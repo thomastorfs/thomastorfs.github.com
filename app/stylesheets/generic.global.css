@@ -1,0 +1,7 @@
+/**
+ * global css
+ */
+body {
+  background: $color-bg-main;
+  font-size: rem;
+}

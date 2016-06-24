@@ -1,0 +1,41 @@
+{
+  "name": "personal-website-v3",
+  "description": "Thomas Torfs Portfolio",
+  "author": "Thomas Torfs",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/thomastorfs/personal-website-v3.git"
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "lodash": "^4.13.1",
+    "page": "^1.7.1"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.0.0",
+    "autoprefixer": "^6.3.6",
+    "browser-sync-brunch": "0.0.9",
+    "coffee-script-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.7.1",
+    "javascript-brunch": "^2.0.0",
+    "marko": "^3.5.0",
+    "normalize.css": "^4.1.1",
+    "pixrem": "^3.0.1",
+    "postcss-brunch": "^0.5.0",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-import": "^8.1.2",
+    "postcss-mixins": "^4.0.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-reporter": "^1.3.3",
+    "postcss-simple-vars": "^2.0.0",
+    "static-marko-brunch": "^0.1.0",
+    "uglify-js-brunch": "^2.0.0"
+  }
+}
