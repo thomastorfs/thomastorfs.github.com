@@ -1,16 +1,17 @@
-# Brunch app
+# Thomas Torfs Portfolio
 
-This is HTML5 application, built with [Brunch](http://brunch.io).
+This is the personal website of Thomas Torfs, a Full Stack Developer for hire
 
-## Getting started
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Brunch plugins and app dependencies: `npm install`
-* Run:
-    * `brunch watch --server` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `brunch build --production` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
+### Setup
+
+- make sure [node.js](http://nodejs.org) and [roots](http://roots.cx) are installed
+- clone this repo down and `cd` into the folder
+- run `npm install`
+- run `roots watch`
+- ???
+- get money
+
+### Deploying
+
+- If you just want to compile the production build, run `roots compile -e production` and it will build to public.
+- To deploy your site with a single command, run `roots deploy -to XXX` with `XXX` being whichever [ship](https://github.com/carrot/ship#usage) deployer you want to use.
