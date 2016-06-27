@@ -1,6 +1,6 @@
-browserify   = require 'roots-browserify'
-css_pipeline = require 'css-pipeline'
 postcss      = require 'postcss'
+css_pipeline = require 'css-pipeline'
+browserify   = require 'roots-browserify'
 Model        = require './assets/js/lib/model'
 
 # Instantiate the model
@@ -11,29 +11,27 @@ module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/*', 'views/content/**', 'assets/css/vendor/*']
   server:
     clean_urls: true
+  open_browser: false
   locals:
     config:
       templateData: model.getData()
+  jade:
+    pretty: true
   extensions: [
     browserify(
-      files: "assets/js/main.coffee",
+      files: 'assets/js/main.coffee',
       out: 'js/app.js',
-      transforms: ['coffeeify']
+      sourceMap: true
     ),
     css_pipeline(files: 'assets/css/app.css', postcss: true)
   ]
   postcss:
     use: [
       require('postcss-import')({ path: ['assets/css'] }),
-      require('postcss-simple-vars'),
       require('postcss-mixins'),
       require('postcss-nested'),
       require('postcss-cssnext')([ 'last 8 versions' ]),
       require('css-mqpacker'),
-      require('pixrem'),
-      require('postcss-discard-comments')({ removeAll: true }),
-      require('cssnano'),
+      require('postcss-simple-vars'),
       require('postcss-reporter')
     ]
-
-
