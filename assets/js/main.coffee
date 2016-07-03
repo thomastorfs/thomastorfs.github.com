@@ -1,3 +1,3 @@
-Router = require('./lib/router');
+Router = require './lib/router'
 
-Router.start();
+Router.start()

@@ -4,3 +4,4 @@ controllers = require('./controllers');
 
 module.exports.start = ->
   page('*', init)
+  # page.start()

@@ -1,32 +1,37 @@
 fs           = require 'fs'
-rimraf       = require 'rimraf'
-postcss      = require 'postcss'
-uglifyjs     = require 'uglify-js'
-css_pipeline = require 'css-pipeline'
-browserify   = require 'roots-browserify'
 Model        = require './assets/js/lib/model'
+rimraf       = require 'rimraf'
+records      = require 'roots-records'
+postcss      = require 'postcss'
+slugify      = require 'underscore.string/slugify'
+uglifyjs     = require 'uglify-js'
+browserify   = require 'roots-browserify'
+css_pipeline = require 'css-pipeline'
 
 # Instantiate the model
 model = new Model
 
-# Minification function
-
 # Configure Roots
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/*', 'views/content/**', 'assets/css/vendor/*']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/content/**', 'assets/css/vendor/*', 'data/**']
   server:
     clean_urls: true
-  open_browser:
-    false
+  open_browser: false
   locals:
-    config:
-      templateData: model.getData()
+    slugify: slugify
+    templateData: model.getAllData()
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',
       out: 'js/app.js'
     ),
-    css_pipeline(files: 'assets/css/app.css', postcss: true)
+    css_pipeline(files: 'assets/css/app.css', postcss: true),
+    records(
+      projects:
+        data: model.getProjects(),
+        template: 'views/work/_project.jade',
+        out: (project) -> "/work/#{slugify(project.title)}"
+    )
   ]
   postcss:
     use: [
@@ -39,9 +44,6 @@ module.exports =
       require('postcss-discard-comments')({ removeAll: true }),
       require('cssnano')
     ]
-  before:
-    ->
-      rimraf('public', fs, -> console.log('removed public directory'))
   after:
     ->
       result = uglifyjs.minify('public/js/app.js')
