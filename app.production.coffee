@@ -3,10 +3,11 @@ postcss      = require 'postcss'
 uglifyjs     = require 'uglify-js'
 browserify   = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
+Resizers     = require './assets/js/lib/image/resizers'
 
 # Configure Roots
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/content/**', 'assets/css/vendor/*', 'data/**']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*']
   server:
     clean_urls: true
   open_browser: false
