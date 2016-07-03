@@ -1,0 +1,9 @@
+mixin image-content(source, dest, alt, title)
+  - var large_x1 = resize.createImage({source: source, suffix: 'large-x1', dest: dest, w: 1100, crop: false})
+  - var large_x2 = resize.createImage({source: source, suffix: 'large-x2', dest: dest, w: 2200, quality: 30, crop: false})
+  - var small_x1 = resize.createImage({source: source, suffix: 'small-x1', dest: dest, w: 550, crop: false})
+  - var small_x2 = resize.createImage({source: source, suffix: 'small-x2', dest: dest, w: 1100, quality: 30, crop: false})
+
+  picture.lazyload
+    source(media='(min-width: 550px)', srcset='#{large_x1} 1x, #{large_x2} 2x')
+    img(srcset='#{small_x1} x1, #{small_x2} x2' alt='#{alt}' title='#{title}')

@@ -1,7 +1,15 @@
-include ../../../_includes/mixin-bg-header
+extends ../../../_includes/layout-project
+include ../../../_includes/mixin-image-content
 
-+bg-header('views/content/work/aristide/images/toresize.jpg', 'header/work/aristide')
+block vars
+  - var imgHeader = 'views/content/work/aristide/images/toresize.jpg'
+  - var imgDest = 'work/aristide'
+
+block header
   h1 Aristide
 
-p This is a paragraph from aristide.jade
-p This is another paragraph
+block content
+  p This is a paragraph from aristide
+  p This is another paragraph
+
+  +image-content(imgHeader, imgDest, 'Alt text', 'Title text')
