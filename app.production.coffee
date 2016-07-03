@@ -1,15 +1,8 @@
 fs           = require 'fs'
-Model        = require './assets/js/lib/model'
-rimraf       = require 'rimraf'
-records      = require 'roots-records'
 postcss      = require 'postcss'
-slugify      = require 'underscore.string/slugify'
 uglifyjs     = require 'uglify-js'
 browserify   = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
-
-# Instantiate the model
-model = new Model
 
 # Configure Roots
 module.exports =
@@ -18,20 +11,13 @@ module.exports =
     clean_urls: true
   open_browser: false
   locals:
-    slugify: slugify
-    templateData: model.getAllData()
+    resize: new Resizers
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',
       out: 'js/app.js'
     ),
-    css_pipeline(files: 'assets/css/app.css', postcss: true),
-    # records(
-    #   projects:
-    #     data: model.getProjects(),
-    #     template: 'views/work/_project.jade',
-    #     out: (project) -> "/work/#{slugify(project.title)}"
-    # )
+    css_pipeline(files: 'assets/css/app.css', postcss: true)
   ]
   postcss:
     use: [
