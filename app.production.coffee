@@ -26,12 +26,12 @@ module.exports =
       out: 'js/app.js'
     ),
     css_pipeline(files: 'assets/css/app.css', postcss: true),
-    records(
-      projects:
-        data: model.getProjects(),
-        template: 'views/work/_project.jade',
-        out: (project) -> "/work/#{slugify(project.title)}"
-    )
+    # records(
+    #   projects:
+    #     data: model.getProjects(),
+    #     template: 'views/work/_project.jade',
+    #     out: (project) -> "/work/#{slugify(project.title)}"
+    # )
   ]
   postcss:
     use: [

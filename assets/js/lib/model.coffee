@@ -12,18 +12,18 @@ class Model
     this.getProjects()
   getProjects: ->
     [
-      {
-        title: 'Aristide',
-        type: 'webdevelopment',
-        linkTitle: 'See how the Aristide project was made.',
-        content: jade.renderFile('data/work/aristide/index.jade', jadeOptions)
-      },
-      {
-        title: 'AE',
-        type: 'webdevelopment',
-        linkTitle: 'See how the AE project was made.',
-        content: jade.renderFile('data/work/ae/index.jade', jadeOptions)
-      }
+      # {
+      #   title: 'Aristide',
+      #   type: 'webdevelopment',
+      #   linkTitle: 'See how the Aristide project was made.',
+      #   content: jade.renderFile('data/work/aristide/index.jade', jadeOptions)
+      # },
+      # {
+      #   title: 'AE',
+      #   type: 'webdevelopment',
+      #   linkTitle: 'See how the AE project was made.',
+      #   content: jade.renderFile('data/work/ae/index.jade', jadeOptions)
+      # }
     ]
 
 module.exports = Model

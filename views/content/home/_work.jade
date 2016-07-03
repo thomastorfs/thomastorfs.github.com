@@ -4,8 +4,7 @@ section.work.wrapper
       h1 My work
     .content
       ul.list-work
-        each project in records.projects
-          li
-            a(href= '/work/' + slugify(project.title), data-href= 'work/' + slugify(project.title), title= project.linkTitle)
-              h2= project.title
-              p= project.type
+        li
+          a(href= '/work/aristide', data-href= 'work/aristide', title='See how Aristide was made')
+            h2 Aristide
+            p webdevelopment
