@@ -1,13 +1,7 @@
-Model           = require './assets/js/lib/model'
-Resizers        = require './assets/js/lib/image/resizers'
 postcss         = require 'postcss'
-slugify         = require 'underscore.string/slugify'
-records         = require 'roots-records'
-browserify      = require 'roots-browserify'
 css_pipeline    = require 'css-pipeline'
-
-# Instantiate the model
-model = new Model
+browserify      = require 'roots-browserify'
+Resizers        = require './assets/js/lib/image/resizers'
 
 # Configure Roots
 module.exports =
@@ -15,8 +9,6 @@ module.exports =
   server:
     clean_urls: true
   locals:
-    slugify: slugify
-    templateData: model.getAllData()
     resize: new Resizers
   jade:
     pretty: true
@@ -27,12 +19,6 @@ module.exports =
       sourceMap: true
     ),
     css_pipeline(files: 'assets/css/app.css', postcss: true)
-    # records(
-    #   projects:
-    #     data: model.getProjects(),
-    #     template: 'views/work/_project.jade',
-    #     out: (project) -> "/work/#{slugify(project.title)}"
-    # )
   ]
   postcss:
     use: [

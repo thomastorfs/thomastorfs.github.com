@@ -36,7 +36,6 @@
     "postcss-simple-vars": "^2.0.0",
     "rimraf": "^2.5.2",
     "roots-browserify": "^0.5.0",
-    "roots-records": "^0.5.1",
     "uglify-js": "^2.6.4",
     "underscore.string": "^3.3.4"
   }
