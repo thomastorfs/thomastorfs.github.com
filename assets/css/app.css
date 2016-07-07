@@ -4,31 +4,57 @@
  * Main App Styling
  *
  * Based on ITCSS
+ * https://speakerdeck.com/dafed/managing-css-projects-with-itcss
  *
  * #############################################################################
  */
 
-/* Vendor */
+/**
+ * Settings
+ *
+ * Global variables and config switches
+ * ---------------------------------------------------------------------------*/
+@import "_settings.*";
+
+/**
+ * Tools
+ *
+ * Default mixins and functions
+ * ---------------------------------------------------------------------------*/
+@import "_tools.*";
+
+/**
+ * Generic
+ *
+ * Ground-zero styles
+ * ---------------------------------------------------------------------------*/
 @import "vendor/normalize";
+@import "_generic.*";
 
-/* Settings */
-@import "_settings.colors";
-@import "_settings.fonts";
-@import "_settings.icons";
-@import "_settings.structure";
-@import "_settings.breakpoints";
+/**
+ * Base
+ *
+ * HTML elements and generic structure classed elements
+ * ---------------------------------------------------------------------------*/
+@import "_base.*";
 
-/* Tools */
-@import "_tools.mixins";
+/**
+ * Objects
+ *
+ * Classed objects (cosmetic-free design patterns)
+ * ---------------------------------------------------------------------------*/
+@import "_objects.*";
 
-/* Generic */
-@import "_generic.global";
-@import "_generic.structure";
+/**
+ * Components
+ *
+ * Designed pieces of UI
+ * ---------------------------------------------------------------------------*/
+@import "_components.*";
 
-/* Elements */
-
-/* Objects */
-
-/* Components */
-
-/* Trumps */
+/**
+ * Trumps
+ *
+ * Specific single individual pieces, helpers and overrides
+ * ---------------------------------------------------------------------------*/
+@import "_trumps.*";

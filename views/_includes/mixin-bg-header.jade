@@ -1,8 +1,8 @@
 mixin bg-header(source, dest)
-  - var large = resize.createImage({source: source, suffix: 'large', dest: dest, w: 1920, h: 800, crop: true})
-  - var medium = resize.createImage({source: source, suffix: 'medium', dest: dest, w: 1024, h: 600, crop: true})
-  - var small = resize.createImage({source: source, suffix: 'small', dest: dest, w: 480, h: 400, crop: true})
+    - var large = resize.createImage({source: source, suffix: 'large', dest: dest, w: 1920, h: 800, crop: true})
+    - var medium = resize.createImage({source: source, suffix: 'medium', dest: dest, w: 1024, h: 600, crop: true})
+    - var small = resize.createImage({source: source, suffix: 'small', dest: dest, w: 480, h: 400, crop: true})
 
-  header.wrapper.lazyload(data-bgset='#{large} 1920w, #{medium} 1024w, #{small} 480w')
-    .inner
-      block
+    header.wrapper.lazyload(data-bgset='#{large} 1920w, #{medium} 1024w, #{small} 480w')
+        .inner
+            block

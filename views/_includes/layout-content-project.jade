@@ -1,0 +1,12 @@
+include mixin-bg-header
+include mixin-image-content
+
+block vars
+
+article.project
+    +bg-header(imgHeader, imgDest)
+        block header
+
+    .text.wrapper
+        .inner
+            block content

@@ -22,7 +22,7 @@ module.exports =
   ]
   postcss:
     use: [
-      require('postcss-import')({ path: ['assets/css'] }),
+      require('postcss-easy-import')({ glob: true, path: ['assets/css'] }),
       require('postcss-mixins'),
       require('postcss-nested'),
       require('postcss-cssnext')([ 'last 8 versions' ]),
