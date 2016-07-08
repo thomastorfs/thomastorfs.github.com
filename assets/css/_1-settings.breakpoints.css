@@ -7,13 +7,13 @@
  */
 
 $bp-mobile-narrow-min: 20em;
-$bp-mobile-narrow-max: 29.9999em;
+$bp-mobile-narrow-max: 29.99em;
 $bp-mobile-wide-min: 30em;
-$bp-mobile-wide-max: 39.9999em;
+$bp-mobile-wide-max: 39.99em;
 $bp-tablet-narrow-min: 40em;
-$bp-tablet-narrow-max: 49.9999em;
+$bp-tablet-narrow-max: 49.99em;
 $bp-tablet-wide-min: 50em;
-$bp-tablet-wide-max: 63.9999em;
+$bp-tablet-wide-max: 63.99em;
 $bp-desktop-min: 64em;
-$bp-desktop-max: 79.9999em;
-$bp-large-desktop-max: 80em;
+$bp-desktop-max: 79.99em;
+$bp-large-desktop-min: 80em;

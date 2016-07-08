@@ -24,6 +24,7 @@ $color-blue: #0eb3ed;
  * ---------------------------------------------------------------------------*/
 /* backgrounds */
 $color-bg-main: #fff;
+$color-bg-dark: $color-grey-dark;
 
 /* typography */
 $color-font: #000;

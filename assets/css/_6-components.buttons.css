@@ -1,0 +1,55 @@
+/**
+ * ############################################################################
+ *
+ * Components: Buttons
+ *
+ * #############################################################################
+ */
+
+.button {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 3px;
+
+    font-family: $font-sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1em;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .button {
+        padding: 14px 17px;
+        border-radius: 4px;
+        font-size: 1.125rem;
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .button {
+        padding: 19px 21px;
+        border-radius: 5px;
+        font-size: 1.625rem;
+    }
+}
+
+/**
+ * red button
+ * ---------------------------------------------------------------------------*/
+.button--red {
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: #ff5d5d;
+    border-right-color: #7f0000;
+    border-bottom-color: #660000;
+    border-left-color: #ff4949;
+    background-image: linear-gradient(180deg, #ff3131, #cd0000);
+}

@@ -31,6 +31,8 @@
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .main-logo {
+        left: 0;
+
         a {
             width: 20%;
             margin: 0 auto;

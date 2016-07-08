@@ -18,7 +18,7 @@ module.exports =
       out: 'js/app.js',
       sourceMap: true
     ),
-    css_pipeline(files: 'assets/css/app.css', postcss: true)
+    css_pipeline(files: ['assets/css/app.css', 'content/**/*.css'], postcss: true)
   ]
   postcss:
     use: [

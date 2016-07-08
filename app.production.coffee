@@ -18,7 +18,7 @@ module.exports =
       files: 'assets/js/main.coffee',
       out: 'js/app.js'
     ),
-    css_pipeline(files: 'assets/css/app.css', postcss: true)
+    css_pipeline(files: ['assets/css/app.css', 'views/**/*.css'], postcss: true)
   ]
   postcss:
     use: [

@@ -6,15 +6,42 @@
  * #############################################################################
  */
 
+.hero {
+    color: #fff;
+
+    h1, h2, h3, h4, h5 {
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+}
+
+/* with background */
 .hero--bg {
     padding-top: $sizes-header-height-small;
+    background-color: $color-bg-dark;
     background-position: 50% 50%;
     background-size: cover;
 }
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .hero--bg {
+    .hero {
         padding-top: $sizes-header-height-large;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-desktop-min) {
+    .hero {
+        h1 {
+            font-size: 2.75rem;
+        }
     }
 }
