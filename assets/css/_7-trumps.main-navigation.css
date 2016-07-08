@@ -1,0 +1,39 @@
+/**
+ * ############################################################################
+ *
+ * Trumps: Main navigation
+ *
+ * #############################################################################
+ */
+
+.primary-navigation {
+    li {
+        text-align: center;
+    }
+
+    a {
+        display: block;
+        color: #fff;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .primary-navigation {
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: 20%;
+        }
+
+        a {
+            height: $sizes-header-height-large;
+            line-height: $sizes-header-height-large;
+        }
+
+        .blog {
+            margin-left: 20%;
+        }
+    }
+}

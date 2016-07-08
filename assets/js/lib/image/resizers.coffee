@@ -33,8 +33,7 @@ class Resizers
 
             # Resize the image
             if (options.crop)
-              img.resize(options.w, Jimp.AUTO)
-                .cover(options.w, options.h)
+              img.cover(options.w, options.h)
                 .quality(options.quality)
                 .write('public' + dest)
             else

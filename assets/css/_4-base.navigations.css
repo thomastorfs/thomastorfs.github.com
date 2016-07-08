@@ -1,13 +1,15 @@
 /**
  * ############################################################################
  *
- * Generic: Body
+ * Base: Navigations
  *
  * #############################################################################
  */
 
-body {
-    background: $color-bg-main;
-    font-size: 1rem;
-    color: $color-font;
+nav {
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
 }

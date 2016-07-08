@@ -1,0 +1,18 @@
+/**
+ * ############################################################################
+ *
+ * Generic: Body
+ *
+ * #############################################################################
+ */
+
+body {
+    background: $color-bg-main;
+    font-size: 1rem;
+    color: $color-font;
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+
+}

@@ -1,10 +1,10 @@
-include mixin-bg-header
+include mixin-wrapper-with-bg
 include mixin-image-content
 
 block vars
 
 article.project
-    +bg-header(imgHeader, imgDest)
+    +wrapper-with-bg('header', imgHeader, imgDest)
         block header
 
     .text.wrapper

@@ -1,0 +1,50 @@
+/**
+ * ############################################################################
+ *
+ * Trumps: Main logo
+ *
+ * #############################################################################
+ */
+
+.main-logo {
+    position: absolute;
+    top: 0;
+    left: $gutter;
+    width: 100%;
+    height: 0;
+
+    fill: #fff;
+    transition: fill 5s ease 0s;
+
+    a {
+        display: block;
+        height: 24px;
+        width: 42px;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .main-logo {
+        a {
+            width: 20%;
+            margin: 0 auto;
+            padding: calc(($sizes-header-height-large - 32px) / 2);
+            height: $sizes-header-height-large;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .main-logo {
+        a {
+            padding: calc(($sizes-header-height-large - 40px) / 2);
+        }
+    }
+}
