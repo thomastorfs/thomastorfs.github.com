@@ -37,7 +37,7 @@
     }
 }
 
-/* tablet narrow */
+/* desktop */
 @media (min-width: $bp-desktop-min) {
     .hero {
         h1 {
