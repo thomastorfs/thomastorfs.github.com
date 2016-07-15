@@ -1,28 +1,36 @@
 /**
- * ############################################################################
+ * #############################################################################
  *
  * Trumps: List with work items
  *
  * #############################################################################
  */
 
-.list-work {
+.home-work {
+    /* less bottom padding */
+    padding-bottom: $gutter;
+
+    /* set the height */
     .text {
         height: 160px;
     }
 
+    /* unique more link */
     .more {
+        /* slight overlay on hover */
         a:hover {
             .text {
                 background: rgba(0, 0, 0, 0.3);
             }
         }
 
+        /* black title */
         h2 {
             margin-bottom: 1em;
             color: $color-font-header;
         }
 
+        /* and no background by default */
         .text {
             background: none;
         }
@@ -31,12 +39,14 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .list-work {
+    .home-work {
+        /* position the text at the top on the left columns */
         .cols__row-first {
             .text {
                 vertical-align: top;
             }
         }
+        /* position the text at the bottom on the right columns */
         .cols__row-last {
             .text {
                 text-align: right;
@@ -44,6 +54,7 @@
             }
         }
 
+        /* set the height and text positioning */
         .text {
             height: 200px;
             padding: 22px;
@@ -54,7 +65,11 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .list-work {
+    .home-work {
+        /* larger bottom padding */
+        padding-bottom: calc($gutter * 2);
+
+        /* set the height and text positioning */
         .text {
             height: 280px;
             padding: 40px 35px 30px 35px;

@@ -8,16 +8,13 @@ section.want-more.wrapper
             ul.cols--3
                 li.first.col.cols__row-first
                     +bglink-cols-3('/about', 'What can I do for you?', 'views/_includes/images/want-more-about.jpg', 'footer')
-                        .text
-                            h2 What can I do for you?
-                            p About
+                        h2 What can I do for you?
+                        p About
                 li.col
-                    a(href="/blog", data-href="/blog", title="Go to the blog.")
-                        .text
-                            h2 Tell me a story
-                            p Blog
+                    +bglink-cols-3('/blog', 'Read a story on the blog', 'views/_includes/images/want-more-blog.jpg', 'footer')
+                        h2 Tell me a story
+                        p Blog
                 li.last.col.cols__row-last
-                    a(href="/contact", data-href="/contact", title="Go to the contact page.")
-                        .text
-                            h2 Let's do this
-                            p Contact
+                    +bglink-cols-3('/contact', 'Give me a call or drop me a line on the contact page.', 'views/_includes/images/want-more-contact.jpg', 'footer')
+                        h2 Let's do this
+                        p Contact

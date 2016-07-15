@@ -1,5 +1,5 @@
 /**
- * ############################################################################
+ * #############################################################################
  *
  * Components: Section
  *
@@ -10,6 +10,7 @@ section {
     padding: 64px 0;
 }
 
+/* header */
 .section__header {
     h1 {
         margin-bottom: 64px;
@@ -19,13 +20,18 @@ section {
     }
 }
 
+/* next button */
 .section__next {
+    /* positioning */
     position: absolute;
     bottom: 40px;
     left: 50%;
     margin-left: -20px;
+
+    /* add the animation */
     transition: transform $transition-duration $transition-type;
 
+    /* icon */
     &:before {
         @mixin webfont-icon;
         content: $icon-arrow-down;
@@ -33,6 +39,7 @@ section {
         font-size: 40px;
     }
 
+    /* grow on hover */
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
@@ -45,6 +52,7 @@ section {
         padding: 110px 0;
     }
 
+    /* header */
     .section__header {
         h1 {
             margin-bottom: 110px;
@@ -60,6 +68,7 @@ section {
         padding: 155px 0;
     }
 
+    /* header */
     .section__header {
         h1 {
             margin-bottom: 155px;

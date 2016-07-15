@@ -1,5 +1,5 @@
 /**
- * ############################################################################
+ * #############################################################################
  *
  * Objects: Lazysizes
  *
@@ -14,6 +14,6 @@
 
     .lazyloaded {
         opacity: 1;
-        transition: opacity 0.5s ease-out;
+        transition: opacity $transition-duration $transition-type;
     }
 }

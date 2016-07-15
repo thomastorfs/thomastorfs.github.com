@@ -1,5 +1,5 @@
 /**
- * ############################################################################
+ * #############################################################################
  *
  * Components: List with links with backgrounds
  *
@@ -7,34 +7,41 @@
  */
 
 .bglink {
+    /* make it a table so we can position the inner content more easily */
     display: table;
     width: 100%;
     height: 100%;
 
+    /* background */
     background-color: $color-bg-dark;
     background-position: 50% 50%;
     background-size: cover;
 
+    /* default text styling */
     color: #fff;
     text-decoration: none;
     text-align: center;
 
+    /* darken the background on hover */
     &:hover {
         .text {
             background: rgba(0, 0, 0, 0.8);
         }
     }
 
+    /* title styling */
     h2 {
         margin: 0 0 0.25em 0;
         color: #fff;
         font-size: 1.25rem;
     }
 
+    /* no margin on the paragraphs */
     p {
         margin: 0;
     }
 
+    /* center the text and set a dark background by default */
     .text {
         display: table-cell;
         height: 100%;
@@ -47,6 +54,7 @@
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .bglink {
+        /* medium title size */
         h2 {
             font-size: 1.5rem;
         }
@@ -56,6 +64,7 @@
 /* desktop */
 @media (min-width: $bp-desktop-min) {
     .bglink {
+        /* large title size */
         h2 {
             font-size: 2.125rem;
         }
