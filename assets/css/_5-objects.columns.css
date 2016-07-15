@@ -36,6 +36,12 @@
 /**
  * 3 Columns
  * ---------------------------------------------------------------------------*/
+.cols--3 {
+    .col {
+        width: 100%;
+    }
+}
+
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .cols--3 {

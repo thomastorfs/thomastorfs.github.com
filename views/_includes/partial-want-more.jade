@@ -7,14 +7,17 @@ section.want-more.wrapper
         .content
             ul.cols--3
                 li.first.col.cols__row-first
-                    a(href="/about", data-href="/about", title="Go to the about page.")
-                        h2 What can I do for you?
-                        p About
+                    +bglink-cols-3('/about', 'What can I do for you?', 'views/_includes/images/want-more-about.jpg', 'footer')
+                        .text
+                            h2 What can I do for you?
+                            p About
                 li.col
                     a(href="/blog", data-href="/blog", title="Go to the blog.")
-                        h2 Tell me a story
-                        p Blog
+                        .text
+                            h2 Tell me a story
+                            p Blog
                 li.last.col.cols__row-last
                     a(href="/contact", data-href="/contact", title="Go to the contact page.")
-                        h2 Let's do this
-                        p Contact
+                        .text
+                            h2 Let's do this
+                            p Contact

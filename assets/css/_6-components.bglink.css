@@ -6,23 +6,19 @@
  * #############################################################################
  */
 
-.list-bg-link {
-    overflow: hidden;
+.bglink {
+    height: 100%;
 
-    a {
-        height: 100%;
+    background-color: $color-bg-dark;
+    background-position: 50% 50%;
+    background-size: cover;
 
-        background-color: $color-bg-dark;
-        background-position: 50% 50%;
-        background-size: cover;
+    color: #fff;
+    text-decoration: none;
 
-        color: #fff;
-        text-decoration: none;
-
-        &:hover {
-            .text {
-                background: rgba(0, 0, 0, 0.8);
-            }
+    &:hover {
+        .text {
+            background: rgba(0, 0, 0, 0.8);
         }
     }
 
@@ -45,7 +41,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .list-bg-link {
+    .bglink {
         h2 {
             font-size: 1.5rem;
         }
@@ -54,7 +50,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .list-bg-link {
+    .bglink {
         h2 {
             font-size: 2.125rem;
         }

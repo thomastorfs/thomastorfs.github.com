@@ -43,12 +43,12 @@
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .list-work {
-        .col--row-first {
+        .cols__row-first {
             .text {
                 vertical-align: top;
             }
         }
-        .col--row-last {
+        .cols__row-last {
             .text {
                 text-align: right;
                 vertical-align: bottom;
