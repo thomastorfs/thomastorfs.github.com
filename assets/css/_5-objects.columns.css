@@ -1,28 +1,46 @@
 /**
  * ############################################################################
  *
- * Objects: Objects
+ * Objects: Columns
  *
  * #############################################################################
  */
 
-.cols2 {
-    li {
-        padding-bottom: 1px;
-    }
+/**
+ * Default - 2 Columns
+ * ---------------------------------------------------------------------------*/
+.cols {
+    overflow: hidden;
+}
+.col {
+    padding-bottom: 1px;
 }
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .cols2 {
-        li {
-            float: left;
-            width: 50%;
-        }
+    .col {
+        float: left;
+        width: 50%;
+        padding-right: 1px;
+    }
 
-        .col2_1 {
-            clear: both;
-            padding-right: 1px;
+    .cols__row-first {
+        clear: both;
+    }
+
+    .cols__row-last {
+        padding-right: 0;
+    }
+}
+
+/**
+ * 3 Columns
+ * ---------------------------------------------------------------------------*/
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .cols--3 {
+        .col {
+            width: 33.3334%;
         }
     }
 }
