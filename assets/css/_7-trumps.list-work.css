@@ -7,18 +7,7 @@
  */
 
 .list-work {
-    a {
-        display: table;
-        width: 100%;
-
-        color: #fff;
-        text-decoration: none;
-        text-align: center;
-    }
-
     .text {
-        display: table-cell;
-        vertical-align: middle;
         height: 160px;
     }
 
@@ -68,7 +57,7 @@
     .list-work {
         .text {
             height: 280px;
-            padding: 22px;
+            padding: 40px 35px 30px 35px;
         }
     }
 }

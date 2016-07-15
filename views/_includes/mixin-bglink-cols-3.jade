@@ -5,4 +5,5 @@ mixin bglink-cols-3(url, title, source, dest)
     - var small_2x = resize.createImage({source: source, suffix: 'small-2x', dest: dest, w: 700, h: 400, quality: 30, crop: true})
 
     a.bglink.lazyload(href='#{url}', data-href='#{url}', data-bgset='#{large_1x} 1024w, #{small_1x} 640w 1x, #{large_2x} 1024w 2x, #{small_2x} 640w 2x')
-        block
+        .text
+            block
