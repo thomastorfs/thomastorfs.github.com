@@ -1,0 +1,8 @@
+mixin list-work(url, title, source, dest)
+    - var large_1x = resize.createImage({source: source, suffix: 'large-1x', dest: dest, w: 600, h: 350, crop: true})
+    - var large_2x = resize.createImage({source: source, suffix: 'large-2x', dest: dest, w: 1200, h: 700, quality: 30, crop: true})
+    - var small_1x = resize.createImage({source: source, suffix: 'small-1x', dest: dest, w: 350, h: 200, crop: false})
+    - var small_2x = resize.createImage({source: source, suffix: 'small-2x', dest: dest, w: 700, h: 400, quality: 30, crop: true})
+
+    a.lazyload(href='#{url}', data-href='#{url}', data-bgset='#{large_1x} 1024w, #{small_1x} 640w 1x, #{large_2x} 1024w 2x, #{small_2x} 640w 2x')
+        block

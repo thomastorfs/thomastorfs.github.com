@@ -1,0 +1,70 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M512.034 0c-282.734 0-511.966 229.232-511.966 511.966-0.068 282.87 229.164 512.034 511.966 512.034 282.734 0 511.896-229.232 511.896-511.966 0.070-282.802-229.162-512.034-511.896-512.034zM512.034 955.477c-244.46 0-443.374-198.914-443.374-443.374s198.914-443.376 443.374-443.376c244.46-0.068 443.306 198.846 443.306 443.374 0.068 244.392-198.846 443.376-443.306 443.376z",
+					"M707.863 399.82l-198.298 198.365-198.298-198.365c-13.376-13.376-35.12-13.376-48.493 0s-13.376 35.12 0 48.493l222.44 222.44c6.722 6.859 15.571 10.014 24.35 10.014 8.849 0 17.629-3.362 24.35-10.014l222.373-222.44c13.376-13.376 13.376-35.12 0-48.493s-35.052-13.376-48.425-0z"
+				],
+				"attrs": [
+					{},
+					{}
+				],
+				"isMulticolor": false,
+				"isMulticolor2": false,
+				"grid": 0,
+				"tags": [
+					"arrows5"
+				]
+			},
+			"attrs": [
+				{},
+				{}
+			],
+			"properties": {
+				"order": 2,
+				"id": 0,
+				"prevSize": 32,
+				"code": 59648,
+				"name": "arrow-down"
+			},
+			"setIdx": 0,
+			"setId": 0,
+			"iconIdx": 0
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "thomastorfs"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showCodes": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "thomastorfs",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215
+		},
+		"historySize": 100
+	}
+}

@@ -1,0 +1,74 @@
+/**
+ * ############################################################################
+ *
+ * Trumps: List with work items
+ *
+ * #############################################################################
+ */
+
+.list-work {
+    a {
+        display: table;
+        width: 100%;
+
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .text {
+        display: table-cell;
+        vertical-align: middle;
+        height: 160px;
+    }
+
+    .more {
+        a:hover {
+            .text {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        h2 {
+            margin-bottom: 1em;
+            color: $color-font-header;
+        }
+
+        .text {
+            background: none;
+        }
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .list-work {
+        .col2_1 {
+            .text {
+                vertical-align: top;
+            }
+        }
+        .col2_2 {
+            .text {
+                text-align: right;
+                vertical-align: bottom;
+            }
+        }
+
+        .text {
+            height: 200px;
+            padding: 22px;
+            text-align: left;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .list-work {
+        .text {
+            height: 280px;
+            padding: 22px;
+        }
+    }
+}

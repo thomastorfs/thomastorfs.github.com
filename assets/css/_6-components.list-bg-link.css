@@ -1,0 +1,62 @@
+/**
+ * ############################################################################
+ *
+ * Components: List with links with backgrounds
+ *
+ * #############################################################################
+ */
+
+.list-bg-link {
+    overflow: hidden;
+
+    a {
+        height: 100%;
+
+        background-color: $color-bg-dark;
+        background-position: 50% 50%;
+        background-size: cover;
+
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            .text {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+
+    h2 {
+        margin: 0 0 0.25em 0;
+        color: #fff;
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .text {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        transition: background $transition-duration $transition-type;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .list-bg-link {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .list-bg-link {
+        h2 {
+            font-size: 2.125rem;
+        }
+    }
+}

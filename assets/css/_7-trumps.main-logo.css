@@ -18,8 +18,9 @@
 
     a {
         display: block;
-        height: 24px;
+        height: $sizes-header-height-small;
         width: 42px;
+        padding: calc(($sizes-header-height-small - 24px) / 2) 0;
     }
 
     svg {

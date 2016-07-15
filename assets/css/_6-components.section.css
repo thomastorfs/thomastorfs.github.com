@@ -19,6 +19,26 @@ section {
     }
 }
 
+.section__next {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -20px;
+    transition: transform $transition-duration $transition-type;
+
+    &:before {
+        @mixin webfont-icon;
+        content: $icon-arrow-down;
+        color: #fff;
+        font-size: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     section {

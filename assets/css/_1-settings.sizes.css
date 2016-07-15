@@ -9,6 +9,11 @@
 /**
  * header
  * ---------------------------------------------------------------------------*/
-$sizes-header-height-small: 40px;
-$sizes-header-height-large: 65px;
+$sizes-header-height-small: 60px;
+$sizes-header-height-large: 70px;
 
+/**
+ * transitions
+ * ---------------------------------------------------------------------------*/
+$transition-duration: 0.3s;
+$transition-type: ease;

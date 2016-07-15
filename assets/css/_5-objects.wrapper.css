@@ -7,9 +7,10 @@
  */
 
 .wrapper {
+    position: relative;
+
     /* wrapper content */
     > .inner {
-        position: relative;
         margin: 0 auto;
         padding: 0 $gutter;
         max-width: $bp-large-desktop-min;

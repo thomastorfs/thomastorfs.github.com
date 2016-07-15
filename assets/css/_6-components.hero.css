@@ -20,7 +20,7 @@
 
 /* with background */
 .hero--bg {
-    padding-top: $sizes-header-height-small;
+    padding: $sizes-header-height-small 0;
     background-color: $color-bg-dark;
     background-position: 50% 50%;
     background-size: cover;
@@ -29,7 +29,7 @@
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .hero {
-        padding-top: $sizes-header-height-large;
+        padding: $sizes-header-height-large 0;
 
         h1 {
             font-size: 2rem;

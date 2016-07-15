@@ -1,21 +1,28 @@
 /**
  * ############################################################################
  *
- * Objects: Main header
+ * Objects: Objects
  *
  * #############################################################################
  */
 
-.wrapper.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+.cols2 {
+    li {
+        padding-bottom: 1px;
+    }
 }
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .header {
-        height: $sizes-header-height-large;
+    .cols2 {
+        li {
+            float: left;
+            width: 50%;
+        }
+
+        .col2_1 {
+            clear: both;
+            padding-right: 1px;
+        }
     }
 }

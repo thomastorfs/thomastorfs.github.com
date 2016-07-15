@@ -1,7 +1,7 @@
 /**
  * ############################################################################
  *
- * Trumps: Hero
+ * Trumps: Hero on the homepage
  *
  * #############################################################################
  */
@@ -9,7 +9,9 @@
 .hero--home {
     /* general layout*/
     display: flex;
+    display: -webkit-box;
     align-content: center;
+    -webkit-box-align: center;
     min-height: 100%;
 
     /* position my head */
@@ -18,8 +20,6 @@
     /* make sure the alignment is only horizontal */
     > .inner {
         width: 100%;
-        padding-top: 100px;
-        padding-bottom: 100px;
     }
 
     header {

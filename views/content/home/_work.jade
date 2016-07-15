@@ -3,8 +3,44 @@ section.work.wrapper
         header.section__header
             h1 My work
         .content
-            ul.list-work
-                li
-                    a(href= '/work/aristide', data-href= 'work/aristide', title='See how Aristide was made')
-                        h2 Aristide
-                        p webdevelopment
+            ul.cols2.list-bg-link.list-work
+                li.first.col2_1
+                    +list-work('/work/aristide', 'See how Aristide was made', 'views/content/home/images/portfolio-aristide.jpg', 'home')
+                        .text
+                            h2 Aristide
+                            p webdevelopment
+                li.col2_2
+                    +list-work('/work/ae', 'See how AE was made', 'views/content/home/images/portfolio-ae.jpg', 'home')
+                        .text
+                            h2 AE
+                            p webdevelopment
+                li.col2_1
+                    +list-work('/work/heritage-buildings', 'See how Heritage Buildings was made', 'views/content/home/images/portfolio-heritage.jpg', 'home')
+                        .text
+                            h2 Heritage Buildings
+                            p webdevelopment
+                li.col2_2
+                    +list-work('/work/medics4medics', 'See how Medics4medics was made', 'views/content/home/images/portfolio-m4m.jpg', 'home')
+                        .text
+                            h2 Medics4medics
+                            p webdevelopment
+                li.col2_1
+                    +list-work('/work/quasar', 'See how Quasar Online was made', 'views/content/home/images/portfolio-quasar.jpg', 'home')
+                        .text
+                            h2 Quasar Online
+                            p branding, design &amp; 3D
+                li.col2_2
+                    +list-work('/work/blenderworld', 'See how Blenderworld was made', 'views/content/home/images/portfolio-blenderworld.jpg', 'home')
+                        .text
+                            h2 Blenderworld
+                            p branding, design &amp; 3D
+                li.col2_1
+                    +list-work('/work/stealth-bombers', 'See how the Stealth Bombers movies were made', 'views/content/home/images/portfolio-sb.jpg', 'home')
+                        .text
+                            h2 Stealth Bombers
+                            p branding, design &amp; 3D
+                li.last.col2_2.more
+                    +list-work('/contact', 'Interested? You can always contact me here.', 'views/content/home/images/portfolio-more.jpg', 'home')
+                        .text
+                            h2 Your project?
+                            .button.button--red Hire me now
