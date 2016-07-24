@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'thomastorfs';
-    src:    url('fonts/thomastorfs.eot?g4fttw');
-    src:    url('fonts/thomastorfs.eot?g4fttw#iefix') format('embedded-opentype'),
-        url('fonts/thomastorfs.ttf?g4fttw') format('truetype'),
-        url('fonts/thomastorfs.woff?g4fttw') format('woff'),
-        url('fonts/thomastorfs.svg?g4fttw#thomastorfs') format('svg');
+    src:    url('fonts/thomastorfs.eot?lx1xst');
+    src:    url('fonts/thomastorfs.eot?lx1xst#iefix') format('embedded-opentype'),
+        url('fonts/thomastorfs.ttf?lx1xst') format('truetype'),
+        url('fonts/thomastorfs.woff?lx1xst') format('woff'),
+        url('fonts/thomastorfs.svg?lx1xst#thomastorfs') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +24,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down:before {
+.icon-logo:before {
     content: "\e900";
+}
+.icon-arrow-down:before {
+    content: "\e901";
 }
 

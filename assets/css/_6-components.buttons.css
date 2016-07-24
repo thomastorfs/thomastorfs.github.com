@@ -24,9 +24,15 @@
     line-height: 1em;
     color: #fff;
     text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+    transition: background $transition-duration $transition-type;
 
     /* shadow */
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+
+    /* force a cursor on hover */
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 /* tablet narrow */
@@ -41,8 +47,8 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
+    /* large button and font size */
     .button {
-        /* large button and font size */
         padding: 19px 21px;
         border-radius: 5px;
         font-size: 1.625rem;
@@ -63,4 +69,9 @@
 
     /* red gradient background */
     background-image: linear-gradient(180deg, #ff3131, #cd0000);
+
+    /* force a cursor on hover */
+    &:hover {
+        background-image: linear-gradient(180deg, #ff4646, #d31a1a);
+    }
 }
