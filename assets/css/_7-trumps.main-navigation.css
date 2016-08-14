@@ -6,6 +6,9 @@
  * #############################################################################
  */
 
+/**
+ * primary navigation
+ * ---------------------------------------------------------------------------*/
 .primary-navigation {
     li {
         text-align: center;
@@ -17,10 +20,21 @@
     }
 }
 
+/* mobile */
+@media (max-width: $bp-mobile-wide-max) {
+    .primary-navigation {
+        display: none;
+    }
+}
+
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .primary-navigation {
+        display: block;
         overflow: hidden;
+        margin: 0 auto;
+        padding: 0 $gutter;
+        max-width: $bp-large-desktop-min;
 
         li {
             float: left;
@@ -35,5 +49,54 @@
         .blog {
             margin-left: 20%;
         }
+    }
+}
+
+
+/**
+ * navigation toggler
+ * ---------------------------------------------------------------------------*/
+ /* mobile */
+@media (max-width: $bp-mobile-wide-max) {
+    .nav-toggler {
+        position: absolute;
+        top: calc(($sizes-header-height-small / 2) - 20px);
+        right: $gutter;
+        display: block;
+        width: auto;
+        height: 45px;
+        padding-right: 50px;
+        font-family: $font-sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 50px;
+        color: #fff;
+
+        &:after,
+        strong:before,
+        strong:after {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            display: block;
+            width: 35px;
+            height: 4px;
+            content: " ";
+            background: #fff;
+            border-radius: 2px;
+        }
+        strong:before {
+            top: 34px;
+        }
+        strong:after {
+            top: 22px;
+        }
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .nav-toggler {
+        display: none;
     }
 }
