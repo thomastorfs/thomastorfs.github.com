@@ -60,12 +60,12 @@
 @media (max-width: $bp-mobile-wide-max) {
     .nav-toggler {
         position: absolute;
-        top: calc(($sizes-header-height-small / 2) - 20px);
+        top: calc(($sizes-header-height-small / 2) - 25px);
         right: $gutter;
         display: block;
         width: auto;
         height: 45px;
-        padding-right: 50px;
+        padding-right: 40px;
         font-family: $font-sans-serif;
         text-transform: uppercase;
         text-decoration: none;
@@ -77,16 +77,16 @@
         strong:after {
             position: absolute;
             right: 0;
-            top: 10px;
+            top: 12px;
             display: block;
-            width: 35px;
+            width: 30px;
             height: 4px;
             content: " ";
             background: #fff;
             border-radius: 2px;
         }
         strong:before {
-            top: 34px;
+            top: 32px;
         }
         strong:after {
             top: 22px;
