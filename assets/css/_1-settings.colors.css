@@ -31,6 +31,7 @@ $color-blue: #0eb3ed;
 /* backgrounds */
 $color-bg-main: #fff;
 $color-bg-dark: $color-grey-dark;
+$color-bg-black-trans: rgba(0, 0, 0, 0.9);
 
 /* typography */
 $color-font: #000;

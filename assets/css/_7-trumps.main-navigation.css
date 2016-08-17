@@ -22,8 +22,40 @@
 
 /* mobile */
 @media (max-width: $bp-mobile-wide-max) {
+    /* hidden by default */
     .primary-navigation {
-        display: none;
+        position: relative;
+        top: -999px;
+        padding-top: $sizes-header-height-small;
+        transition: top $transition-duration $transition-type;
+
+        a {
+            padding: 10px 0;
+            margin: 10px 0;
+        }
+    }
+
+    /* when the navigation is visible */
+    .nav-visible {
+        /* prevent scrolling of the body */
+        overflow: hidden;
+
+        /* adjust header height and background color */
+        .header {
+            height: 100%;
+            background: $color-bg-black-trans;
+        }
+
+        /* make sure we can scroll the navigation if it's out of sight */
+        .header__nav {
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        /* show the navigation */
+        .primary-navigation {
+            top: 0;
+        }
     }
 }
 
@@ -60,7 +92,7 @@
 @media (max-width: $bp-mobile-wide-max) {
     .nav-toggler {
         position: absolute;
-        top: calc(($sizes-header-height-small / 2) - 25px);
+        top: calc(($sizes-header-height-small / 2) - 23px);
         right: $gutter;
         display: block;
         width: auto;
@@ -71,6 +103,7 @@
         text-decoration: none;
         line-height: 50px;
         color: #fff;
+        z-index: 999;
 
         &:after,
         strong:before,
@@ -85,11 +118,32 @@
             background: #fff;
             border-radius: 2px;
         }
+        &:after {
+            transition-duration: $transition-duration;
+            transition-timing-function: cubic-bezier(0.5, -0.5, 0.25, 1.5);
+        }
         strong:before {
-            top: 32px;
+            top: 22px;
+            transition: opacity $transition-duration $transition-type;
         }
         strong:after {
-            top: 22px;
+            top: 32px;
+            transition: transform $transition-duration cubic-bezier(0.5, -0.5, 0.25, 1.5);
+        }
+    }
+
+    /* when the navigation is visible */
+    .nav-visible {
+        .nav-toggler {
+            &:after {
+                transform: translate3d(0, 10px, 0) rotate(135deg);
+            }
+            strong:before {
+                opacity: 0;
+            }
+            strong:after {
+                transform: translate3d(0, -10px, 0) rotate(-135deg);
+            }
         }
     }
 }

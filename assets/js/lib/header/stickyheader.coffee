@@ -10,7 +10,7 @@ class Stickyheader
         # variables
         @speed = 300
         @lastScrollPosition = 0
-        @minScrollPosition = 100
+        @minScrollPosition = 10
         @minHideScroll = 200
         @hideScrollPosition = 0
         @stickyClass = 'sticky'
@@ -18,6 +18,9 @@ class Stickyheader
 
         # check when scrolling
         throttle(@speed, @w.scroll(@updateHeaderClasses))
+
+        # force check upon constructing
+        @updateHeaderClasses()
 
     updateHeaderClasses: () =>
         # get the current scroll position

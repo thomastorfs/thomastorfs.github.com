@@ -1,4 +1,5 @@
 # Vendor
+$ = require 'jquery'
 lazysizes = require 'lazysizes'
 lsBgset   = require 'lazysizes/plugins/bgset/ls.bgset'
 
@@ -6,4 +7,5 @@ lsBgset   = require 'lazysizes/plugins/bgset/ls.bgset'
 Router    = require './lib/router'
 
 # Start the router
-Router.start()
+$(document).ready ->
+	Router.start()

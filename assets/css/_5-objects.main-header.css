@@ -10,12 +10,24 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: $sizes-header-height-small;
     z-index: 999;
+    transition: background $transition-duration $transition-type, top $transition-duration $transition-type, height $transition-duration $transition-type;
+
+    /* sticky header */
+    &.sticky {
+    	background: $color-bg-black-trans;
+    }
+
+    /* hidden header */
+    &.hide {
+        top: -999px;
+    }
 }
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .header {
+    .wrapper.header {
         height: $sizes-header-height-large;
     }
 }
