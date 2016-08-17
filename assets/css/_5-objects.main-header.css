@@ -21,7 +21,7 @@
 
     /* hidden header */
     &.hide {
-        top: -999px;
+        top: calc($sizes-header-height-small * -1);
     }
 }
 
@@ -29,5 +29,10 @@
 @media (min-width: $bp-tablet-narrow-min) {
     .wrapper.header {
         height: $sizes-header-height-large;
+
+        /* hidden header */
+        &.hide {
+            top: calc($sizes-header-height-large * -1);
+        }
     }
 }
