@@ -16,4 +16,4 @@ $sizes-header-height-large: 70px;
  * transitions
  * ---------------------------------------------------------------------------*/
 $transition-duration: 0.3s;
-$transition-type: ease;
+$transition-type: ease-out;

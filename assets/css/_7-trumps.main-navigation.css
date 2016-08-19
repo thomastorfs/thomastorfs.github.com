@@ -17,6 +17,10 @@
     a {
         display: block;
         color: #fff;
+
+        &:hover {
+            background: $color-bg-dark;
+        }
     }
 }
 
@@ -32,10 +36,6 @@
         a {
             padding: 10px 0;
             margin: 10px 0;
-
-            &:hover {
-                background: $color-bg-dark;
-            }
         }
     }
 
@@ -97,25 +97,30 @@
 @media (max-width: $bp-mobile-wide-max) {
     .nav-toggler {
         position: absolute;
-        top: calc(($sizes-header-height-small / 2) - 23px);
-        right: $gutter;
+        top: 0;
+        right: 0;
         display: block;
         width: auto;
-        height: 45px;
-        padding-right: 40px;
+        height: $sizes-header-height-small;
+        padding: 2px 60px 0 20px;
+        padding-right: 55px;
         font-family: $font-sans-serif;
         text-transform: uppercase;
         text-decoration: none;
-        line-height: 50px;
+        line-height: $sizes-header-height-small;
         color: #fff;
         z-index: 999;
+
+        &:hover {
+            background: $color-bg-dark;
+        }
 
         &:after,
         strong:before,
         strong:after {
             position: absolute;
-            right: 0;
-            top: 12px;
+            right: 15px;
+            top: 19px;
             display: block;
             width: 30px;
             height: 4px;
@@ -125,15 +130,14 @@
         }
         &:after {
             transition-duration: $transition-duration;
-            transition-timing-function: cubic-bezier(0.5, -0.5, 0.25, 1.5);
         }
         strong:before {
-            top: 22px;
+            top: 29px;
             transition: opacity $transition-duration $transition-type;
         }
         strong:after {
-            top: 32px;
-            transition: transform $transition-duration cubic-bezier(0.5, -0.5, 0.25, 1.5);
+            top: 39px;
+            transition-duration: $transition-duration;
         }
     }
 
