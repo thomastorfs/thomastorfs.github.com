@@ -3,8 +3,8 @@ $ = require 'jquery'
 class Navtoggler
     constructor: (selector) ->
         # elements
-        @toggler = $(selector)
-        @body = $('body')
+        @toggler = $ selector
+        @body = $ 'body'
 
         # variables
         @visibleClass = 'nav-visible'

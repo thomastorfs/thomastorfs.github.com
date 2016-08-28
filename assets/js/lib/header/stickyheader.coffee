@@ -4,8 +4,8 @@ throttle = require 'throttle-debounce/throttle'
 class Stickyheader
     constructor: (selector) ->
         # elements
-        @header = $(selector)
-        @w = $(window)
+        @header = $ selector
+        @w = $ window
 
         # variables
         @speed = 300
@@ -17,33 +17,33 @@ class Stickyheader
         @hideClass = 'hide'
 
         # check when scrolling
-        throttle(@speed, @w.scroll(@updateHeaderClasses))
+        throttle @speed, @w.scroll @updateHeaderClasses
 
         # force check upon constructing
         @updateHeaderClasses()
 
     updateHeaderClasses: () =>
         # get the current scroll position
-        scrollPosition = @w.scrollTop();
+        scrollPosition = @w.scrollTop()
 
         # scrolled beyond the minimum scroll position
         if scrollPosition > @minScrollPosition
             # add the sticky class
-            if !@header.hasClass(@stickyClass)
-                @header.addClass(@stickyClass)
+            if !@header.hasClass @stickyClass
+                @header.addClass @stickyClass
 
             # add or remove the hide class
-            if @lastScrollPosition > (@hideScrollPosition + @minHideScroll) && !@header.hasClass(@hideClass)
-                @header.addClass(@hideClass)
+            if @lastScrollPosition > (@hideScrollPosition + @minHideScroll) && !@header.hasClass @hideClass
+                @header.addClass @hideClass
 
             else if scrollPosition < @lastScrollPosition
-                @header.removeClass(@hideClass)
+                @header.removeClass @hideClass
                 @hideScrollPosition = scrollPosition
 
         # returned to top
         else
             # remove the sticky class
-            @header.removeClass(@stickyClass)
+            @header.removeClass @stickyClass
 
         # store the last scroll position
         @lastScrollPosition = scrollPosition

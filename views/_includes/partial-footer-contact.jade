@@ -3,13 +3,13 @@ section.wrapper.footer-contact
         header.section__header
             h1 Want to say hi?
         .content
-            form(name="contact-form", method="post")
+            form(name="contact-form", method="post").contact-form
                 .form-text
                     label Your name
-                    input(type="text", name="title", placeholder="What is your name?")
+                    input(type="text", name="name", placeholder="What is your name?")
                 .form-text
                     label Your e-mail address
-                    input(type="text", name="title", placeholder="What is your email address?")
+                    input(type="text", name="email", placeholder="What is your email address?")
                 .form-text
                     label Your message
                     textarea(name="message", cols="40", rows="5", placeholder="Enter your message.")

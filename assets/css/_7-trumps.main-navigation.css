@@ -19,7 +19,7 @@
         color: #fff;
 
         &:hover {
-            background: $color-bg-dark;
+            background: $color-bg-white-trans-light;
         }
     }
 }
@@ -112,7 +112,7 @@
         z-index: 999;
 
         &:hover {
-            background: $color-bg-dark;
+            background: $color-bg-white-trans-light;
         }
 
         &:after,

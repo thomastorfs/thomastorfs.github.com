@@ -8,6 +8,10 @@
     "url": "https://gitlab.com/thomastorfs/personal-website-v3.git"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-sanitizer": "^1.0.1",
+    "express-validator": "^2.20.8",
     "jquery": "^2.2.4",
     "lazysizes": "^2.0.0",
     "lodash": "^4.13.1",
