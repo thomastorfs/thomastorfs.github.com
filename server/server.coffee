@@ -54,12 +54,12 @@ router.route '/contact-form'
             return
 
         # Sanitize the values using Caja's HTML Sanitizer
-        req.body.name = req.sanitize(req.body.name)
-        req.body.email = req.sanitize(req.body.email)
-        req.body.message = req.sanitize(req.body.message)
+        req.body.name = req.sanitize req.body.name
+        req.body.email = req.sanitize req.body.email
+        req.body.message = req.sanitize req.body.message
 
         # Send the email
-        smtpTransport = nodeMailer.createTransport 'smtps://thomas.torfs@gmail.com:egkyqfljsgalqpmf@smtp.gmail.com'
+        smtpTransport = nodeMailer.createTransport 'smtps://thomas.torfs@gmail.com:egkyqfljsgalqpmf@smtp.gmail.commmm'
 
         mailOptions =
             from: req.body.name + ' <' + req.body.email + '>'
@@ -69,7 +69,6 @@ router.route '/contact-form'
 
         smtpTransport.sendMail mailOptions, (error, info) ->
             if error
-                console.log error
                 res.json { errors: error }
             else
                 res.json { success: true }

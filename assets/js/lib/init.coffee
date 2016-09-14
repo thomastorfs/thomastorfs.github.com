@@ -14,4 +14,4 @@ module.exports = (ctx, next) ->
     new navtoggler('.nav-toggler')
 
     # initialize the contact form
-    new contactform()
+    new contactform('.contact-form')
