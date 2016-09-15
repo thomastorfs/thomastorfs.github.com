@@ -39,11 +39,15 @@ class Contactform
         if element.length
             $msg = $ '<div />', {class: 'message ' + type}
             $msg.html body
+            $msg.hide()
             element.before $msg
+            $msg.slideDown()
 
     removeMessages: () =>
         msgs = @form.find '.message'
-        msgs.remove()
+        msgs.slideUp(() ->
+            $ this remove()
+        )
 
     disableSend: () =>
         @sendBtns.prop 'disabled', true

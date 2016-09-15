@@ -92,3 +92,11 @@
         border-left-color: #393939;
     }
 }
+
+
+/**
+ * inset button
+ * ---------------------------------------------------------------------------*/
+.button--inset {
+    /* specific border style */
+}

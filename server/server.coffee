@@ -38,7 +38,6 @@ router.route '/contact-form'
                 notEmpty: true
                 errorMessage: 'Please enter your name.'
             'email':
-                notEmpty: true
                 isEmail:
                     errorMessage: 'Please enter a valid email address.'
             'message':
@@ -59,7 +58,7 @@ router.route '/contact-form'
         req.body.message = req.sanitize req.body.message
 
         # Send the email
-        smtpTransport = nodeMailer.createTransport 'smtps://thomas.torfs@gmail.com:egkyqfljsgalqpmf@smtp.gmail.commmm'
+        smtpTransport = nodeMailer.createTransport 'smtps://thomas.torfs@gmail.com:egkyqfljsgalqpmf@smtp.gmail.com'
 
         mailOptions =
             from: req.body.name + ' <' + req.body.email + '>'
@@ -72,7 +71,6 @@ router.route '/contact-form'
                 res.json { errors: error }
             else
                 res.json { success: true }
-
 
 # Prefix the routes with /api
 app.use '/api', router

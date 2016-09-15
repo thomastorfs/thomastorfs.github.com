@@ -27,6 +27,9 @@
 /* mobile */
 @media (max-width: $bp-mobile-wide-max) {
     /* hidden by default */
+    .header__nav {
+        height: 0;
+    }
     .primary-navigation {
         position: relative;
         top: -999px;

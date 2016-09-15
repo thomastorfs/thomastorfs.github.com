@@ -1,0 +1,20 @@
+/**
+ * #############################################################################
+ *
+ * Components: Messages
+ *
+ * #############################################################################
+ */
+
+/* default styling */
+.message {
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* error messages */
+.message.error {
+    background: $color-red-lighter;
+    color: $color-red;
+}

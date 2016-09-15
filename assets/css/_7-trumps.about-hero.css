@@ -1,0 +1,121 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Hero on the about page
+ *
+ * #############################################################################
+ */
+
+.hero--about {
+    .inner {
+        padding: 3em 0 2em 0;
+    }
+
+    /* define header whitespace */
+    header {
+        margin-bottom: 2em;
+
+        h1 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    /* make sure the content does not stick against the wall */
+    .content {
+        padding: 0 5%;
+        text-align: justify;
+    }
+
+    /* Position the download on the bottom, always */
+    .download-resume {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        text-align: center;
+    }
+}
+
+/* mobile wide */
+@media (min-width: $bp-mobile-wide-min) {
+    .hero--about {
+        /* put some whitespace around the content */
+        .inner {
+            padding: 4em 0 3em 0;
+        }
+
+        /* more whitespace for the header */
+        header {
+            margin-bottom: 3em;
+        }
+
+        /* make sure the content can breathe */
+        .content {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .hero--about {
+        /* general layout*/
+        position: relative;
+        display: flex;
+        display: -webkit-box;
+        align-content: center;
+        -webkit-box-align: center;
+        min-height: 100%;
+
+        /* remove any whitespace on vertical align */
+        .inner {
+            padding: 0;
+        }
+
+        /* set the text width */
+        header {
+            width: 60%;
+            margin: 0 auto 5em auto;
+        }
+
+        /* the content needs to occupy the width of the page */
+        .content {
+            width: 100% !important;
+        }
+
+        /* adjust the columns */
+        .col {
+            padding: 0 2%;
+        }
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-narrow-min) {
+    .hero--about {
+        /* set the text width */
+        header {
+            width: 45%;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .hero--about {
+        /* again, more whitespace for the header */
+        header {
+            h1 {
+                margin-bottom: 2em;
+            }
+        }
+
+        /* adjust the columns */
+        .col {
+            padding: 0 4%;
+        }
+    }
+}
