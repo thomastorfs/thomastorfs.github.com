@@ -27,7 +27,7 @@ body {
     }
 }
 
-/* tablet narrow */
+/* desktop */
 @media (min-width: $bp-desktop-min) {
     body {
         font-size: 1rem;

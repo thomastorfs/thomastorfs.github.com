@@ -33,8 +33,33 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        padding: 1em 0;
         background: #000;
         text-align: center;
+    }
+
+    /* the love icon */
+    .love {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        padding-left: 0.875em;
+        overflow: hidden;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: 100% !important;
+            margin-top: -0.4em;
+
+            @mixin webfont-icon;
+            content: $icon-heart;
+            color: $color-red;
+            font-size: 0.70em;
+            text-align: center;
+        }
     }
 }
 
@@ -62,6 +87,28 @@
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .hero--about {
+        /* set the text width */
+        header {
+            width: 60%;
+            margin: 0 auto 5em auto;
+        }
+
+        /* the content needs to occupy the width of the page */
+        .content {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* adjust the columns */
+        .col {
+            padding: 0 2%;
+        }
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-wide-min) {
+    .hero--about {
         /* general layout*/
         position: relative;
         display: flex;
@@ -75,27 +122,11 @@
             padding: 0;
         }
 
-        /* set the text width */
-        header {
-            width: 60%;
-            margin: 0 auto 5em auto;
-        }
-
-        /* the content needs to occupy the width of the page */
+        /* clearfix for the content */
         .content {
-            width: 100% !important;
+            overflow: hidden;
         }
 
-        /* adjust the columns */
-        .col {
-            padding: 0 2%;
-        }
-    }
-}
-
-/* tablet wide */
-@media (min-width: $bp-tablet-narrow-min) {
-    .hero--about {
         /* set the text width */
         header {
             width: 45%;

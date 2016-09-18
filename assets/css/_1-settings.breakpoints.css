@@ -17,3 +17,24 @@ $bp-tablet-wide-max: 63.99em;
 $bp-desktop-min: 64em;
 $bp-desktop-max: 79.99em;
 $bp-large-desktop-min: 80em;
+
+/**
+ * Initialize the order of the breakpoints so that the final generated CSS
+ * is rendered in a cascading manner by the browser
+ */
+@media (min-width: $bp-mobile-narrow-min) {}
+@media (min-width: $bp-mobile-narrow-min) and (max-width: $bp-mobile-narrow-max) {}
+@media (max-width: $bp-mobile-narrow-max) {}
+@media (min-width: $bp-mobile-wide-min) {}
+@media (min-width: $bp-mobile-wide-min) and (max-width: $bp-mobile-wide-max) {}
+@media (max-width: $bp-mobile-wide-max) {}
+@media (min-width: $bp-tablet-narrow-min) {}
+@media (min-width: $bp-tablet-narrow-min) and (max-width: $bp-tablet-narrow-max) {}
+@media (max-width: $bp-tablet-narrow-max) {}
+@media (min-width: $bp-tablet-wide-min) {}
+@media (min-width: $bp-tablet-wide-min) and (max-width: $bp-tablet-wide-max) {}
+@media (max-width: $bp-tablet-wide-max) {}
+@media (min-width: $bp-desktop-min) {}
+@media (min-width: $bp-desktop-min) and (max-width: $bp-desktop-max) {}
+@media (max-width: $bp-desktop-max) {}
+@media (min-width: $bp-large-desktop-min) {}
