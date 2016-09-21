@@ -51,4 +51,50 @@
             width: 33.3334%;
         }
     }
+
+    .cols--3__row-first {
+        clear: both;
+    }
+
+    .cols--3__row-last {
+        padding-right: 0;
+    }
+}
+
+/**
+ * Both 2 and 3 columns depending on the width of the page
+ * ---------------------------------------------------------------------------*/
+.cols--2-3 {
+    overflow: hidden;
+
+    .col {
+        width: 100%;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .cols--2-3 {
+        .col {
+            width: 50%;
+        }
+    }
+
+    .cols--2-3__row-1-2 {
+        clear: both;
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-desktop-min) {
+    .cols--2-3 {
+        .col {
+            clear: none;
+            width: 33.3334%;
+        }
+    }
+
+    .cols--2-3__row-1-3 {
+        clear: both !important;
+    }
 }

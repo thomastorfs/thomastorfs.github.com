@@ -1,0 +1,62 @@
+/**
+ * #############################################################################
+ *
+ * Components: Section Text
+ *
+ * #############################################################################
+ */
+
+.section-text {
+    /* header with less bottom padding*/
+    .section__header {
+        h1 {
+            margin-bottom: 32px;
+        }
+    }
+
+    /* intro text */
+    .intro {
+        margin-bottom: 32px;
+        font-size: 0.875rem;
+        line-height: 1.875em;
+        text-align: left;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .section-text {
+        /* header with less bottom padding*/
+        .section__header {
+            h1 {
+                margin-bottom: 55px;
+            }
+        }
+
+        /* intro text */
+        .intro {
+            margin-bottom: 55px;
+            font-size: 1.125rem;
+            text-align: center;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .section-text {
+        /* header with less bottom padding*/
+        .section__header {
+            h1 {
+                margin-bottom: 78px;
+            }
+        }
+
+        /* intro text */
+        .intro {
+            padding: 0 calc($gutter * 2.5);
+            margin-bottom: 78px;
+            font-size: 1.375rem;
+        }
+    }
+}
