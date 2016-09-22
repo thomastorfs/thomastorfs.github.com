@@ -1,0 +1,80 @@
+/**
+ * #############################################################################
+ *
+ * Components: Skillset
+ *
+ * #############################################################################
+ */
+
+.skillgroup {
+    /* hide the title */
+    h2 {
+        display: none;
+    }
+
+    /* spacing */
+    .col {
+        margin: 2em 0;
+    }
+}
+
+.skillset {
+    /* default typography */
+    font-family: $font-sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.875em;
+
+    /* space between single skills */
+    dd {
+        margin-bottom: 3em;
+    }
+
+    /* percentage bar */
+    .perc-bar {
+        position: relative;
+        display: block;
+        background: #fff;
+        height: 5px;
+        width: 0;
+        margin-left: 0;
+        text-indent: 999px;
+        overflow: hidden;
+
+        /* 100% by default */
+        padding-left: 100%;
+    }
+
+    /* different percentages */
+    .perc-bar--90 {
+        padding-left: 90%;
+    }
+    .perc-bar--75 {
+        padding-left: 75%;   
+    }
+    .perc-bar--60 {
+        padding-left: 60%;
+    }
+    .perc-bar--45 {
+        padding-left: 45%;
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .skillgroup {
+        /* spacing between columns */
+        .col {
+            padding: 0 $gutter;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    /* make the group of skills less wide for readability */
+    .skillgroup {
+        padding: 0 calc($gutter * 2);
+    }
+}

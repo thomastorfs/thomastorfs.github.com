@@ -16,3 +16,18 @@
         max-width: $bp-large-desktop-min;
     }
 }
+
+/* with background */
+.wrapper--bg {
+    /* default typography */
+    color: #fff;
+
+    h1, h2, h3, h4, h5 {
+        color: #fff;
+    }
+
+    /* background positioning */
+    background-color: $color-bg-dark;
+    background-position: 50% 50%;
+    background-size: cover;
+}

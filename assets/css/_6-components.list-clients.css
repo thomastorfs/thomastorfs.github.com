@@ -7,11 +7,12 @@
  */
 
 .list-clients {
+    /* default typography */
     font-size: 0.75rem;
     line-height: 2em;
     text-align: justify;
 
-    /* single client styling */
+    /* spacing below a single client */
     .client {
         margin-bottom: 30px;
     }

@@ -32,6 +32,10 @@ router.get '/', (req, res, next) ->
 # Send an email
 router.route '/contact-form'
     .post (req, res, next) ->
+        # TODO:
+        #  - Check for spam with akismet or mollom
+        #  - Manually debounce every x seconds
+
         # Check for errors within the form submission
         req.checkBody(
             'name':

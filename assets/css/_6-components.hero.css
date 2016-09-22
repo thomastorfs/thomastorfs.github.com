@@ -7,6 +7,7 @@
  */
 
 .hero {
+    /* default typography */
     color: #fff;
 
     h1, h2, h3, h4, h5 {
@@ -18,12 +19,9 @@
     }
 }
 
-/* with background */
+/* less vertical spacing on heros with background */
 .hero--bg {
     padding: $sizes-header-height-small 0;
-    background-color: $color-bg-dark;
-    background-position: 50% 50%;
-    background-size: cover;
 }
 
 /* tablet narrow */
@@ -31,6 +29,7 @@
     .hero {
         padding: $sizes-header-height-large 0;
 
+        /* adjust the title size */
         h1 {
             font-size: 2rem;
         }
@@ -40,6 +39,7 @@
 /* desktop */
 @media (min-width: $bp-desktop-min) {
     .hero {
+        /* adjust the title size */
         h1 {
             font-size: 2.75rem;
         }

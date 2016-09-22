@@ -3,7 +3,7 @@ mixin wrapper-with-bg(tag, source, dest, extra_classes)
     - var medium = resize.createImage({source: source, suffix: 'medium', dest: dest, w: 1280, h: 800, crop: true})
     - var small = resize.createImage({source: source, suffix: 'small', dest: dest, w: 960, h: 600, crop: true})
 
-    - var default_classes = 'wrapper lazyload hero hero--bg'
+    - var default_classes = 'wrapper lazyload wrapper--bg'
 
     if extra_classes
         - var classes = default_classes  + ' ' + extra_classes

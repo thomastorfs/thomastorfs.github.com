@@ -94,6 +94,10 @@
         /* make sure the content can breathe */
         .content {
             width: 70%;
+
+            p {
+                padding: 0 $gutter;
+            }
         }
     }
 }
