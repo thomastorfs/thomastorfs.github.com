@@ -1,0 +1,92 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Main article
+ *
+ * #############################################################################
+ */
+
+.article--main {
+    .text {
+        /* add padding */
+        padding: 50px 0;
+
+        /* set the maximum width */
+        max-width: calc($bp-desktop-min / 1.2);
+        margin: 0 auto;
+
+        /* increase the default text size */
+        font-size: 1.2em;
+        line-height: 2em;
+
+        /* headings */
+        h2, h3, h4 {
+            margin: 0;
+            padding: 2.5em 0;
+            letter-spacing: 0.175em;
+            text-align: center;
+
+            /* don't add a top margin on the first one */
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+        h2 {
+            font-size: 1em;
+        }
+        h3 {
+            font-size: 0.875em;
+        }
+        h4 {
+            font-size: 0.75em;
+        }
+
+        /* set the maximum width for paragraphs and headings */
+        p, h2, h3, h4, blockquote {
+            max-width: $bp-tablet-narrow-min;
+            margin: 0 auto;
+        }
+
+        /* make images use the full width */
+        img {
+            width: 100%;
+            height: auto;
+
+            /* add extra vertical padding */
+            padding: 4em 0;
+        }
+    }
+}
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    .article--main {
+        .text {
+            /* increase the padding */
+            padding: 80px 0;
+        }
+    }
+}
+
+/* wide tablet */
+@media (min-width: $bp-tablet-wide-min) {
+    .article--main {
+        .text {
+            /* increase the padding */
+            padding: 120px 0;
+
+            /* increase the text size */
+            font-size: 1.375em;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .article--main {
+        .text {
+            /* increase the padding */
+            padding: 150px 0;
+        }
+    }
+}
