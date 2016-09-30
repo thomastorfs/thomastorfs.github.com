@@ -21,6 +21,9 @@
     h1 {
         font-size: 1.25rem;
     }
+
+    /* black background by default */
+    background-color: #000;
 }
 
 

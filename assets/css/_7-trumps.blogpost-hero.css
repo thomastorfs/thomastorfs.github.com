@@ -16,6 +16,7 @@
     h1 {
         font-size: 2em;
     }
+
     /* subtitle */
     h2 {
         font-size: 1em;
@@ -27,6 +28,7 @@
         }
     }
 
+    /* hide the next button */
     .section__next {
         display: none;
     }
@@ -34,9 +36,11 @@
 
 /* mobile wide */
 @media (min-width: $bp-mobile-wide-min) {
-    /* title */
-    h1 {
-        font-size: 3.25rem;
+    .hero--blogpost {
+        /* title */
+        h1 {
+            font-size: 3.25rem;
+        }
     }
 }
 
@@ -49,6 +53,7 @@
             font-size: 4.5em !important;
         }
 
+        /* show the next button below the text */
         .section__next {
             display: inline-block;
             position: static;
