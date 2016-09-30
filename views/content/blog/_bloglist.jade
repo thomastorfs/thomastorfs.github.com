@@ -1,4 +1,4 @@
-section.wrapper.section-text.section-hero.blog-list
+section.wrapper.section-text.section-hero
     .inner
         header.section__header
             h1 Latest stories
@@ -8,3 +8,23 @@ section.wrapper.section-text.section-hero.blog-list
                 | Below you can find the latest stories, thoughts, new findings, etcetera.<br />
                 | The paint is still wet so for the moment the list has 3 articles.<br />
                 | It will be updated on a regular basis.
+
+        .content
+            if site && site.blog
+                ul.list--blog
+                    - var postcount = site.blog.length
+                    - var showcount = 5
+                    - var i = 0
+
+                    while i < showcount && postcount - i
+                        - post = site.blog[postcount - i - 1]
+                        - post_url = post._url.substr(0, post._url.lastIndexOf('.'))
+                        - i++
+
+                        li
+                            +bglink-full(post_url, 'Read ' + post.title, post.image, post.imageDest)
+                                h2 #{post.title}
+                                p #{post.date} <span class="separator">|</span> #{post.timetoread}
+            else
+                p.center There are currently no blog posts
+

@@ -1,0 +1,14 @@
+include mixin-wrapper-with-bg
+include mixin-content-image
+
+block vars
+
+article.blogpost
+    +wrapper-with-bg('header', imgHeader, imgDest, 'hero hero--bg hero--dualheight hero--blogpost')
+        block header
+
+        .section__next
+
+    .text.wrapper
+        .inner
+            block content

@@ -1,14 +1,14 @@
 extends ../../../_includes/layout-content-project
 
 block vars
-  - var imgHeader = 'views/content/work/aristide/images/toresize.jpg'
-  - var imgDest = 'work/aristide'
+    - var imgHeader = 'views/content/work/aristide/images/toresize.jpg'
+    - var imgDest = 'work/aristide'
 
 block header
-  h1 Aristide
+    h1 Aristide
 
 block content
-  p This is a paragraph from aristide
-  p This is another paragraph
+    p This is a paragraph from aristide
+    p This is another paragraph
 
-  +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')

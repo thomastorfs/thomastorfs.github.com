@@ -1,0 +1,58 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Hero on the blogpost page
+ *
+ * #############################################################################
+ */
+
+.hero--blogpost {
+    .inner {
+        max-width: $max-article-width;
+        text-align: center;
+    }
+
+    /* title */
+    h1 {
+        font-size: 2em;
+    }
+    /* subtitle */
+    h2 {
+        font-size: 1em;
+        font-family: $font-serif;
+        text-transform: none;
+
+        .separator {
+            padding: 0 0.75em;
+        }
+    }
+
+    .section__next {
+        display: none;
+    }
+}
+
+/* mobile wide */
+@media (min-width: $bp-mobile-wide-min) {
+    /* title */
+    h1 {
+        font-size: 3.25rem;
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-wide-min) {
+    .hero--blogpost {
+        /* title */
+        h1 {
+            margin-bottom: 3.5rem;
+            font-size: 4.5em !important;
+        }
+
+        .section__next {
+            display: inline-block;
+            position: static;
+            margin-top: 2.5rem;
+        }
+    }
+}

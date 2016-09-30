@@ -6,6 +6,10 @@
  * #############################################################################
  */
 
+
+/**
+ * default hero
+ * ---------------------------------------------------------------------------*/
 .hero {
     /* default typography */
     color: #fff;
@@ -19,10 +23,6 @@
     }
 }
 
-/* less vertical spacing on heros with background */
-.hero--bg {
-    padding: $sizes-header-height-small 0;
-}
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
@@ -42,6 +42,57 @@
         /* adjust the title size */
         h1 {
             font-size: 2.75rem;
+        }
+    }
+}
+
+
+/**
+ * hero with background
+ * ---------------------------------------------------------------------------*/
+/* less vertical spacing */
+.hero--bg {
+    padding: $sizes-header-height-small 0;
+}
+
+
+/**
+ * hero with different height depending on browser size
+ * ---------------------------------------------------------------------------*/
+.hero--dualheight {
+    /* put some whitespace around the content */
+    .inner {
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+}
+
+/* mobile wide */
+@media (min-width: $bp-mobile-wide-min) {
+    .hero--dualheight {
+        /* put some whitespace around the content */
+        .inner {
+            padding-top: 4em;
+            padding-bottom: 3em;
+        }
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-wide-min) {
+    .hero--dualheight {
+        /* general layout*/
+        position: relative;
+        display: flex;
+        display: -webkit-box;
+        align-content: center;
+        -webkit-box-align: center;
+        min-height: 100vh;
+
+        /* equalize the whitespace on vertical align */
+        .inner {
+            padding-top: 4em;
+            padding-bottom: 4em;
         }
     }
 }

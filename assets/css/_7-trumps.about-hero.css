@@ -7,12 +7,6 @@
  */
 
 .hero--about {
-    /* put some whitespace around the content */
-    .inner {
-        padding-top: 3em;
-        padding-bottom: 2em;
-    }
-
     /* define header whitespace */
     header {
         margin-bottom: 2em;
@@ -80,12 +74,6 @@
 /* mobile wide */
 @media (min-width: $bp-mobile-wide-min) {
     .hero--about {
-        /* put some whitespace around the content */
-        .inner {
-            padding-top: 4em;
-            padding-bottom: 3em;
-        }
-
         /* more whitespace for the header */
         header {
             margin-bottom: 3em;
@@ -127,20 +115,6 @@
 /* tablet wide */
 @media (min-width: $bp-tablet-wide-min) {
     .hero--about {
-        /* general layout*/
-        position: relative;
-        display: flex;
-        display: -webkit-box;
-        align-content: center;
-        -webkit-box-align: center;
-        min-height: 100%;
-
-        /* equalize the whitespace on vertical align */
-        .inner {
-            padding-top: 4em;
-            padding-bottom: 4em;
-        }
-
         /* clearfix for the content */
         .content {
             overflow: hidden;

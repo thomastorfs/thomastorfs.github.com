@@ -1,0 +1,40 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Blogpost listing
+ *
+ * #############################################################################
+ */
+
+.list--blog {
+    .text {
+        height: 180px;
+        padding: 1.5em 0 1em 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* separator */
+    .separator {
+        padding: 0 0.75em;
+    }
+}
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    .list--blog {
+        .text {
+            height: 250px;
+            padding: 2em 0 1.5em 0;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .list--blog {
+        .text {
+            height: 400px;
+            padding: 2.5em 0 2em 0;
+        }
+    }
+}

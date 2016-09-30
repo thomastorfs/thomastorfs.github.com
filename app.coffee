@@ -2,10 +2,11 @@ postcss         = require 'postcss'
 css_pipeline    = require 'css-pipeline'
 browserify      = require 'roots-browserify'
 Resizers        = require './assets/js/lib/image/resizers'
+dynamic         = require 'dynamic-content'
 
 # Configure Roots
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'server/**']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'server/**', 'blog/assets/**']
   debug: true
   server:
     clean_urls: true
@@ -19,7 +20,8 @@ module.exports =
       out: 'js/app.js',
       sourceMap: true
     ),
-    css_pipeline(files: ['assets/css/app.css', 'content/**/*.css'], postcss: true)
+    css_pipeline(files: ['assets/css/app.css', 'content/**/*.css'], postcss: true),
+    dynamic()
   ]
   postcss:
     use: [

@@ -4,10 +4,11 @@ uglifyjs     = require 'uglify-js'
 browserify   = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
 Resizers     = require './assets/js/lib/image/resizers'
+dynamic      = require 'dynamic-content'
 
 # Configure Roots
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'server/**']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'server/**', 'blog/assets/**']
   server:
     clean_urls: true
   open_browser: false
@@ -18,7 +19,8 @@ module.exports =
       files: 'assets/js/main.coffee',
       out: 'js/app.js'
     ),
-    css_pipeline(files: ['assets/css/app.css', 'views/**/*.css'], postcss: true)
+    css_pipeline(files: ['assets/css/app.css', 'views/**/*.css'], postcss: true),
+    dynamic()
   ]
   postcss:
     use: [
