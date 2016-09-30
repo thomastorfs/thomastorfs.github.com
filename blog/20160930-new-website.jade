@@ -12,15 +12,31 @@ _content: false
 extends ../views/_includes/layout-blogpost
 
 block vars
-    - var imgHeader = 'blog/assets/20160930-new-website/images/hero.jpg'
+    - var imgSrc = 'blog/assets/20160930-new-website/images/'
     - var imgDest = 'blog/20160930-new-website'
+    - var imgHeader = imgSrc + 'hero.jpg'
 
 block header
     h1 Torfs Media has launched
-    h2 30 September 2016 <span class="separator">|</span> 2 minute read
+    p.meta 30 September 2016 <span class="separator">|</span> 2 minute read
 
 block content
-    p This is a paragraph from aristide
-    p This is another paragraph
+    h2 Lorem ipsum dolor
 
-    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+    p Vivamus eu hendrerit turpis. Vivamus in mi id leo pellentesque eleifend id in massa. Morbi commodo nunc ultricies metus dapibus tristique. Donec faucibus neque et pulvinar vestibulum. Curabitur vel varius leo, sagittis mattis ante. Donec at nisi arcu. Integer in porta erat.
+
+    p Nulla ac felis vel nisl auctor lobortis vitae a metus. Cras arcu elit, faucibus non posuere non, ultricies vitae magna. Maecenas a lobortis arcu, rutrum tempus ligula. Aenean placerat elit ac enim rhoncus commodo. Curabitur luctus fringilla accumsan.
+
+    h3 Lorem ipsum dolor
+
+    p Vivamus eu hendrerit turpis. Vivamus in mi id leo pellentesque eleifend id in massa. Morbi commodo nunc ultricies metus dapibus tristique. Donec faucibus neque et pulvinar vestibulum. Curabitur vel varius leo, sagittis mattis ante. Donec at nisi arcu. Integer in porta erat.
+
+    p Nulla ac felis vel nisl auctor lobortis vitae a metus. Cras arcu elit, faucibus non posuere non, ultricies vitae magna. Maecenas a lobortis arcu, rutrum tempus ligula. Aenean placerat elit ac enim rhoncus commodo. Curabitur luctus fringilla accumsan.
+
+    h4 Lorem ipsum dolor
+
+    p Vivamus eu hendrerit turpis. Vivamus in mi id leo pellentesque eleifend id in massa. Morbi commodo nunc ultricies metus dapibus tristique. Donec faucibus neque et pulvinar vestibulum. Curabitur vel varius leo, sagittis mattis ante. Donec at nisi arcu. Integer in porta erat.
+
+    p Nulla ac felis vel nisl auctor lobortis vitae a metus. Cras arcu elit, faucibus non posuere non, ultricies vitae magna. Maecenas a lobortis arcu, rutrum tempus ligula. Aenean placerat elit ac enim rhoncus commodo. Curabitur luctus fringilla accumsan.
+
+    +content-image(imgSrc + 'dummy.jpg', imgDest, 'Alt text', 'Title text')
