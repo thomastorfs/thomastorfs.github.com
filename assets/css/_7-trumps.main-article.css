@@ -9,7 +9,7 @@
 .article--main {
     .text {
         /* add padding */
-        padding: 50px 0;
+        padding: 70px 0;
 
         /* set the maximum width */
         max-width: calc($bp-desktop-min / 1.2);
@@ -41,6 +41,11 @@
             font-size: 0.75em;
         }
 
+        /* add padding to the paragraphs, more reliable than margins */
+        p {
+            padding-bottom: 2em;
+        }
+
         /* set the maximum width for paragraphs and headings */
         p, h2, h3, h4, blockquote {
             max-width: $bp-tablet-narrow-min;
@@ -63,7 +68,7 @@
     .article--main {
         .text {
             /* increase the padding */
-            padding: 80px 0;
+            padding: 90px 0;
         }
     }
 }
