@@ -6,6 +6,7 @@ Resizers        = require './assets/js/lib/image/resizers'
 # Configure Roots
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'server/**']
+  debug: true
   server:
     clean_urls: true
   locals:

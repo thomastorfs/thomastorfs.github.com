@@ -7,6 +7,9 @@
  */
 
 .list-clients {
+    /* add spacing at the top */
+    padding-top: 32px;
+
     /* default typography */
     font-size: 0.75rem;
     line-height: 2em;
@@ -14,28 +17,30 @@
 
     /* spacing below a single client */
     .client {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     /* client logo */
-    .logo {
-        position: relative;
-        height: 2em;
-        padding-left: 100%;
-        margin-bottom: 25px;
-        text-indent: 999px;
-        overflow: hidden;
+    h1 {
+        /* general layout*/
+        height: 80px;
+        text-align: center;
+        font-size: 3.5em;
 
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 2em;
-            background: #ccc;
-            content: " ";
+        /* text only */
+        &.text {
+            display: flex;
+            display: -webkit-box;
+            align-content: flex-end;
+            -webkit-box-align: end;
+            justify-content: center;
         }
+    }
+    img {
+        display: block;
+        max-width: 200px;
+        max-height: 80px;
+        margin: 0 auto;
     }
 
     /* job title */
@@ -73,6 +78,16 @@
         /* add padding on the sides */
         .client {
             padding: 0 $gutter;
+        }
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-wide-min) {
+    .list-clients {
+        /* spacing below a single client */
+        .client {
+            margin-bottom: 30px;
         }
     }
 }
