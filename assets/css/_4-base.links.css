@@ -1,0 +1,11 @@
+/**
+ * #############################################################################
+ *
+ * Base: Links
+ *
+ * #############################################################################
+ */
+
+a {
+    transition: color $transition-duration $transition-type, background $transition-duration $transition-type;
+}

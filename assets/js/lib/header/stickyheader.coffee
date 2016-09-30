@@ -14,6 +14,7 @@ class Stickyheader
         @minHideScroll = 200
         @hideScrollPosition = 0
         @stickyClass = 'sticky'
+        @topClass = 'top'
         @hideClass = 'hide'
 
         # check when scrolling
@@ -31,6 +32,7 @@ class Stickyheader
             # add the sticky class
             if !@header.hasClass @stickyClass
                 @header.addClass @stickyClass
+                @header.removeClass @topClass
 
             # add or remove the hide class
             if @lastScrollPosition > (@hideScrollPosition + @minHideScroll) && !@header.hasClass @hideClass
@@ -44,6 +46,7 @@ class Stickyheader
         else
             # remove the sticky class
             @header.removeClass @stickyClass
+            @header.addClass @topClass
 
         # store the last scroll position
         @lastScrollPosition = scrollPosition

@@ -43,7 +43,7 @@
     }
 
     /* when the navigation is visible */
-    .nav-visible {
+    .nav--visible {
         /* prevent scrolling of the body */
         overflow: hidden;
 
@@ -90,6 +90,20 @@
             margin-left: 20%;
         }
     }
+
+    /* dark header */
+    .header--dark.top {
+        .primary-navigation {
+            a {
+                color: $color-font;
+
+                &:hover {
+                    background: $color-bg-black-trans;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 
@@ -118,6 +132,7 @@
             background: $color-bg-white-trans-light;
         }
 
+        /* the hamburger */
         &:after,
         strong:before,
         strong:after {
@@ -136,7 +151,7 @@
         }
         strong:before {
             top: 29px;
-            transition: opacity $transition-duration $transition-type;
+            transition: opacity $transition-duration $transition-type, background $transition-duration $transition-type;
         }
         strong:after {
             top: 39px;
@@ -145,7 +160,7 @@
     }
 
     /* when the navigation is visible */
-    .nav-visible {
+    .nav--visible {
         .nav-toggler {
             &:after {
                 transform: translate3d(0, 10px, 0) rotate(135deg);
@@ -155,6 +170,34 @@
             }
             strong:after {
                 transform: translate3d(0, -10px, 0) rotate(-135deg);
+            }
+        }
+    }
+
+    /* dark header with hidden navigation */
+    .nav--hidden {
+        .header--dark.top {
+            .nav-toggler {
+                color: $color-font;
+
+                &:hover {
+                    background: $color-bg-black-trans;
+                    color: #fff;
+
+                    /* the hamburger */
+                    &:after,
+                    strong:before,
+                    strong:after {
+                        background: #fff;
+                    }
+                }
+
+                /* the hamburger */
+                &:after,
+                strong:before,
+                strong:after {
+                    background: $color-font;
+                }
             }
         }
     }

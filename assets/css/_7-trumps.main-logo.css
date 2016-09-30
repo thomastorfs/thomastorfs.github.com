@@ -14,9 +14,6 @@
     height: 0;
     z-index: 999;
 
-    fill: #fff;
-    transition: fill 5s ease 0s;
-
     a {
         display: block;
         height: $sizes-header-height-small;
@@ -27,6 +24,19 @@
     svg {
         width: 100%;
         height: 100%;
+
+        /* make it white */
+        fill: #fff;
+        transition: fill $transition-duration ease 0s;
+    }
+}
+
+/* dark header */
+.header--dark.top {
+    .main-logo {
+        svg {
+            fill: $color-font;
+        }
     }
 }
 
