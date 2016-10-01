@@ -3,6 +3,10 @@ css_pipeline    = require 'css-pipeline'
 browserify      = require 'roots-browserify'
 Resizers        = require './assets/js/lib/image/resizers'
 dynamic         = require 'dynamic-content'
+DataController  = require './assets/js/lib/datacontroller'
+
+# Instantiate the model
+dataController = new DataController
 
 # Configure Roots
 module.exports =
@@ -12,6 +16,7 @@ module.exports =
     clean_urls: true
   locals:
     resize: new Resizers
+    blogposts: dataController.getBlogPosts()
   jade:
     pretty: true
   extensions: [

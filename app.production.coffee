@@ -5,6 +5,10 @@ browserify      = require 'roots-browserify'
 css_pipeline    = require 'css-pipeline'
 Resizers        = require './assets/js/lib/image/resizers'
 dynamic         = require 'dynamic-content'
+DataController  = require './assets/js/lib/datacontroller'
+
+# Instantiate the model
+model = new Model
 
 # Configure Roots
 module.exports =
@@ -14,6 +18,7 @@ module.exports =
   open_browser: false
   locals:
     resize: new Resizers
+    blogposts: dataController.getBlogPosts()
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',
