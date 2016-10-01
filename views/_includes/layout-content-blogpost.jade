@@ -12,3 +12,8 @@ article.article--main.blogpost
     .text.wrapper
         .inner
             block content
+
+if site.blog.length > 2
+    include partial-blogpost-nav-prevnext
+else
+    include partial-want-more

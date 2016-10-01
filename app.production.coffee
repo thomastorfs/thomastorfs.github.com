@@ -1,10 +1,10 @@
-fs           = require 'fs'
-postcss      = require 'postcss'
-uglifyjs     = require 'uglify-js'
-browserify   = require 'roots-browserify'
-css_pipeline = require 'css-pipeline'
-Resizers     = require './assets/js/lib/image/resizers'
-dynamic      = require 'dynamic-content'
+fs              = require 'fs'
+postcss         = require 'postcss'
+uglifyjs        = require 'uglify-js'
+browserify      = require 'roots-browserify'
+css_pipeline    = require 'css-pipeline'
+Resizers        = require './assets/js/lib/image/resizers'
+dynamic         = require 'dynamic-content'
 
 # Configure Roots
 module.exports =

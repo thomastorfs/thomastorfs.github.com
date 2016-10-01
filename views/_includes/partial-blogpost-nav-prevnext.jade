@@ -1,0 +1,43 @@
+include mixin-bglink-full
+
+section.blogpost-prevnext.wrapper
+    header.section__header
+        h1 Blog navigation
+    .content
+        //- Find the current post in the blog array
+        - var currentPostIndex = 0
+        - var postCount = site.blog.length
+        - var i = 0
+
+        - each post, i in site.blog
+            - if (post._url === locals.post._url)
+                - currentPostIndex = i
+                - break
+
+        //- Get the next and previous blogpost
+        - var nextPostIndex = i + 1
+        - var previousPostIndex = i - 1
+
+        //- Check for boundaries and correct the post indices
+        - if (nextPostIndex > (postCount - 1))
+            - nextPostIndex = 0
+        - if (previousPostIndex < 0)
+            - previousPostIndex = postCount - 1
+
+        //- Store the previous and next blogpost in a variable for readability
+        - var previousPost = site.blog[previousPostIndex]
+        - var nextPost = site.blog[nextPostIndex]
+
+        //- Prepare the URL's for both the previous and next post
+        - var previousPostUrl = previousPost._url.substr(0, previousPost._url.lastIndexOf('.'))
+        - var nextPostUrl = nextPost._url.substr(0, nextPost._url.lastIndexOf('.'))
+
+        ul
+            li.first
+                +bglink-full(previousPostUrl, 'Read ' + previousPost.title, previousPost.image, previousPost.imageDest)
+                    h2 #{previousPost.title}
+                    p.meta #{previousPost.dateFull} <span class="separator">|</span> #{previousPost.timetoread}
+            li.last
+                +bglink-full(nextPostUrl, 'Read ' + nextPost.title, nextPost.image, nextPost.imageDest)
+                    h2 #{nextPost.title}
+                    p.meta #{nextPost.dateFull} <span class="separator">|</span> #{nextPost.timetoread}

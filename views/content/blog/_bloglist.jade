@@ -12,19 +12,17 @@ section.wrapper.section-text.section-hero
         .content
             if site && site.blog
                 ul.list--blog
-                    - var postcount = site.blog.length
-                    - var showcount = 5
-                    - var i = 0
+                    - var showCount = 5
 
-                    while i < showcount && postcount - i
-                        - post = site.blog[postcount - i - 1]
+                    - each post, i in site.blog
                         - post_url = post._url.substr(0, post._url.lastIndexOf('.'))
-                        - i++
+                        - if (i > showCount) break
 
                         li
                             +bglink-full(post_url, 'Read ' + post.title, post.image, post.imageDest)
                                 h2 #{post.title}
-                                p.meta #{post.date} <span class="separator">|</span> #{post.timetoread}
+                                p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
+                                .button.button--white Read more
             else
                 p.center There are currently no blog posts
 
