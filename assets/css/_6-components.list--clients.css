@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.list-clients {
+.list--clients {
     /* add spacing at the top */
     padding-top: 32px;
 
@@ -74,7 +74,7 @@
 
 /* mobile wide */
 @media (min-width: $bp-mobile-wide-min) {
-    .list-clients {
+    .list--clients {
         /* add padding on the sides */
         .client {
             padding: 0 $gutter;
@@ -84,7 +84,7 @@
 
 /* tablet wide */
 @media (min-width: $bp-tablet-wide-min) {
-    .list-clients {
+    .list--clients {
         /* spacing below a single client */
         .client {
             margin-bottom: 30px;

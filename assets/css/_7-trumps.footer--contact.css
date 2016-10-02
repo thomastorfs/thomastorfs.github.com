@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.footer-contact {
+.footer--contact {
     /* dark background */
     background: $color-grey-dark;
 
@@ -49,7 +49,7 @@
 
 /* narrow tablet */
 @media (min-width: $bp-tablet-narrow-min) {
-    .footer-contact {
+    .footer--contact {
         /* small top padding */
         padding-top: 80px;
 
@@ -64,7 +64,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .footer-contact {
+    .footer--contact {
         /* medium top padding */
         padding-top: 90px;
 

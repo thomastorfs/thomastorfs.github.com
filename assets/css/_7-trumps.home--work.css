@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.home-work {
+.home--work {
     /* less bottom padding */
     padding-bottom: $gutter;
 
@@ -39,7 +39,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .home-work {
+    .home--work {
         /* position the text at the top on the left columns */
         .cols__row-first {
             .text {
@@ -65,7 +65,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .home-work {
+    .home--work {
         /* larger bottom padding */
         padding-bottom: calc($gutter * 2);
 

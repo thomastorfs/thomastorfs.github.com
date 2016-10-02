@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.main-logo {
+.logo--main {
     position: absolute;
     top: 0;
     left: $gutter;
@@ -33,7 +33,7 @@
 
 /* dark header */
 .header--dark.top {
-    .main-logo {
+    .logo--main {
         svg {
             fill: $color-font;
         }
@@ -42,7 +42,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .main-logo {
+    .logo--main {
         left: 0;
 
         a {
@@ -56,7 +56,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .main-logo {
+    .logo--main {
         a {
             padding: calc(($sizes-header-height-large - 40px) / 2);
         }

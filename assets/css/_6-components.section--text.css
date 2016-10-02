@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.section-text {
+.section--text {
     /* header with less bottom padding*/
     .section__header {
         h1 {
@@ -30,7 +30,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .section-text {
+    .section--text {
         /* header with less bottom padding*/
         .section__header {
             h1 {
@@ -54,7 +54,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .section-text {
+    .section--text {
         /* header with less bottom padding*/
         .section__header {
             h1 {

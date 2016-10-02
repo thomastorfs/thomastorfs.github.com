@@ -9,7 +9,7 @@
 /**
  * primary navigation
  * ---------------------------------------------------------------------------*/
-.primary-navigation {
+.nav--primary {
     li {
         text-align: center;
     }
@@ -30,7 +30,7 @@
     .header__nav {
         height: 0;
     }
-    .primary-navigation {
+    .nav--primary {
         position: relative;
         top: -999px;
         padding-top: $sizes-header-height-small;
@@ -61,7 +61,7 @@
         }
 
         /* show the navigation */
-        .primary-navigation {
+        .nav--primary {
             top: 0;
         }
     }
@@ -69,7 +69,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .primary-navigation {
+    .nav--primary {
         display: block;
         overflow: hidden;
         margin: 0 auto;
@@ -93,7 +93,7 @@
 
     /* dark header */
     .header--dark.top {
-        .primary-navigation {
+        .nav--primary {
             a {
                 color: $color-font;
 
