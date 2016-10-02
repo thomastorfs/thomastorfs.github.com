@@ -13,7 +13,7 @@
     > .inner {
         margin: 0 auto;
         padding: 0 $gutter;
-        max-width: $bp-large-desktop-min;
+        max-width: $bp-desktop-large-min;
     }
 }
 

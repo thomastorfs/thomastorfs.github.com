@@ -39,7 +39,7 @@
     /* set margin and line-height for paragraphs */
     p {
         margin: 0;
-        padding: 1em 0 0 0;
+        padding: 0.75em 0 0 0;
         line-height: 1.2em;
     }
 

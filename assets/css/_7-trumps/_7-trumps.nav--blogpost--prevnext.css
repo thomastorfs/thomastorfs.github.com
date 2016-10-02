@@ -17,7 +17,7 @@
 
     /* set the link height */
     .bglink {
-        height: 180px;
+        height: 200px;
     }
 }
 
@@ -129,7 +129,7 @@
 
         /* set the link height */
         .bglink {
-            height: 250px;
+            height: 300px;
         }    
     }
 }
@@ -145,7 +145,6 @@
 
                     &:before {
                         right: 80px;
-                        content: $icon-arrow-left;
                     }
                 }
 
@@ -161,7 +160,6 @@
 
                     &:before {
                         left: 80px;
-                        content: $icon-arrow-right;
                     }
                 }
 
@@ -175,7 +173,17 @@
 
         /* set the link height */
         .bglink {
-            height: 350px;
+            height: 400px;
+        }    
+    }
+}
+
+/* large desktop */
+@media (min-width: $bp-desktop-large-min) {
+    .nav--blogpost--prevnext {
+        /* set the link height */
+        .bglink {
+            height: 500px;
         }    
     }
 }

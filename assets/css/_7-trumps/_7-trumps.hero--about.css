@@ -145,7 +145,7 @@
 }
 
 /* large desktop */
-@media (min-width: $bp-large-desktop-min) {
+@media (min-width: $bp-desktop-large-min) {
     .hero--about {
         /* adjust the columns */
         .col:first-child {

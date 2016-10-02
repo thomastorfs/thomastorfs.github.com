@@ -16,7 +16,7 @@ $bp-tablet-wide-min: 50em;
 $bp-tablet-wide-max: 63.99em;
 $bp-desktop-min: 64em;
 $bp-desktop-max: 79.99em;
-$bp-large-desktop-min: 80em;
+$bp-desktop-large-min: 80em;
 
 /**
  * Initialize the order of the breakpoints so that the final generated CSS
@@ -37,4 +37,4 @@ $bp-large-desktop-min: 80em;
 @media (min-width: $bp-desktop-min) {}
 @media (min-width: $bp-desktop-min) and (max-width: $bp-desktop-max) {}
 @media (max-width: $bp-desktop-max) {}
-@media (min-width: $bp-large-desktop-min) {}
+@media (min-width: $bp-desktop-large-min) {}
