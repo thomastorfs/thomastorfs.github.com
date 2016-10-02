@@ -99,7 +99,7 @@
 .button--white {
     /* dark font */
     color: $color-font;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, .3);
+    text-shadow: 1px 1px 0 #fff;
 
     /* specific border style */
     border-style: solid;
