@@ -3,12 +3,29 @@ extends ../../../_includes/layout-content-project
 block vars
     - var imgHeader = 'views/content/work/aristide/images/toresize.jpg'
     - var imgDest = 'work/aristide'
-
-block header
-    h1 Creating a new way to order samples
+    - var title = 'Creating a new way to order samples'
+    - var client = 'Aristide | while employed at Open Up Media'
+    - var job = 'All programming and technical conversion'
 
 block content
-    p This is a paragraph from aristide
-    p This is another paragraph
+
+    h2 The story
+
+    p Aristide went from a rather simple to a full-blown interactive website in a rather short period of time. This is in fact the 3rd iteration of the website. And it still uses the same data and functionality as the first iteration, all thanks to the flexibility that Drupal has to offer.
+
+    p The original version, which we also created, looked like this.
 
     +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+
+    p And at Open Up Media we transformed it into this.
+
+    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+
+    p Funny thing about this all is that despite being a bit less creative the site has become much more usable. It has become much easier to navigate. Moreover, for the first time it can also be used on smartphones, which means that you now can order samples right from your phone.
+
+    h2 Technical details
+
+    p The website was built on Drupal 7 using various contrib and custom written modules. I also made extensive use of jQuery and wrote a couple custom libraries that helped us deliver the final product. Front-end theming was done using the Open Up Media base theme called Breeze, which uses SASS for CSS compilation.
+
+    p.center
+        a.button.button_black(href='http://www.aristide.be', target='_blank') Visit the new website

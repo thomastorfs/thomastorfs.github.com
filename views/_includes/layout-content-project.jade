@@ -5,9 +5,17 @@ block vars
 
 article.article--main.project
     +wrapper-with-bg('header', imgHeader, imgDest, 'hero hero--bg hero--dualheight hero--title hero--project')
-        block header
+        h1 #{title}
 
         .section__next
+
+    .project__info
+        dl.project__info__who
+            dt.project__info__title Who was it for?
+            dd.project__info__desc #{client}
+        dl.project__info__what
+            dt.project__info__title What did I do?
+            dd.project__info__desc #{job}
 
     .text.wrapper
         .inner
