@@ -14,14 +14,14 @@
  *
  * Global variables and config switches
  * ---------------------------------------------------------------------------*/
-@import "_1-settings.*";
+@import "_1-settings/_1-settings.*";
 
 /**
  * Tools
  *
  * Default mixins and functions
  * ---------------------------------------------------------------------------*/
-@import "_2-tools.*";
+@import "_2-tools/_2-tools.*";
 
 /**
  * Generic
@@ -29,32 +29,32 @@
  * Ground-zero styles
  * ---------------------------------------------------------------------------*/
 @import "vendor/normalize";
-@import "_3-generic.*";
+@import "_3-generic/_3-generic.*";
 
 /**
  * Base
  *
  * HTML elements and generic structure classed elements
  * ---------------------------------------------------------------------------*/
-@import "_4-base.*";
+@import "_4-base/_4-base.*";
 
 /**
  * Objects
  *
  * Classed objects (cosmetic-free design patterns)
  * ---------------------------------------------------------------------------*/
-@import "_5-objects.*";
+@import "_5-objects/_5-objects.*";
 
 /**
  * Components
  *
  * Designed pieces of UI
  * ---------------------------------------------------------------------------*/
-@import "_6-components.*";
+@import "_6-components/_6-components.*";
 
 /**
  * Trumps
  *
  * Specific single individual pieces, helpers and overrides
  * ---------------------------------------------------------------------------*/
-@import "_7-trumps.*";
+@import "_7-trumps/_7-trumps.*";

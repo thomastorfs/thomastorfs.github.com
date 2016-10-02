@@ -47,7 +47,7 @@
 /* desktop */
 @media (min-width: $bp-desktop-min) {
     /* large button and font size */
-    .button--large {
+    .button_large {
         padding: 19px 21px;
         border-radius: 5px;
         font-size: 1.625rem;
@@ -58,7 +58,7 @@
 /**
  * red button
  * ---------------------------------------------------------------------------*/
-.button--red {
+.button_red {
     /* specific border style */
     border-style: solid;
     border-width: 1px;
@@ -96,7 +96,7 @@
 /**
  * white button
  * ---------------------------------------------------------------------------*/
-.button--white {
+.button_white {
     /* dark font */
     color: $color-font;
     text-shadow: 1px 1px 0 #fff;
@@ -127,7 +127,7 @@
 /**
  * inset button
  * ---------------------------------------------------------------------------*/
-.button--inset {
+.button_inset {
     /* specific border style */
     border-style: solid;
     border-width: 1px;
@@ -194,7 +194,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .button--large.icon {
+    .button_large.icon {
         padding-left: 63px !important;
 
         &:before {
