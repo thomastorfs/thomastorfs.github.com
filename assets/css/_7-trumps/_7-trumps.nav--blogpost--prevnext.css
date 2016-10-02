@@ -1,0 +1,181 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Blogpost previous / next navigation
+ *
+ * #############################################################################
+ */
+
+.nav--blogpost--prevnext {
+    /* remove all padding */
+    padding: 0 !important;
+
+    /* hide the header */
+    header {
+        display: none;
+    }
+
+    /* set the link height */
+    .bglink {
+        height: 180px;
+    }
+}
+
+/* wide mobile */
+@media (min-width: $bp-mobile-wide-min) {
+    .nav--blogpost--prevnext {
+        /* add the icon */
+        .text {
+            position: relative;
+            padding: 0 70px;
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
+                @mixin webfont-icon;
+                color: #fff;
+                font-size: 40px;
+
+                /* add the animation */
+                transition: transform $transition-duration $transition-type;
+            }
+        }
+
+        /* position the icon and animate on hover */
+        li {
+            &:first-child {
+                .text {
+                    &:before {
+                        left: 30px;
+                        content: $icon-arrow-left;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        &:before {
+                            transform: translateX(-10px);
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                .text {
+                    &:before {
+                        right: 30px;
+                        content: $icon-arrow-right;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        &:before {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    .nav--blogpost--prevnext {
+        /* let the text breathe */
+        .text {
+            position: relative;
+            transition: padding $transition-duration $transition-type, background $transition-duration $transition-type;
+        }
+
+        /* align and animate the text and icon */
+        li {
+            &:first-child {
+                .text {
+                    padding: 0 80px 0 0;
+                    text-align: right;    
+
+                    &:before {
+                        left: auto;
+                        right: 20px;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        padding: 0 90px 0 0;
+                    }
+                }
+            }
+            &:last-child {
+                .text {
+                    padding: 0 0 0 80px;
+                    text-align: left;
+
+                    &:before {
+                        right: auto;
+                        left: 20px;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        padding: 0 0 0 90px;
+                    }
+                }
+            }
+        }
+
+        /* set the link height */
+        .bglink {
+            height: 250px;
+        }    
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .nav--blogpost--prevnext {
+        /* align and animate the text and icon */
+        li {
+            &:first-child {
+                .text {
+                    padding: 0 150px 0 0;
+
+                    &:before {
+                        right: 80px;
+                        content: $icon-arrow-left;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        padding: 0 170px 0 0;
+                    }
+                }
+            }
+            &:last-child {
+                .text {
+                    padding: 0 0 0 150px;
+
+                    &:before {
+                        left: 80px;
+                        content: $icon-arrow-right;
+                    }
+                }
+
+                a:hover {
+                    .text {
+                        padding: 0 0 0 170px;
+                    }
+                }
+            }
+        }
+
+        /* set the link height */
+        .bglink {
+            height: 350px;
+        }    
+    }
+}
