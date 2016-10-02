@@ -99,3 +99,100 @@
         }
     }
 }
+
+
+/**
+ * hero as a title
+ * ---------------------------------------------------------------------------*/
+.hero--title {
+    .inner {
+        position: relative;
+        max-width: 85%;
+        text-align: center;
+        z-index: 3;
+    }
+
+    /* title */
+    h1 {
+        margin: 0;
+        font-size: 2em;
+    }
+
+    /* meta information */
+    .meta {
+        margin: 1em 0 0 0;
+    }
+
+    /* separator */
+    .separator {
+        padding: 0 0.75em;
+    }
+
+    /* add horizontal spacing to the separator */
+    .section__next {
+        display: none;
+    }
+
+    /* add a background overlay */
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.6;
+        content: ' ';
+        z-index: 2;
+    }
+
+}
+
+/* mobile wide */
+@media (min-width: $bp-mobile-wide-min) {
+    .hero--title {
+        /* title */
+        h1 {
+            font-size: 2.75em;
+        }
+    }
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .hero--title {
+        /* title */
+        h1 {
+            font-size: 3.25em;
+        }
+    }
+}
+
+/* tablet wide */
+@media (min-width: $bp-tablet-wide-min) {
+    .hero--title {
+        /* title */
+        h1 {
+            margin-bottom: 3rem;
+            font-size: 4.5em !important;
+        }
+
+        /* show the next button below the text */
+        .section__next {
+            display: inline-block;
+            position: static;
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    /* make the title more readable */
+    .hero--title {
+        .inner {
+            max-width: $bp-desktop-min;
+        }
+    }
+}

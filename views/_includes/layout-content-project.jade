@@ -3,9 +3,11 @@ include mixin-content-image
 
 block vars
 
-article.project
-    +wrapper-with-bg('header', imgHeader, imgDest, 'hero--project')
+article.article--main.project
+    +wrapper-with-bg('header', imgHeader, imgDest, 'hero hero--bg hero--dualheight hero--title hero--project')
         block header
+
+        .section__next
 
     .text.wrapper
         .inner
