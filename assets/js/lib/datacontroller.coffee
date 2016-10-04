@@ -6,30 +6,41 @@ path        = require 'path'
 # Create our Model class
 class DataController
     getBlogPosts: ->
-        posts = []
+        posts = @getDirectoryEntries 'blog'
 
+    getProjects: ->
+        projects = @getDirectoryEntries 'work'
+
+    getDirectoryEntries: (directory, files = []) =>
         # Read all files
-        files = fs.readdirSync 'blog'
+        entries = fs.readdirSync directory
 
-        # Process each one individually
-        _.each files, (file, index) ->
+        # Process each entry individually
+        _.each entries, (entry, index) =>
             # Get the full path
-            filePath = path.join('blog/', file)
+            filePath = path.join(directory, entry)
 
-            # If the path is a file
+            # What kind of entry is it?
             fileStat = fs.statSync(filePath)
-            if fileStat.isFile()
+
+            # Process an individual file
+            if fileStat.isFile() && path.extname(entry) == '.jade'
                 # Read it
-                post = fs.readFileSync(filePath, 'utf8')
+                file = fs.readFileSync(filePath, 'utf8')
 
-                # And add the front-matter data to the posts array, with URL
-                postData = fm post
-                postData.attributes._url = path.join('/', filePath.substr(0, filePath.lastIndexOf('.')))
-                posts.push postData.attributes
+                # And add the front-matter data to the files array, with URL
+                fileData = fm file
+                fileData.attributes._url = path.join('/', filePath.substr(0, filePath.lastIndexOf('.')))
+                files.push postData.attributes
 
-        # Sort the posts by descending date
-        posts = _.sortBy(posts, 'date').reverse()
+            # Process a directory
+            else if fileStat.isDirectory()
+                # Traverse the newly found directory
+                files = @getDirectoryEntries filePath, files
 
-        return posts
+        # Sort the files by descending date
+        files = _.sortBy(files, 'date').reverse()
+
+        return files
 
 module.exports = DataController
