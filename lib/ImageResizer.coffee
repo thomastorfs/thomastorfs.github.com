@@ -4,7 +4,7 @@ path    = require 'path'
 Jimp    = require 'jimp'
 mkdirp  = require 'mkdirp'
 
-class Resizers
+class ImageResizer
     createImage: (opts) ->
         # Complete the config with defaults where necessary.
         options = _.defaults(opts, {
@@ -46,4 +46,4 @@ class Resizers
 
         return dest
 
-module.exports = Resizers
+module.exports = ImageResizer

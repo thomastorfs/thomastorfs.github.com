@@ -3,36 +3,72 @@ section.wrapper.home--work
         header.section__header
             h1 My work
         .content
-            ul.cols
-                li.first.col.cols__row-first
-                    +bglink-cols-2('/work/aristide', 'See how Aristide was made', 'views/content/home/images/portfolio-aristide.jpg', 'home')
-                        h2 Aristide
-                        p webdevelopment
-                li.col.cols__row-last
-                    +bglink-cols-2('/work/ae', 'See how AE was made', 'views/content/home/images/portfolio-ae.jpg', 'home')
-                        h2 AE
-                        p webdevelopment
-                li.col.cols__row-first
-                    +bglink-cols-2('/work/heritage-buildings', 'See how Heritage Buildings was made', 'views/content/home/images/portfolio-heritage.jpg', 'home')
-                        h2 Heritage Buildings
-                        p webdevelopment
-                li.col.cols__row-last
-                    +bglink-cols-2('/work/medics4medics', 'See how Medics4medics was made', 'views/content/home/images/portfolio-m4m.jpg', 'home')
-                        h2 Medics4medics
-                        p webdevelopment
-                li.col.cols__row-first
-                    +bglink-cols-2('/work/quasar', 'See how Quasar Online was made', 'views/content/home/images/portfolio-quasar.jpg', 'home')
-                        h2 Quasar Online
-                        p branding, design &amp; 3D
-                li.col.cols__row-last
-                    +bglink-cols-2('/work/blenderworld', 'See how Blenderworld was made', 'views/content/home/images/portfolio-blenderworld.jpg', 'home')
-                        h2 Blenderworld
-                        p branding, design &amp; 3D
-                li.col.cols__row-first
-                    +bglink-cols-2('/work/stealth-bombers', 'See how the Stealth Bombers movies were made', 'views/content/home/images/portfolio-sb.jpg', 'home')
-                        h2 Stealth Bombers
-                        p branding, design &amp; 3D
-                li.last.col.cols__row-last.more
+            if locals.projects
+                ul.cols
+                    //- Get the amount of projects
+                    - projectCount = locals.projects.length
+
+                    //- Print each individual project
+                    - each project, i in locals.projects
+                        - rowClasses = ['col']
+
+                        //- Add the first and last class
+                        - if (i === 0) rowClasses.push('first')
+                        - if (i === (projectCount - 1)) rowClasses.push('last')
+
+                        //- Add the row classes
+                        - if (i % 2 == 0) rowClasses.push('cols__row-first')
+                        - if (i % 2 == 1) rowClasses.push('cols__row-last')
+
+                        li(class=rowClasses)
+                            +bglink-cols-2(project._url, project.linkText, project.image, project.imageDest)
+                                h2 #{project.title}
+                                p #{project.type}
+            else
+                p.center There are currently no projects
+
+                li.last.col.more
                     +bglink-cols-2('/contact', 'Interested? You can always contact me here.', 'views/content/home/images/portfolio-more.jpg', 'home')
                         h2 Your project?
                         .button.button_large.button_red Hire me now
+
+
+section.wrapper.home--work
+    .inner
+        header.section__header
+            h1 My work
+        .content
+            ul.cols
+                li.first.col
+                    +bglink-cols-2('/work/aristide', 'See how Aristide was made', 'views/content/home/images/portfolio-aristide.jpg', 'home')
+                        h2 Aristide
+                        p webdevelopment
+                li.col
+                    +bglink-cols-2('/work/ae', 'See how AE was made', 'views/content/home/images/portfolio-ae.jpg', 'home')
+                        h2 AE
+                        p webdevelopment
+                li.col
+                    +bglink-cols-2('/work/heritage-buildings', 'See how Heritage Buildings was made', 'views/content/home/images/portfolio-heritage.jpg', 'home')
+                        h2 Heritage Buildings
+                        p webdevelopment
+                li.col
+                    +bglink-cols-2('/work/medics4medics', 'See how Medics4medics was made', 'views/content/home/images/portfolio-m4m.jpg', 'home')
+                        h2 Medics4medics
+                        p webdevelopment
+                li.col
+                    +bglink-cols-2('/work/quasar', 'See how Quasar Online was made', 'views/content/home/images/portfolio-quasar.jpg', 'home')
+                        h2 Quasar Online
+                        p branding, design &amp; 3D
+                li.col
+                    +bglink-cols-2('/work/blenderworld', 'See how Blenderworld was made', 'views/content/home/images/portfolio-blenderworld.jpg', 'home')
+                        h2 Blenderworld
+                        p branding, design &amp; 3D
+                li.col
+                    +bglink-cols-2('/work/stealth-bombers', 'See how the Stealth Bombers movies were made', 'views/content/home/images/portfolio-sb.jpg', 'home')
+                        h2 Stealth Bombers
+                        p branding, design &amp; 3D
+                li.last.col.more
+                    +bglink-cols-2('/contact', 'Interested? You can always contact me here.', 'views/content/home/images/portfolio-more.jpg', 'home')
+                        h2 Your project?
+                        .button.button_large.button_red Hire me now
+

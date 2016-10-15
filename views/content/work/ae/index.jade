@@ -1,2 +1,12 @@
-p This is a paragraph from ae.jade
-p This is another paragraph
+extends ../../../_includes/layout-content-project
+
+block vars
+    - var imgDir = 'views/content/work/ae/images/'
+    - var imgHeader = imgDir + 'hero.jpg'
+    - var imgDest = 'work/ae'
+    - var title = 'Creating a onepager website factory'
+    - var client = 'AE | while employed at Open Up Media'
+    - var job = 'All programming and technical conversion'
+
+block content
+    p Lorem ipsum dolor sit amet

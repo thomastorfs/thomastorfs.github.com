@@ -3,13 +3,19 @@ fm          = require 'front-matter'
 _           = require 'underscore'
 path        = require 'path'
 
-# Create our Model class
-class DataController
+# Create our Data Model class
+class DataModel
     getBlogPosts: ->
-        posts = @getDirectoryEntries 'blog'
+        # Get the blogposts
+        posts = @getDirectoryEntries 'views/blog'
+        # Sort by descending date
+        posts = _.sortBy(posts, 'date').reverse()
 
     getProjects: ->
-        projects = @getDirectoryEntries 'work'
+        # Get the projects
+        projects = @getDirectoryEntries 'views/work'
+        # Sort by ascending index
+        projects = _.sortBy(projects, 'index')
 
     getDirectoryEntries: (directory, files = []) =>
         # Read all files
@@ -28,19 +34,19 @@ class DataController
                 # Read it
                 file = fs.readFileSync(filePath, 'utf8')
 
+                # Create the URL
+                p = path.relative('views', path.join(filePath.substr(0, filePath.lastIndexOf('.'))))
+
                 # And add the front-matter data to the files array, with URL
                 fileData = fm file
-                fileData.attributes._url = path.join('/', filePath.substr(0, filePath.lastIndexOf('.')))
-                files.push postData.attributes
+                fileData.attributes._url = "/#{p.replace(path.sep, '/')}"
+                files.push fileData.attributes
 
             # Process a directory
             else if fileStat.isDirectory()
                 # Traverse the newly found directory
                 files = @getDirectoryEntries filePath, files
 
-        # Sort the files by descending date
-        files = _.sortBy(files, 'date').reverse()
-
         return files
 
-module.exports = DataController
+module.exports = DataModel

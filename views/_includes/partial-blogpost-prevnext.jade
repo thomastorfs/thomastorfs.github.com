@@ -10,13 +10,13 @@ section.nav--blogpost--prevnext.wrapper
         - var i = 0
 
         - each post, i in locals.blogposts
-            - if (post._url === locals.post._url)
+            - if (post.title === locals.post.title && post.date === locals.post.date)
                 - currentPostIndex = i
                 - break
 
         //- Get the next and previous blogpost
-        - var nextPostIndex = i + 1
-        - var previousPostIndex = i - 1
+        - var nextPostIndex = currentPostIndex + 1
+        - var previousPostIndex = currentPostIndex - 1
 
         //- Check for boundaries and correct the post indices
         - if (nextPostIndex > (postCount - 1))

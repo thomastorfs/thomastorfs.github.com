@@ -27,3 +27,6 @@ public/
 
 # PSD's
 *.psd
+
+# JetBrains
+.idea
