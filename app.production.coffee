@@ -3,22 +3,23 @@ postcss         = require 'postcss'
 uglifyjs        = require 'uglify-js'
 browserify      = require 'roots-browserify'
 css_pipeline    = require 'css-pipeline'
-Resizers        = require './assets/js/lib/image/resizers'
 dynamic         = require 'dynamic-content'
-DataController  = require './assets/js/lib/datacontroller'
+DataModel       = require './lib/DataModel'
+ImageResizer    = require './lib/ImageResizer'
 
 # Instantiate the model
-model = new Model
+dataModel = new DataModel
 
 # Configure Roots
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'blog/assets/**']
+  ignores: ['.idea/**', 'readme.md', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'blog/assets/**']
   server:
     clean_urls: true
   open_browser: false
   locals:
-    resize: new Resizers
-    blogposts: dataController.getBlogPosts()
+    resize: new ImageResizer
+    blogposts: dataModel.getBlogPosts(),
+    projects: dataModel.getProjects()
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',

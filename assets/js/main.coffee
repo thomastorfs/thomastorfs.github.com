@@ -7,6 +7,7 @@ lsBgset   = require 'lazysizes/plugins/bgset/ls.bgset'
 Stickheader = require './lib/header/Stickyheader'
 Navtoggler = require './lib/header/Navtoggler'
 Contactform = require './lib/contact/Contactform'
+Sectionnext = require './lib/section/Sectionnext'
 
 # Router    = require './lib/Router'
 
@@ -22,3 +23,6 @@ $(document).ready ->
 
 	# initialize the contact form
 	new Contactform('.form--contact')
+
+	# initialize the section-next buttons
+	new Sectionnext('.section__next')
