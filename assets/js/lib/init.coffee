@@ -1,8 +1,8 @@
 $ = require 'jquery'
 page = require 'page'
-stickyheader = require './header/stickyheader'
-navtoggler = require './header/navtoggler'
-contactform = require './contact/contactform'
+stickyheader = require './header/Stickyheader'
+navtoggler = require './header/Navtoggler'
+contactform = require './contact/Contactform'
 
 module.exports = (ctx, next) ->
     ctx.handled = true
@@ -14,4 +14,4 @@ module.exports = (ctx, next) ->
     new navtoggler('.nav-toggler')
 
     # initialize the contact form
-    new contactform('.contact-form')
+    new contactform('.form--contact')
