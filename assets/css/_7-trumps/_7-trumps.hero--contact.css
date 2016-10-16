@@ -1,0 +1,24 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Hero on the contact page
+ *
+ * #############################################################################
+ */
+
+.hero--contact {
+    /* define header whitespace */
+    header {
+        margin-bottom: 3em;
+
+        h1 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    /* give the submit button a bit more room */
+    .actions {
+        margin-top: 1em;
+    }
+}

@@ -1,0 +1,12 @@
+form(name="contact-form", method="post").form--contact
+    .form-text
+        label Your name
+        input(type="text", name="name", placeholder="What is your name?")
+    .form-text
+        label Your e-mail address
+        input(type="text", name="email", placeholder="What is your email address?")
+    .form-text
+        label Your message
+        textarea(name="message", cols="40", rows="5", placeholder="Enter your message here.")
+    .actions
+        button.button.button_red(type="submit") Send message

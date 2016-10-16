@@ -5,8 +5,8 @@ section.wrapper.home--work
         .content
             if locals.projects
                 ul.cols
-                    //- Store the projects so we can add an extra link towars the contact page
-                    - projects = locals.projects
+                    //- Copy the projects array so we can add an extra link towars the contact page
+                    - var projects = JSON.parse(JSON.stringify(locals.projects))
                     - projects.push({title: 'Your project?', _url: '/contact', linkText: 'Interested? You can always contact me here.', image: 'views/content/home/images/portfolio-more.jpg', imageDest: 'home', type: 'moreLink', extraClass: 'more' })
 
                     //- Get the amount of projects
@@ -38,25 +38,3 @@ section.wrapper.home--work
 
             else
                 p.center There are currently no projects
-
-                li.last.col.more
-                    +bglink-cols-2('/contact', 'Interested? You can always contact me here.', 'views/content/home/images/portfolio-more.jpg', 'home')
-                        h2 Your project?
-                        .button.button_large.button_red Hire me now
-
-
-section.wrapper.home--work
-    .inner
-        header.section__header
-            h1 My work
-        .content
-            ul.cols
-                li.col
-                    +bglink-cols-2('/work/stealth-bombers', 'See how the Stealth Bombers movies were made', 'views/content/home/images/portfolio-sb.jpg', 'home')
-                        h2 Stealth Bombers
-                        p branding, design &amp; 3D
-                li.last.col.more
-                    +bglink-cols-2('/contact', 'Interested? You can always contact me here.', 'views/content/home/images/portfolio-more.jpg', 'home')
-                        h2 Your project?
-                        .button.button_large.button_red Hire me now
-

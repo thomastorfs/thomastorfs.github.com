@@ -6,7 +6,7 @@
  * #############################################################################
  */
 
-.nav--blogpost--prevnext {
+.nav--prevnext {
     /* remove all padding */
     padding: 0 !important;
 
@@ -23,7 +23,7 @@
 
 /* wide mobile */
 @media (min-width: $bp-mobile-wide-min) {
-    .nav--blogpost--prevnext {
+    .nav--prevnext {
         /* add the icon */
         .text {
             position: relative;
@@ -82,7 +82,7 @@
 
 /* narrow tablet */
 @media (min-width: $bp-tablet-narrow-min) {
-    .nav--blogpost--prevnext {
+    .nav--prevnext {
         /* let the text breathe */
         .text {
             position: relative;
@@ -136,7 +136,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .nav--blogpost--prevnext {
+    .nav--prevnext {
         /* align and animate the text and icon */
         li {
             &:first-child {
@@ -180,7 +180,7 @@
 
 /* large desktop */
 @media (min-width: $bp-desktop-large-min) {
-    .nav--blogpost--prevnext {
+    .nav--prevnext {
         /* set the link height */
         .bglink {
             height: 500px;

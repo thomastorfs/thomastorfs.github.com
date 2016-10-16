@@ -22,22 +22,9 @@
         }
     }
 
-    /* set the form width */
-    form {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    /* hide the labels */
-    label {
-        display: none;
-    }
-
     /* dark input fields */
     input[type=text],
     textarea {
-        width: 100%;
         background: $color-grey-darker;
         color: #fff;
     }
@@ -73,10 +60,6 @@
             h1 {
                 margin-bottom: 60px;
             }
-        }
-
-        form {
-            max-width: 600px;
         }
     }
 }
