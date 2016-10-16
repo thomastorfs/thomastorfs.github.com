@@ -5,11 +5,15 @@ section.wrapper.home--work
         .content
             if locals.projects
                 ul.cols
+                    //- Store the projects so we can add an extra link towars the contact page
+                    - projects = locals.projects
+                    - projects.push({title: 'Your project?', _url: '/contact', linkText: 'Interested? You can always contact me here.', image: 'views/content/home/images/portfolio-more.jpg', imageDest: 'home', type: 'moreLink', extraClass: 'more' })
+
                     //- Get the amount of projects
-                    - projectCount = locals.projects.length
+                    - projectCount = projects.length
 
                     //- Print each individual project
-                    - each project, i in locals.projects
+                    - each project, i in projects
                         - rowClasses = ['col']
 
                         //- Add the first and last class
@@ -20,10 +24,18 @@ section.wrapper.home--work
                         - if (i % 2 == 0) rowClasses.push('cols__row-first')
                         - if (i % 2 == 1) rowClasses.push('cols__row-last')
 
+                        //- Add the extra class
+                        - if (project.extraClass) rowClasses.push(project.extraClass)
+
                         li(class=rowClasses)
                             +bglink-cols-2(project._url, project.linkText, project.image, project.imageDest)
                                 h2 #{project.title}
-                                p #{project.type}
+                                - if (project.type !== 'moreLink')
+                                    p #{project.type}
+                                - else
+                                    .button.button_large.button_red Hire me now
+
+
             else
                 p.center There are currently no projects
 
@@ -39,30 +51,6 @@ section.wrapper.home--work
             h1 My work
         .content
             ul.cols
-                li.first.col
-                    +bglink-cols-2('/work/aristide', 'See how Aristide was made', 'views/content/home/images/portfolio-aristide.jpg', 'home')
-                        h2 Aristide
-                        p webdevelopment
-                li.col
-                    +bglink-cols-2('/work/ae', 'See how AE was made', 'views/content/home/images/portfolio-ae.jpg', 'home')
-                        h2 AE
-                        p webdevelopment
-                li.col
-                    +bglink-cols-2('/work/heritage-buildings', 'See how Heritage Buildings was made', 'views/content/home/images/portfolio-heritage.jpg', 'home')
-                        h2 Heritage Buildings
-                        p webdevelopment
-                li.col
-                    +bglink-cols-2('/work/medics4medics', 'See how Medics4medics was made', 'views/content/home/images/portfolio-m4m.jpg', 'home')
-                        h2 Medics4medics
-                        p webdevelopment
-                li.col
-                    +bglink-cols-2('/work/quasar', 'See how Quasar Online was made', 'views/content/home/images/portfolio-quasar.jpg', 'home')
-                        h2 Quasar Online
-                        p branding, design &amp; 3D
-                li.col
-                    +bglink-cols-2('/work/blenderworld', 'See how Blenderworld was made', 'views/content/home/images/portfolio-blenderworld.jpg', 'home')
-                        h2 Blenderworld
-                        p branding, design &amp; 3D
                 li.col
                     +bglink-cols-2('/work/stealth-bombers', 'See how the Stealth Bombers movies were made', 'views/content/home/images/portfolio-sb.jpg', 'home')
                         h2 Stealth Bombers
