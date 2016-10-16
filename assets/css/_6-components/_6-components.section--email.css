@@ -1,0 +1,67 @@
+/**
+ * #############################################################################
+ *
+ * Components: Section with email link
+ *
+ * #############################################################################
+ */
+
+/* header */
+.section--email {
+    padding: 0;
+    text-align: left;
+
+    /* vertically and horizontally center the text */
+    .inner {
+        line-height: 1em;
+        text-align: center;
+    }
+
+    /* adjust the header margin and color, and set it inline */
+    .section__header {
+        display: block;
+
+        h1 {
+            margin: 0 0.5em;
+            color: #fff;
+            line-height: 1.5em
+        }
+    }
+
+    /* adjust the paragraph margin and vertically center it*/
+    p {
+        margin: 0 0.5em;
+        font-size: 1.25em;
+        line-height: 1.5em
+    }
+
+    /* style the actual link */
+    a {
+        display: block;
+        padding: 2em 0;
+        background: $color-red;
+        color: #fff;
+        text-decoration: none;
+
+        /* hover state */
+        &:hover {
+            background: $color-red-light;
+        }
+    }
+}
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    /* header */
+    .section--email {
+        /* put the header inline */
+        .section__header {
+            display: inline-block;
+        }
+
+        /* put the content inline */
+        .content {
+            display: inline-block;
+        }
+    }
+}

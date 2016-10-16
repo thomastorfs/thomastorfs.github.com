@@ -25,7 +25,8 @@ $color-grey-darkest: #0e0e0e;
 
 /* reds */
 $color-red-lighter: #ffc0c0;
-$color-red: #db1818;
+$color-red-light: #ff2828;
+$color-red-dark: #db1818;
 
 /* colors */
 $color-red: #ff0808;

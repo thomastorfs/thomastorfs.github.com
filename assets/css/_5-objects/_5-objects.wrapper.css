@@ -10,7 +10,7 @@
     position: relative;
 
     /* wrapper content */
-    > .inner {
+    .inner {
         margin: 0 auto;
         padding: 0 $gutter;
         max-width: $bp-desktop-large-min;
