@@ -18,7 +18,7 @@
     background-position: 60% 50%;
 
     /* make sure the alignment is only horizontal */
-    > .inner {
+    > .wrapper__inner {
         width: 100%;
     }
 
@@ -31,14 +31,14 @@
         }
     }
 
-    .content {
+    .section__content {
         /* hide the content */
         display: none;
     }
 
     /* set the margins between the elements */
     header,
-    .content {
+    .section__content {
         margin-bottom: 3em;
     }
 }
@@ -48,12 +48,12 @@
     .hero--home {
         /* set the text width */
         header,
-        .content {
+        .section__content {
             width: 52.5%;
         }
 
         /* show the content */
-        .content {
+        .section__content {
             display: block;
         }
     }

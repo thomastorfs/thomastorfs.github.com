@@ -8,13 +8,13 @@
 
 .wrapper {
     position: relative;
+}
 
-    /* wrapper content */
-    .inner {
-        margin: 0 auto;
-        padding: 0 $gutter;
-        max-width: $bp-desktop-large-min;
-    }
+/* wrapper content */
+.wrapper__inner {
+    margin: 0 auto;
+    padding: 0 $gutter;
+    max-width: $bp-desktop-large-min;
 }
 
 /* with background */

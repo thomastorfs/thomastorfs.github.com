@@ -45,6 +45,9 @@
 
     /* center the text and set a dark background by default */
     .text {
+        /* always show */
+        position: relative;
+
         display: table-cell;
         height: 100%;
         vertical-align: middle;

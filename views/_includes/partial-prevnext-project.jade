@@ -3,36 +3,37 @@ include mixin-bglink-full
 section.nav--prevnext.wrapper
     header.section__header
         h1 Project navigation
-    .content
-        //- Find the current post in the blog array
-        - var currentProjectIndex = 0
-        - var projectCount = locals.projects.length
+    .section__content
+        if locals.projects && locals.post
+            //- Find the current post in the blog array
+            - var currentProjectIndex = 0
+            - var projectCount = locals.projects.length
 
-        - each project, i in locals.projects
-            - if (project.title === locals.post.title && project.date === locals.post.date)
-                - currentProjectIndex = i
-                - break
+            - each project, i in locals.projects
+                - if (project.title === locals.post.title && project.date === locals.post.date)
+                    - currentProjectIndex = i
+                    - break
 
-        //- Get the next and previous blogpost
-        - var nextProjectIndex = currentProjectIndex + 1
-        - var previousProjectIndex = currentProjectIndex - 1
+            //- Get the next and previous blogpost
+            - var nextProjectIndex = currentProjectIndex + 1
+            - var previousProjectIndex = currentProjectIndex - 1
 
-        //- Check for boundaries and correct the post indices
-        - if (nextProjectIndex > (projectCount - 1))
-            - nextProjectIndex = 0
-        - if (previousProjectIndex < 0)
-            - previousProjectIndex = projectCount - 1
+            //- Check for boundaries and correct the post indices
+            - if (nextProjectIndex > (projectCount - 1))
+                - nextProjectIndex = 0
+            - if (previousProjectIndex < 0)
+                - previousProjectIndex = projectCount - 1
 
-        //- Store the previous and next blogpost in a variable for readability
-        - var previousProject = locals.projects[previousProjectIndex]
-        - var nextProject = locals.projects[nextProjectIndex]
+            //- Store the previous and next blogpost in a variable for readability
+            - var previousProject = locals.projects[previousProjectIndex]
+            - var nextProject = locals.projects[nextProjectIndex]
 
-        ul.cols
-            li.col
-                +bglink-full(previousProject._url, previousProject.linkText, previousProject.image, previousProject.imageDest)
-                    h2 #{previousProject.title}
-                    p.meta #{previousProject.type}
-            li.col
-                +bglink-full(nextProject._url, nextProject.linkText, nextProject.image, nextProject.imageDest)
-                    h2 #{nextProject.title}
-                    p.meta #{nextProject.type}
+            ul.cols
+                li.col
+                    +bglink-full(previousProject._url, previousProject.linkText, previousProject.image, previousProject.imageDest)
+                        h2 #{previousProject.title}
+                        p.meta #{previousProject.type}
+                li.col
+                    +bglink-full(nextProject._url, nextProject.linkText, nextProject.image, nextProject.imageDest)
+                        h2 #{nextProject.title}
+                        p.meta #{nextProject.type}

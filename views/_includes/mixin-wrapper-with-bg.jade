@@ -11,5 +11,5 @@ mixin wrapper-with-bg(tag, source, dest, extra_classes)
         - var classes = default_classes
 
     #{tag}(class='#{classes}' data-bgset='#{large} 1024w, #{medium} 640w, #{small} 320w')
-        .inner
+        .wrapper__inner
             block

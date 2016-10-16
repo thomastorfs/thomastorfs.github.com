@@ -16,7 +16,9 @@
     }
 
     /* unique more link */
-    .more {
+    .section__more {
+        position: relative;
+
         /* slight overlay on hover */
         a:hover {
             .text {

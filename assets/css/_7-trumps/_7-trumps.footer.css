@@ -7,7 +7,7 @@
  */
 
 footer {
-    .inner {
+    .wrapper__inner {
         padding: 0 !important;
         max-width: none !important;
     }

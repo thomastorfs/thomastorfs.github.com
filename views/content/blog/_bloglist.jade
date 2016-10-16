@@ -1,15 +1,15 @@
 section.wrapper.section--text.section--hero
-    .inner
+    .wrapper__inner
         header.section__header
             h1 Latest stories
 
-        .intro
+        .section__intro
             p 
                 | Below you can find the latest stories, thoughts, new findings, etcetera.<br />
                 | The paint is still wet so for the moment the list has 3 articles.<br />
                 | It will be updated on a regular basis.
 
-        .content
+        .section__content
             if locals.blogposts
                 ul.list--blog
                     - var showCount = 5

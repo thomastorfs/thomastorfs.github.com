@@ -12,12 +12,24 @@ section {
 
 /* header */
 .section__header {
+    position: relative;
+
     h1 {
         margin-bottom: 64px;
         font-size: 0.875rem;
         letter-spacing: 0.175rem;
         text-align: center;
     }
+}
+
+/* content */
+.section__content {
+    position: relative;
+}
+
+/* more */
+.section__more {
+    position: relative;
 }
 
 /* next button */

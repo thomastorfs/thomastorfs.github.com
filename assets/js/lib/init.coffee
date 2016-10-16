@@ -5,7 +5,7 @@ navtoggler = require './header/Navtoggler'
 contactform = require './contact/Contactform'
 
 module.exports = (ctx, next) ->
-    ctx.handled = true
+    # ctx.handled = true
 
     # initialize the sticky header
     new stickyheader('.header')

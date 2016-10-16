@@ -15,7 +15,7 @@
     }
 
     /* intro text */
-    .intro {
+    .section__intro {
         margin-bottom: 32px;
         font-size: 0.875rem;
         line-height: 1.875em;
@@ -39,7 +39,7 @@
         }
 
         /* intro text */
-        .intro {
+        .section__intro {
             margin-bottom: 55px;
             font-size: 1.125rem;
             text-align: center;
@@ -63,7 +63,7 @@
         }
 
         /* intro text */
-        .intro {
+        .section__intro {
             padding: 0 calc($gutter * 2.5);
             margin-bottom: 78px;
             font-size: 1.375rem;

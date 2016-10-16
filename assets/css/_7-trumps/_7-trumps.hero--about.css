@@ -18,12 +18,12 @@
     }
 
     /* make sure the content does not stick against the wall */
-    .content {
+    .section__content {
         text-align: justify;
     }
 
     /* Position the download on the bottom, always */
-    .download-resume {
+    .section__download-resume {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -64,7 +64,7 @@
 @media (min-width: $bp-mobile-narrow-min) {
     .hero--about {
         /* make sure the content can breathe */
-        .content {
+        .section__content {
             width: 85%;
             margin: 0 auto;
         }
@@ -80,7 +80,7 @@
         }
 
         /* make sure the content can breathe */
-        .content {
+        .section__content {
             width: 70%;
 
             p {
@@ -100,7 +100,7 @@
         }
 
         /* the content needs to occupy the width of the page */
-        .content {
+        .section__content {
             width: 100%;
             overflow: hidden;
         }
@@ -116,7 +116,7 @@
 @media (min-width: $bp-tablet-wide-min) {
     .hero--about {
         /* clearfix for the content */
-        .content {
+        .section__content {
             overflow: hidden;
         }
 
