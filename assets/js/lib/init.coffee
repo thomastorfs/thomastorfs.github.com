@@ -1,17 +1,18 @@
-$ = require 'jquery'
-page = require 'page'
-stickyheader = require './header/Stickyheader'
-navtoggler = require './header/Navtoggler'
-contactform = require './contact/Contactform'
+$               = require 'jquery'
+page            = require 'page'
+Stickyheader    = require './header/Stickyheader'
+Navtoggler      = require './header/Navtoggler'
+Contactform     = require './forms/Contactform'
+
 
 module.exports = (ctx, next) ->
     # ctx.handled = true
 
     # initialize the sticky header
-    new stickyheader('.header')
+    new Stickyheader('.header')
 
     # intialize the toggling on the navigation
-    new navtoggler('.nav-toggler')
+    new Navtoggler('.nav-toggler')
 
     # initialize the contact form
-    new contactform('.form--contact')
+    new Contactform('.form--contact')
