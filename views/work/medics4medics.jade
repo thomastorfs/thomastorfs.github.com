@@ -10,5 +10,9 @@ _content: false
 
 extends ../_includes/layout-default
 
+block header-vars
+    - var title = 'Medics4Medics'
+    - var description = 'A small encyclopedia for medical practitioners'
+
 block content
     include ../content/work/medics4medics/index.jade
