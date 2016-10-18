@@ -11,23 +11,15 @@ class Aboutwriter
                 {
                     strings: [
                         'music',
-                        'programming', 
-                        'linux',
-                        'UNIX',
-                        'web frameworks', 
-                        'squash', 
-                        'nature',
-                        'guitar',
-                        'machine learning', 
+                        'programming',
                         'photography',
-                        'design', 
-                        'typography'
+                        'design',
+                        'many things'
                     ],
                     typeSpeed: 100,
                     backSpeed: 50,
                     shuffle: true,
-                    backDelay: 1000,
-                    loop: true
+                    backDelay: 1000
                 }
             )
 

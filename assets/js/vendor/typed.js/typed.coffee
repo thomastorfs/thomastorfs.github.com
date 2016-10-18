@@ -143,8 +143,6 @@ class Typedjs
 
         # contain typing function in a timeout humanize'd delay
         typingCallback = () =>
-
-            console.log 'typingCallback started'
             # check for an escape character before a pause value
             # format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
             # single ^ are removed from string
@@ -181,7 +179,6 @@ class Typedjs
 
             # timeout for any pause after a character
             pauseAfterChar = () =>
-                console.log 'pauseAfterChar started'
                 if (curStrPos == curString.length)
                     # fires callback function
                     @options.onStringTyped(@arrayPos)
@@ -226,12 +223,8 @@ class Typedjs
                     # loop the function
                     @typewrite(curString, curStrPos)
 
-                console.log 'pauseAfterChar ended'
-
                 # end of character pause
             timeout = setTimeout pauseAfterChar charPause
-
-            console.log 'typingCallback ended'
 
         # humanized value for typing
         timeout = setTimeout typingCallback, humanize
@@ -258,8 +251,6 @@ class Typedjs
             # else{
             #  @stopNum = 0;
             # }
-
-            console.log 'backspaceCallback started'
 
             if (@contentType == 'html')
                 # skip over html tags while backspacing
@@ -309,8 +300,6 @@ class Typedjs
                 else
                     @typewrite(@strings[@sequence[@arrayPos]], curStrPos)
 
-            console.log 'backspaceCallback ended'
-
         # humanized value for typing
         timeout = setTimeout backspaceCallback, humanize
 
@@ -331,7 +320,6 @@ class Typedjs
             array[top] = tmp
 
         return array
-
 
     # Start & Stop currently not working
 
