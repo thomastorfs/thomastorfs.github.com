@@ -51,6 +51,16 @@
         margin: 0 auto;
     }
 
+    /* add link styling */
+    a {
+        color: $color-blue;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     /* make images use the full width */
     img {
         width: 100%;

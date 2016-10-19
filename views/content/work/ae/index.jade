@@ -9,4 +9,25 @@ block vars
     - var job = 'All programming and technical conversion'
 
 block content
-    p Lorem ipsum dolor sit amet
+
+    h2 A what?
+
+    p Yes indeed, it's a onepager factory, more or less. So, what does this mean? In the final product the client is able to add more than a dozen types of sections to individual homepages, each with their own subdomain. Every section has its own look and feel, and functionality.
+
+    p Internal pages are opened within a custom written modal window and can be linked from the elements within these sections. It also works in reverse, and they can be ordered and configured individually.
+
+    p Next to contrib modules such as Domains and Views, a lot of the functionality was custom written from the ground up. We made extensive usage of the Drupal API and added both custom and vendor jQuery plugins on top.
+
+    //- @TODO: Marketing image of Lance his design (perhaps inside a Mac, iPad and iPhone?)
+    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+
+    p Props to my colleague Lance, who created this fantastic responsive design.
+
+    p AE wanted to be able to customize the look and feel of every section individually. With the newly built system they can configure specific colors and backgrounds per section. Using these settings, the code that is necessary for styling is dynamically generated for each individual block and subsite.
+
+    p When a block is added or updated, the styling is automatically regenerated in 2 steps. First of all, since we use SASS for styling, new SCSS files are rendered by our modules, after which the final CSS is regenerated using PHPSass through the Prepro-module.
+
+    p The result is, well you guessed it, a onepager factory with extra cream and a cherry on top. Ready to be served.
+
+    p.center
+        a.button.button_black(href='http://jobs.ae.be', target='_blank') Visit the new website
