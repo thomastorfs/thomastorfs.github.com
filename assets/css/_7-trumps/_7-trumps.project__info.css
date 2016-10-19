@@ -17,6 +17,16 @@
 
     /* white text */
     color: #fff;
+
+    /* links */
+    a {
+        color: #fff;
+        white-space: nowrap;
+
+        &:hover {
+            color: $color-red-light;
+        }
+    }
 }
 
 /* title */
