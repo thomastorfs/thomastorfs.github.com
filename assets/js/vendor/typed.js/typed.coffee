@@ -197,7 +197,7 @@ class Typedjs
                     backspaceCallback = () =>
                         @backspace(curString, curStrPos)
 
-                    timeout = setTimeout backspaceCallback, @backDelay
+                    @timeout = setTimeout backspaceCallback, @backDelay
 
                 else
                     # call before functions if applicable #
@@ -224,10 +224,10 @@ class Typedjs
                     @typewrite(curString, curStrPos)
 
                 # end of character pause
-            timeout = setTimeout pauseAfterChar charPause
+            @timeout = setTimeout pauseAfterChar, charPause
 
         # humanized value for typing
-        timeout = setTimeout typingCallback, humanize
+        @timeout = setTimeout typingCallback, humanize
 
     backspace: (curString, curStrPos) =>
         # exit when stopped

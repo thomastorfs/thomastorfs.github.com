@@ -8,10 +8,11 @@
 
 /* animated cursor */
 .typed-cursor {
+    position: relative;
+    top: -0.125em;
     opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+    animation: blink 1.2s infinite;
+    font-size: 0.875em;
 }
 @keyframes blink{
     0% { opacity:1; }

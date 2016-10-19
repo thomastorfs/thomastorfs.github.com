@@ -16,7 +16,8 @@ class Aboutwriter
                         'design',
                         'many things'
                     ],
-                    typeSpeed: 100,
+                    startDelay: 2000,
+                    typeSpeed: 70,
                     backSpeed: 50,
                     shuffle: true,
                     backDelay: 1000
