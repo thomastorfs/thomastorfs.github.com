@@ -6,30 +6,29 @@
  * #############################################################################
  */
 
-.js {
-    /* add a black background to lazyloading items */
-    .lazyload,
-    .lazyloading,
-    .lazyloaded {
-        position: relative;
+/* add a black background to lazyloading items */
+.lazyload,
+.lazyloading,
+.lazyloaded {
+    position: relative;
 
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            content: ' ';
-        }
-    }
-
-    /* fadeout the black background */
-    .lazyloaded {
-        &:before {
-            opacity: 0;
-            transition: opacity $transition-duration $transition-type;
-        }
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        content: ' ';
     }
 }
+
+/* fadeout the black background */
+.lazyloaded {
+    &:before {
+        opacity: 0;
+        transition: opacity $transition-duration $transition-type;
+    }
+}
+

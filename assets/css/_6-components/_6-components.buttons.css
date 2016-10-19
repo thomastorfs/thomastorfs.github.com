@@ -21,10 +21,10 @@
     font-family: $font-sans-serif;
     font-size: 0.875rem;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: none !important; /* make sure there's no underlining in a text area */
     text-transform: uppercase;
     line-height: 1em;
-    color: #fff;
+    color: #fff !important; /* make sure the text remains white in a text area */
     text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
 
     /* shadow */
