@@ -98,7 +98,7 @@
  * ---------------------------------------------------------------------------*/
 .button_white {
     /* dark font */
-    color: $color-font;
+    color: $color-font !important; /* We have to overwrite it again, unfortunately */
     text-shadow: 1px 1px 0 #fff;
 
     /* specific border style */

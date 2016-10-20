@@ -11,9 +11,9 @@ class Aboutwriter
                 {
                     strings: [
                         'music',
-                        'programming',
-                        'photography',
+                        'technology',
                         'design',
+                        'photography',
                         'many things'
                     ],
                     startDelay: 2000,
