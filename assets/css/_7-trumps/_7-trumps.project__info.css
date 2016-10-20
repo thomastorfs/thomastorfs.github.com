@@ -24,7 +24,7 @@
         white-space: nowrap;
 
         &:hover {
-            color: $color-red-light;
+            color: $color-blue;
         }
     }
 }
