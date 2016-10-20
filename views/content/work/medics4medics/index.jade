@@ -9,4 +9,24 @@ block vars
     - var job = 'All programming and technical conversion'
 
 block content
-    p Lorem ipsum dolor sit amet
+
+    h2 Tricky menus
+
+    p Medics4Medics was a tricky one. We had to create a site with a gigantic menu structure. Nearly every single page had to be added to the main menu. The question was: how can we make it so that visitors can easily understand, access and find pages on a deeper level?
+
+    p Lance to the rescue! My fellow designer colleague created a mockup with the concept of a grid menu. Depending on the device you're visiting the website on, the menu will present itself as a responsive grid with a varying amount of columns. Now, that may be all nice and dandy, but how can we implement that on the front-end side, especially considering it is all responsive, even the levels below?
+
+    p And there it is, say hi to jQuery Grid Menu, a custom-built jQuery plugin which allows for multi-level menus to be rendered in a grid. On Medics4Medics it looks like this:
+
+    //- @TODO: Marketing image of Lance his design (perhaps inside a Mac, iPad and iPhone?)
+    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+
+    p As you can see on the detail pages there is a breadcrumb with a dropdown as well. It is powered by another custom written Drupal module <a href="https://www.drupal.org/sandbox/openupmedia/2585127" title="Checkout Open Up Media's Breadcrumb Dropdown" target="_blank">which you can find over here</a>.
+
+    //- @TODO: Image of the design for the underlying pages with breadcrumb dropdown
+    +content-image(imgHeader, imgDest, 'Alt text', 'Title text')
+
+    p You can play with both of these concepts over here:
+
+    p.center
+        a.button.button_black(href='http://www.medics4medics.com', target='_blank') Visit the new website
