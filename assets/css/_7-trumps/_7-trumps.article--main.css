@@ -65,9 +65,11 @@
     img {
         width: 100%;
         height: auto;
+    }
 
-        /* add extra vertical padding */
-        padding: 4em 0;
+    /* add vertical margin to images*/
+    picture {
+        margin: 4em 0;
     }
 }
 
