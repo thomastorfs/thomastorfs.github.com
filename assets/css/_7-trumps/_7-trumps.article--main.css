@@ -71,7 +71,7 @@
     /* extra styling for the image wrappers */
     picture {
         /* add vertical margin */
-        margin: 4em 0;
+        margin: 3em 0 4em 0;
 
         /* make the lazyloading background less harsh */
         &:before {

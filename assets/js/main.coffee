@@ -2,13 +2,13 @@
 $           = require 'jquery'
 lazysizes   = require 'lazysizes'
 lsBgset     = require 'lazysizes/plugins/bgset/ls.bgset'
+FitVids     = require './vendor/fitvids/FitVids'
 
 # Custom libs
 Stickheader = require './lib/header/Stickyheader'
 Navtoggler  = require './lib/header/Navtoggler'
 Contactform = require './lib/forms/Contactform'
 Sectionnext = require './lib/section/Sectionnext'
-FitVids     = require './vendor/fitvids/FitVids'
 Aboutwriter = require './lib/content/Aboutwriter'
 
 # Router    = require './lib/Router'
@@ -31,6 +31,8 @@ $(document).ready ->
 
     # Initialize the automatic fitting of videos
     new FitVids('body')
+
+    # @TODO: Add ScrollReveal https://github.com/jlmakes/scrollreveal
 
     # Initialize the about topic writer.
     new Aboutwriter()
