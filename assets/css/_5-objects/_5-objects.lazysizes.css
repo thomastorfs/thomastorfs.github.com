@@ -12,6 +12,7 @@
 .lazyloaded {
     position: relative;
 
+    /* add background */
     &:before {
         position: absolute;
         top: 0;
@@ -22,11 +23,40 @@
         background: #000;
         content: ' ';
     }
+
+    /* add throbber */
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: -22px 0 0 -22px;
+        border: 4px solid rgba(255, 255, 255, 0);
+        border-left: 4px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translateZ(0);
+        animation: throbberAnim 1s infinite linear;
+        content: ' ';
+    }
+}
+
+@keyframes throbberAnim {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 /* fadeout the black background */
 .lazyloaded {
-    &:before {
+    &:before,
+    &:after {
         opacity: 0;
         transition: opacity $transition-duration $transition-type;
     }

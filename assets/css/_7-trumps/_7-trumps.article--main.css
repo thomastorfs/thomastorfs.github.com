@@ -63,13 +63,24 @@
 
     /* make images use the full width */
     img {
+        display: block;
         width: 100%;
         height: auto;
     }
 
-    /* add vertical margin to images*/
+    /* extra styling for the image wrappers */
     picture {
+        /* add vertical margin */
         margin: 4em 0;
+
+        /* make the lazyloading background less harsh */
+        &:before {
+            background-color: $color-grey-lighter;
+        }
+        /* do the same for the throbber */
+        &:after {
+            border-left-color: rgba(0, 0, 0, 0.2);
+        }
     }
 }
 

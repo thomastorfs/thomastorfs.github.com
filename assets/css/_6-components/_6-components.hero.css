@@ -24,6 +24,11 @@
 
     /* black background by default */
     background-color: #000;
+
+    /* remove throbber on heros because it's annoying */
+    &:after {
+        display: none;
+    }
 }
 
 /* header */
@@ -139,19 +144,9 @@
     }
 
     /* add a background overlay */
-    &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #000;
+    &.lazyloaded:before {
         opacity: 0.6;
-        content: ' ';
-        z-index: 2;
     }
-
 }
 
 /* mobile wide */
