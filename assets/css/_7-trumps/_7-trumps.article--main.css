@@ -29,6 +29,11 @@
         &:first-child {
             padding-top: 0;
         }
+
+        /* descriptive titles */
+        &.descriptive {
+            padding-bottom: 0;
+        }
     }
     h2 {
         font-size: 1em;
