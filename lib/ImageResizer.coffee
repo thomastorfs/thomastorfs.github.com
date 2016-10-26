@@ -19,15 +19,15 @@ class ImageResizer
         dest = '/images/' + options.dest + '/' + filedest
 
         # Check if the final image exists, if not, create it
-        fs.stat('public' + dest, (err, stat) ->
-            if (err && err.code == 'ENOENT')
+        fs.stat 'public' + dest, (err, stat) ->
+            if err && err.code == 'ENOENT'
                 # Make sure that the directory exists
-                mkdirp('public/images/' + options.dest, (err) ->
+                mkdirp 'public/images/' + options.dest, (err) ->
                     if (err)
                         throw err
 
                     # Resize the image
-                    Jimp.read(options.source, (err, img) ->
+                    Jimp.read options.source, (err, img) ->
                         if (err)
                             throw err
 
@@ -40,9 +40,6 @@ class ImageResizer
                             img.resize(options.w, Jimp.AUTO)
                                 .quality(options.quality)
                                 .write('public' + dest)
-                    )
-                )
-        )
 
         return dest
 

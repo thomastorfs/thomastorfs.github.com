@@ -13,4 +13,7 @@ article.article--main.blogpost
         .wrapper__inner
             block content
 
-include partial-prevnext-blogpost
+if locals.blogposts && locals.blogposts.length > 2
+    include partial-prevnext-blogpost
+else
+    include partial-want-more

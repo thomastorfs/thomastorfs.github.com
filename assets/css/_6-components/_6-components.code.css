@@ -1,0 +1,27 @@
+/**
+ * #############################################################################
+ *
+ * Components: Code
+ *
+ * #############################################################################
+ */
+
+.code {
+    font-size: 0.875em;
+    text-align: left;
+    color: $color-grey-3;
+}
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .code {
+        font-size: 0.75em;
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .code {
+        font-size: 0.625em;
+    }
+}
