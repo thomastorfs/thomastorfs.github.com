@@ -18,7 +18,7 @@ class Contactform
             @removeMessages()
 
             # Send the email
-            $.post 'http://localhost:8080/api/contact-form', $.param(formValues)
+            $.post 'http://api.thomastorfs.com/api/contact-form', $.param(formValues)
                 .done (response) =>
                     if response.errors? && !response.errors.code
                         for error in response.errors

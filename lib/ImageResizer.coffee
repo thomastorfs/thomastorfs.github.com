@@ -31,6 +31,9 @@ class ImageResizer
                         if (err)
                             throw err
 
+                        # Let the user know which image is being resized
+                        console.log 'Resizing image ' + options.source
+
                         # Resize the image
                         if (options.crop)
                             img.cover(options.w, options.h)

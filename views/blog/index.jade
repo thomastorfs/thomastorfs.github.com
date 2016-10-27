@@ -1,11 +1,11 @@
 block vars
     - header_classes = 'header--dark'
 
-extends _includes/layout-default
+extends ../_includes/layout-default
 
 block header-vars
     - var title = 'Blog'
     - var description = 'Latest stories'
 
 block content
-    include content/blog/index
+    include ../content/blog/index

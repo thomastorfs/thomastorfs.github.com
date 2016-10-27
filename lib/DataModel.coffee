@@ -34,13 +34,17 @@ class DataModel
                 # Read it
                 file = fs.readFileSync(filePath, 'utf8')
 
-                # Create the URL
-                p = path.relative('views', path.join(filePath.substr(0, filePath.lastIndexOf('.'))))
-
                 # And add the front-matter data to the files array, with URL
-                fileData = fm file
-                fileData.attributes._url = "/#{p.replace(path.sep, '/')}"
-                files.push fileData.attributes
+                if fm.test file
+                    # Get the front-matter
+                    fileData = fm file
+
+                    # Create the URL and add it to the file data
+                    p = path.relative('views', path.join(filePath.substr(0, filePath.lastIndexOf('.'))))
+                    fileData.attributes._url = "/#{p.replace(path.sep, '/')}"
+
+                    # Add the file data to the files array
+                    files.push fileData.attributes
 
             # Process a directory
             else if fileStat.isDirectory()
