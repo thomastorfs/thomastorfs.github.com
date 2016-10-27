@@ -1,0 +1,12 @@
+doctype xml
+rss(version='2.0')
+    channel
+        title Thomas Torfs RSS Feed
+        link http://thomastorfs.com/feed/rss
+        description
+        language en-US
+        each post in locals.blogposts
+            item
+                title= post.title
+                link http://www.thomastorfs.com#{post._url}
+                pubDate= new Date(post.date).toUTCString()
