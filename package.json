@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "browsernizr": "^2.1.0",
+    "domready": "^1.0.8",
     "dynamic-content": "^0.3.0",
     "express": "^4.14.0",
     "express-sanitizer": "^1.0.1",
@@ -19,6 +21,7 @@
     "lodash": "^4.13.1",
     "nodemailer": "^2.5.0",
     "page": "^1.7.1",
+    "pre-js": "^0.1.2",
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
@@ -36,7 +39,6 @@
     "jstransformer-verbatim": "^1.0.0",
     "marked": "0.3.x",
     "mkdirp": "^0.5.1",
-    "picturefill": "^3.0.2",
     "pixrem": "^3.0.1",
     "postcss": "^5.0.21",
     "postcss-cssnext": "^2.6.0",

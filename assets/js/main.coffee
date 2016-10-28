@@ -1,20 +1,25 @@
 # Vendor libs
-$           = require 'jquery'
-lazysizes   = require 'lazysizes'
-lsBgset     = require 'lazysizes/plugins/bgset/ls.bgset'
-FitVids     = require './vendor/fitvids/FitVids'
+$               = require 'jquery'
+lazysizes       = require 'lazysizes'
+lsBgset         = require 'lazysizes/plugins/bgset/ls.bgset'
+FitVids         = require './vendor/fitvids/FitVids'
 
 # Custom libs
-Stickheader = require './lib/header/Stickyheader'
-Navtoggler  = require './lib/header/Navtoggler'
-Contactform = require './lib/forms/Contactform'
-Sectionnext = require './lib/section/Sectionnext'
-Aboutwriter = require './lib/content/Aboutwriter'
+Compatibility   = require './lib/Compatibility'
+Stickheader     = require './lib/header/Stickyheader'
+Navtoggler      = require './lib/header/Navtoggler'
+Contactform     = require './lib/forms/Contactform'
+Sectionnext     = require './lib/section/Sectionnext'
+Aboutwriter     = require './lib/content/Aboutwriter'
 
+# Remove the Router for now
 # Router    = require './lib/Router'
 
-# Start the router.
+# Whenever the DOM is ready
 $(document).ready ->
+    # Initialize browser compatibility
+    new Compatibility()
+
     # Router.start()
 
     # Initialize the sticky header.

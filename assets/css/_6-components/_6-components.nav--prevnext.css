@@ -31,8 +31,7 @@
 
             &:before {
                 position: absolute;
-                top: 50%;
-                margin-top: -20px;
+                top: 80px;
                 @mixin webfont-icon;
                 color: #fff;
                 font-size: 40px;
@@ -87,6 +86,11 @@
         .text {
             position: relative;
             transition: padding $transition-duration $transition-type, background $transition-duration $transition-type;
+
+            /* fix the icon position */
+            &:before {
+                top: 130px;
+            }
         }
 
         /* align and animate the text and icon */
@@ -111,7 +115,7 @@
             &:last-child {
                 .text {
                     padding: 0 80px 0 0;
-                    text-align: right;    
+                    text-align: right;
 
                     &:before {
                         left: auto;
@@ -174,7 +178,14 @@
         /* set the link height */
         .bglink {
             height: 400px;
-        }    
+        }
+
+        /* fix the icon position */
+        .text {
+            &:before {
+                top: 180px;
+            }
+        }
     }
 }
 
@@ -184,6 +195,13 @@
         /* set the link height */
         .bglink {
             height: 500px;
-        }    
+        }
+
+        /* fix the icon position */
+        .text {
+            &:before {
+                top: 230px;
+            }
+        }
     }
 }

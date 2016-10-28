@@ -1,0 +1,23 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Compatibility
+ *
+ * #############################################################################
+ */
+
+/* vertical centering for heros */
+.no-flex {
+    .hero--home,
+    .hero--dualheight {
+        display: table;
+        width: 100%;
+
+        /* @TODO: fix max-width */
+        .wrapper__inner {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+}

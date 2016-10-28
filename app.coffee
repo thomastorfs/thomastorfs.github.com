@@ -26,11 +26,6 @@ module.exports =
       out: 'js/app.js',
       sourceMap: true
     ),
-    browserify(
-      files: 'assets/js/ie.coffee',
-      out: 'js/ie.js',
-      sourceMap: true
-    ),
     css_pipeline(files: ['assets/css/app.css', 'content/**/*.css'], postcss: true),
     dynamic()
   ]
