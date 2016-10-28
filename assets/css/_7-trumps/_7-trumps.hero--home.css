@@ -12,6 +12,7 @@
     display: -webkit-box;
     align-content: center;
     -webkit-box-align: center;
+    width: 100%;
     min-height: 100%;
 
     /* position my head */

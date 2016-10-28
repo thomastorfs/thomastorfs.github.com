@@ -28,7 +28,6 @@
     "css-mqpacker": "^5.0.1",
     "css-pipeline": "0.3.x",
     "cssnano": "^3.7.1",
-    "flexibility": "^2.0.1",
     "front-matter": "^2.1.0",
     "jade": "1.x",
     "jimp": "^0.2.24",

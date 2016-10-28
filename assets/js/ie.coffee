@@ -1,6 +1,5 @@
 $            = require 'jquery'
 Picturefill  = require 'picturefill'
-Flexibility  = require 'flexibility'
 
 # After loading the document
 $(document).ready ->
@@ -12,9 +11,6 @@ $(document).ready ->
             $this.attr 'src', res[res.length-1]
         else
             $this.attr 'src', $this.data('src')
-
-    # Flexbox
-    flexibility = new Flexibility document.documentElement
 
     # Simple placeholder polyfill
     $("[placeholder]").each ->
