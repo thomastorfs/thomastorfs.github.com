@@ -1,6 +1,6 @@
-$           = require 'jquery'
-Picturefill = require 'picturefill'
-Flexibility = require 'flexibility'
+$            = require 'jquery'
+Picturefill  = require 'picturefill'
+Flexibility  = require 'flexibility'
 
 # After loading the document
 $(document).ready ->
@@ -12,3 +12,21 @@ $(document).ready ->
             $this.attr 'src', res[res.length-1]
         else
             $this.attr 'src', $this.data('src')
+
+    # Simple placeholder polyfill
+    $("[placeholder]").each ->
+        $this = $(this)
+        initialValue = $this.attr "placeholder"
+
+        # Assign placeholder as the value attribute
+        $this.val initialValue
+
+        # Focused
+        $this.focus ->
+            if $this.val() is $this.attr "placeholder"
+                $this.val ""
+
+        # Blurred
+        $this.blur ->
+            if $this.val() is ""
+                $this.val initialValue
