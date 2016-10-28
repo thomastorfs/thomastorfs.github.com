@@ -13,6 +13,9 @@ $(document).ready ->
         else
             $this.attr 'src', $this.data('src')
 
+    # Flexbox
+    flexibility = new Flexibility document.documentElement
+
     # Simple placeholder polyfill
     $("[placeholder]").each ->
         $this = $(this)

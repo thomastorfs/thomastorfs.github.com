@@ -20,6 +20,9 @@
     /* make sure there's no underlining */
     text-decoration: none !important;
 
+    /* fix the line-height */
+    line-height: 1em;
+
     /* text */
     strong {
         /* general look */
@@ -31,7 +34,6 @@
         font-size: 0.875rem;
         font-weight: 700;
         text-transform: uppercase;
-        line-height: 1em;
         color: #fff !important; /* make sure the text remains white in a text area */
         text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
     }
