@@ -17,6 +17,9 @@
     border-style: solid;
     border-width: 1px;
 
+    /* make sure there's no underlining */
+    text-decoration: none !important;
+
     /* text */
     strong {
         /* general look */
@@ -27,7 +30,6 @@
         font-family: $font-sans-serif;
         font-size: 0.875rem;
         font-weight: 700;
-        text-decoration: none !important; /* make sure there's no underlining in a text area */
         text-transform: uppercase;
         line-height: 1em;
         color: #fff !important; /* make sure the text remains white in a text area */
