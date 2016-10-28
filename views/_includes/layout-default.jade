@@ -15,8 +15,8 @@ html
 
         link(rel='alternate', type='application/rss+xml', title='RSS', href='http://www.thomastorfs.com/feed/rss')
 
-        //if (gte IE 6)&(lte IE 8)
-            script(src='js/selectivizr.min.js')
+        <!--[if (gte IE 6)&(lte IE 8)]><script src="/js/selectivizr-min.js"><script src="/js/respond-min.js"></script><![endif]-->
+        <!--[if (lte IE 9)]></script><script src="/js/ie.js"></script><![endif]-->
 
         link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
         link(rel='icon', type='image/x-icon', href='/favicon.ico')

@@ -26,6 +26,11 @@ module.exports =
       out: 'js/app.js',
       sourceMap: true
     ),
+    browserify(
+      files: 'assets/js/ie.coffee',
+      out: 'js/ie.js',
+      sourceMap: true
+    ),
     css_pipeline(files: ['assets/css/app.css', 'content/**/*.css'], postcss: true),
     dynamic()
   ]
@@ -34,7 +39,9 @@ module.exports =
       require('postcss-easy-import')({ glob: true, path: ['assets/css'] }),
       require('postcss-mixins'),
       require('postcss-nested'),
-      require('postcss-cssnext')([ 'last 8 versions' ]),
+      require('postcss-flexibility'),
+      require('postcss-cssnext')([ '> 1%, ie 9' ]),
+      require('postcss-filter-gradient'),
       require('css-mqpacker'),
       require('postcss-simple-vars'),
       require('postcss-reporter')

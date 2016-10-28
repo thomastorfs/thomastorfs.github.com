@@ -21,6 +21,7 @@ section.wrapper.section--text.section--hero
                             +bglink-full(post._url, 'Read ' + post.title, post.image, post.imageDest)
                                 h2 #{post.title}
                                 p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
-                                .button.button_white Read more
+                                .button.button_white
+                                    strong Read more
             else
                 p.center There are currently no blog posts

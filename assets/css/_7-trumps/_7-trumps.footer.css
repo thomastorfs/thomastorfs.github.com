@@ -23,6 +23,7 @@ footer {
         height: 77px;
         background: $color-grey-darkest;
         text-indent: -999px;
+        text-decoration: none;
         overflow: hidden;
 
         /* hover */

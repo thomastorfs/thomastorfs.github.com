@@ -5,5 +5,9 @@ mixin content-image(source, dest, alt)
     - var small_2x = resize.createImage({source: source, suffix: 'small-2x', dest: dest, w: 1100, quality: 30, crop: false})
 
     picture.lazyload
+        // [if IE 9]
+            | <video style="display: none;">
         source(media='(min-width: 550px)', srcset='#{large_1x} 1x, #{large_2x} 2x')
+        // [if IE 9]
+            | </video>
         img(srcset='#{small_1x} 1x, #{small_2x} 2x' alt='#{alt}')
