@@ -56,6 +56,9 @@
         /* show the content */
         .section__content {
             display: block;
+    
+            /* add some shadow */
+            text-shadow: 0 0 10px #000;
         }
     }
 }
