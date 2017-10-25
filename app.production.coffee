@@ -12,7 +12,7 @@ dataModel = new DataModel
 
 # Configure Roots
 module.exports =
-  ignores: ['.idea/**', 'readme.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**']
+  ignores: ['.idea/**', 'readme.md', 'README', '*.lock', '*.iml', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**']
   server:
     clean_urls: true
   open_browser: false

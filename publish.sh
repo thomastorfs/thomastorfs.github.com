@@ -8,6 +8,12 @@
 #roots clean
 roots compile --env="production"
 
+# Remove the DS_Store files
+find ./public -type f -name .DS_Store -exec rm {} +
+rm ./public/README
+rm ./public/*.lock
+rm ./public/*.iml
+
 # removes the html extension
 for f in `ls public/*.html public/**/*.html`; do mv $f "${f%%.*}"; done
 
