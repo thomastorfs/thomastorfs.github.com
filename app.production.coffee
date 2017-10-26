@@ -33,7 +33,7 @@ module.exports =
       require('postcss-easy-import')({ glob: true, path: ['assets/css'] }),
       require('postcss-mixins'),
       require('postcss-nested'),
-      require('postcss-cssnext')([ 'last 8 versions' ]),
+      require('postcss-cssnext')([ '> 1%, ie 9' ]),
       require('css-mqpacker'),
       require('postcss-simple-vars'),
       require('postcss-discard-comments')({ removeAll: true }),

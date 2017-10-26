@@ -96,14 +96,14 @@
     .hero--dualheight {
         /* general layout*/
         position: relative;
-        display: flex;
-        display: -webkit-box;
-        align-content: center;
-        -webkit-box-align: center;
-        min-height: 100vh;
+        display: table;
+        height: 100vh;
+        width: 100%;
 
         /* equalize the whitespace on vertical align */
         .wrapper__inner {
+            display: table-cell;
+            vertical-align: middle;
             padding-top: 4em;
             padding-bottom: 4em;
         }

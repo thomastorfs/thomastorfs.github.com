@@ -35,7 +35,7 @@ module.exports =
       require('postcss-mixins'),
       require('postcss-nested'),
       require('postcss-flexibility'),
-      require('postcss-cssnext')([ '> 1%, ie 9' ]),
+      require('postcss-cssnext')([ '> 1%, ie9' ]),
       require('postcss-filter-gradient'),
       require('css-mqpacker'),
       require('postcss-simple-vars'),
