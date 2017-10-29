@@ -11,7 +11,8 @@ article.article--main.blogpost
 
     .article--main__text.wrapper
         .wrapper__inner
-            block content
+            .wrapper__content
+                block content
 
 if locals.blogposts && locals.blogposts.length > 2
     include partial-prevnext-blogpost

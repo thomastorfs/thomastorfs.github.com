@@ -12,8 +12,10 @@
 
 /* wrapper content */
 .wrapper__inner {
-    margin: 0 auto;
     padding: 0 $gutter;
+}
+.wrapper__content {
+    margin: 0 auto;
     max-width: $bp-desktop-large-min;
 }
 

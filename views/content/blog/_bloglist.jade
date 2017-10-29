@@ -1,27 +1,28 @@
 section.wrapper.section--text.section--hero
     .wrapper__inner
-        header.section__header
-            h1 Latest stories
+        .wrapper__content
+            header.section__header
+                h1 Latest stories
 
-        .section__intro
-            p 
-                | Below you can find the latest stories, thoughts, new findings, etcetera.<br />
-                | The first article has just been added today so the paint is still wet.<br />
-                | New blog posts will be added on a regular basis.
+            .section__intro
+                p
+                    | Below you can find the latest stories, thoughts, new findings, etcetera.<br />
+                    | The first article has just been added today so the paint is still wet.<br />
+                    | New blog posts will be added on a regular basis.
 
-        .section__content
-            if locals.blogposts
-                ul.list--blog
-                    - var showCount = 5
+            .section__content
+                if locals.blogposts
+                    ul.list--blog
+                        - var showCount = 5
 
-                    - each post, i in locals.blogposts
-                        - if (i > showCount) break
+                        - each post, i in locals.blogposts
+                            - if (i > showCount) break
 
-                        li
-                            +bglink-full(post._url, 'Read ' + post.title, post.image, post.imageDest)
-                                h2 #{post.title}
-                                p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
-                                .button.button_white
-                                    strong Read more
-            else
-                p.center There are currently no blog posts
+                            li
+                                +bglink-full(post._url, 'Read ' + post.title, post.image, post.imageDest)
+                                    h2 #{post.title}
+                                    p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
+                                    .button.button_white
+                                        strong Read more
+                else
+                    p.center There are currently no blog posts
