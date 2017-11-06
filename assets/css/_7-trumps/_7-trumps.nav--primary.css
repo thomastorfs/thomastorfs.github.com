@@ -51,7 +51,7 @@
         .wrapper.header {
             top: 0; /* make sure we position the header at the top in all cases */
             height: 100%;
-            background: $color-bg-black-trans;
+            background: $color-bg-blue-trans;
         }
 
         /* make sure we can scroll the navigation if it's out of sight */
@@ -95,10 +95,10 @@
     .header--dark.top {
         .nav--primary {
             a {
-                color: $color-font;
+                color: $color-font-header;
 
                 &:hover {
-                    background: $color-bg-black-trans;
+                    background: $color-bg-blue-trans;
                     color: #fff;
                 }
             }
@@ -181,7 +181,7 @@
                 color: $color-font;
 
                 &:hover {
-                    background: $color-bg-black-trans;
+                    background: $color-bg-blue-trans;
                     color: #fff;
 
                     /* the hamburger */

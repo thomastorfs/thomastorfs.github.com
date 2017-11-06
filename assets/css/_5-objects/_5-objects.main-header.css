@@ -16,7 +16,7 @@
 
     /* sticky header */
     &.sticky {
-    	background: $color-bg-black-trans;
+    	background: $color-bg-blue-trans;
     }
 
     /* hidden header */

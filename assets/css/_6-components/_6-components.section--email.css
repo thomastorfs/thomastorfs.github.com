@@ -45,7 +45,7 @@
 
         /* hover state */
         &:hover {
-            background: $color-red-light;
+            background: $color-blue-light;
         }
     }
 }

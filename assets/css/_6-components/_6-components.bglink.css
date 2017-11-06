@@ -25,14 +25,18 @@
     /* darken the background on hover */
     &:hover {
         .text {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(10, 19, 73, 0.7);
+            
+            h2,
+            p {
+                color: #fff;
+            }
         }
     }
 
     /* title styling */
     h2 {
         margin: 0 0 0.25em 0;
-        color: #fff;
         font-size: 1.25rem;
     }
 
@@ -52,8 +56,39 @@
         height: 100%;
         width: 100%;
         vertical-align: middle;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(10, 19, 73, 0.9);
         transition: background $transition-duration $transition-type;
+
+        h2,
+        p {
+            color: #fff;
+        }
+    }
+}
+
+/* white bglink */
+.bglink_white {
+    /* center the text and set a dark background by default */
+    .text {
+        /* always show */
+        background: rgba(255, 255, 255, 0.95);
+
+        h2,
+        p {
+            color: $color-blue;
+        }
+    }
+
+    /* darken the background on hover */
+    &:hover {
+        .text {
+            background: rgba(10, 19, 73, 0.8);
+            
+            h2,
+            p {
+                color: #fff;
+            }
+        }
     }
 }
 

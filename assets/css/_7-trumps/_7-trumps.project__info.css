@@ -12,9 +12,6 @@
     margin: 0;
     padding: 2em $gutter;
 
-    /* black background */
-    background: #000;
-
     /* white text */
     color: #fff;
 
@@ -36,7 +33,7 @@
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1.375em;
-    color: $color-grey-3;
+    color: #fff;
 
     /* with a bit space beneath */
     margin-bottom: 0.375em;
@@ -79,7 +76,7 @@
             top: 1em;
             bottom: 1em;
             left: 50%;
-            border-left: solid 1px $color-grey-dark;
+            border-left: solid 1px #fff;
             content: ' ';
         }
     }

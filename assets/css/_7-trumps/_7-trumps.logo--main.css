@@ -36,7 +36,7 @@
 .header--dark.top {
     .logo--main {
         svg {
-            fill: $color-font;
+            fill: $color-blue;
         }
     }
 }

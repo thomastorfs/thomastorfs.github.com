@@ -15,10 +15,9 @@
     padding: 0;
     overflow: hidden;
 
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
-
+    /* no border */
+    border: none;
+    
     /* make sure there's no underlining */
     text-decoration: none !important;
 
@@ -79,15 +78,45 @@
 
 
 /**
+ * blue button
+ * ---------------------------------------------------------------------------*/
+.button_blue {
+    /* red gradient background */
+    strong {
+        background-image: linear-gradient(180deg, #23338f, #00106c);
+    }
+
+    /* hover background */
+    &:hover {
+        strong {
+            background-image: linear-gradient(180deg, #2e3c8d, #0b196b);
+        }
+    }
+
+    /* clicked background */
+    &:active {
+        strong {
+            background-image: linear-gradient(0deg, #23338f, #00106c);
+        }
+    }
+
+    /* disabled background and text */
+    &[disabled] {
+        /* text and background */
+        strong {
+            background-image: linear-gradient(180deg, #101010, #232323);
+
+            color: #0e0e0e;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, .1);
+        }
+    }
+}
+
+
+/**
  * red button
  * ---------------------------------------------------------------------------*/
 .button_red {
-    /* specific border style */
-    border-top-color: #ff5d5d;
-    border-right-color: #7f0000;
-    border-bottom-color: #660000;
-    border-left-color: #ff4949;
-
     /* red gradient background */
     strong {
         background-image: linear-gradient(180deg, #ff3131, #cd0000);
@@ -109,11 +138,6 @@
 
     /* disabled background and text */
     &[disabled] {
-        border-top-color: #343434;
-        border-right-color: #101010;
-        border-bottom-color: #151515;
-        border-left-color: #393939;
-
         /* text and background */
         strong {
             background-image: linear-gradient(180deg, #101010, #232323);
@@ -138,7 +162,7 @@
     /* dark font and white gradient background */
     strong {
         background-image: linear-gradient(180deg, #fff, #ccc);
-        color: $color-font !important; /* We have to overwrite it again, unfortunately */
+        color: $color-blue !important; /* We have to overwrite it again, unfortunately */
         text-shadow: 1px 1px 0 #fff;
     }
 
@@ -166,6 +190,9 @@
     text-shadow: 1px 0 0 rgba(255, 255, 255, .1);
 
     /* specific border style */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
     border-top-color: #404040;
     border-right-color: #171717;
     border-bottom-color: #0a0a0a;

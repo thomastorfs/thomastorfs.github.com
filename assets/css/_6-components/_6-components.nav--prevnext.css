@@ -33,7 +33,7 @@
                 position: absolute;
                 top: 80px;
                 @mixin webfont-icon;
-                color: #fff;
+                color: $color-blue;
                 font-size: 40px;
 
                 /* add the animation */
@@ -54,6 +54,7 @@
                 a:hover {
                     .text {
                         &:before {
+                            color: #fff;
                             transform: translateX(10px);
                         }
                     }
@@ -70,6 +71,7 @@
                 a:hover {
                     .text {
                         &:before {
+                            color: #fff;
                             transform: translateX(-10px);
                         }
                     }

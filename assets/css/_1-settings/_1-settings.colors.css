@@ -24,6 +24,11 @@ $color-grey-dark: #2a2a2a;
 $color-grey-darker: #1e1e1e;
 $color-grey-darkest: #0e0e0e;
 
+/* blues */
+$color-blue-lighter: #bfc9ff;
+$color-blue-light: #2949ff;
+$color-blue-dark: #080f37;
+
 /* reds */
 $color-red-lighter: #ffc0c0;
 $color-red-light: #ff2828;
@@ -31,21 +36,21 @@ $color-red-dark: #db1818;
 
 /* colors */
 $color-red: #ff0808;
-$color-blue: #0eb3ed;
+$color-blue: #0a1349;
 
 /**
  * assignments
  * ---------------------------------------------------------------------------*/
 /* backgrounds */
 $color-bg-main: #fff;
-$color-bg-dark: $color-grey-dark;
-$color-bg-black-trans: rgba(0, 0, 0, 0.9);
+$color-bg-dark: $color-blue-dark;
+$color-bg-blue-trans: rgba(10, 19, 73, 0.9);
 $color-bg-white-trans-light: rgba(255, 255, 255, 0.1);
 
 /* typography */
 $color-font: #000;
-$color-font-header: #000;
+$color-font-header: $color-blue;
 
 /* backgrounds */
-$color-footer: $color-grey-dark;
+$color-footer: $color-blue-dark;
 $color-footer-bottom: $color-grey-darkest;

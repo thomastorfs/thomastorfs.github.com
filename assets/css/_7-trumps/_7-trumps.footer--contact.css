@@ -8,7 +8,7 @@
 
 .footer--contact {
     /* dark background */
-    background: $color-grey-dark;
+    background: $color-blue;
 
     /* general text styling */
     text-align: center;
@@ -25,12 +25,12 @@
     /* dark input fields */
     input[type=text],
     textarea {
-        background: $color-grey-darker;
+        background: $color-blue-dark;
         color: #fff;
     }
     input::placeholder,
     textarea::placeholder {
-        color: $color-grey;
+        color: $color-blue-lighter;
     }
 }
 

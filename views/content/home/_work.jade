@@ -15,7 +15,7 @@ section.wrapper.home--work
 
                         //- Print each individual project
                         - each project, i in projects
-                            - rowClasses = ['col']
+                            - rowClasses = ['col', 'bglink_white']
 
                             //- Add the first and last class
                             - if (i === 0) rowClasses.push('first')
@@ -34,7 +34,7 @@ section.wrapper.home--work
                                     - if (project.type !== 'moreLink')
                                         p #{project.type}
                                     - else
-                                        .button.button_large.button_red
+                                        .button.button_large.button_blue
                                             strong Hire me now
 
 
