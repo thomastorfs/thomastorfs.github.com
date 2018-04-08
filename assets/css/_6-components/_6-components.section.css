@@ -44,7 +44,7 @@ section {
     transition: transform $transition-duration $transition-type;
 
     /* icon */
-    &:before {
+    &::before {
         @mixin webfont-icon;
         content: $icon-arrow-down;
         color: #fff;

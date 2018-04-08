@@ -71,7 +71,7 @@
         z-index: 3;
 
         /* the center separator */
-        &:before {
+        &::before {
             position: absolute;
             top: 1em;
             bottom: 1em;

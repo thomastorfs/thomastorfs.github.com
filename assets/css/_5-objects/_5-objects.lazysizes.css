@@ -13,7 +13,7 @@
     position: relative;
 
     /* add background */
-    &:before {
+    &::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -25,7 +25,7 @@
     }
 
     /* add throbber */
-    &:after {
+    &::after {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -55,8 +55,8 @@
 
 /* fadeout the black background */
 .lazyloaded {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         opacity: 0;
         transition: opacity $transition-duration $transition-type;
     }

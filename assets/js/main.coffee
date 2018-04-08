@@ -12,9 +12,6 @@ Contactform     = require './lib/forms/Contactform'
 Sectionnext     = require './lib/section/Sectionnext'
 Aboutwriter     = require './lib/content/Aboutwriter'
 
-# Remove the Router for now
-# Router    = require './lib/Router'
-
 # Whenever the DOM is ready
 $(document).ready ->
     # Initialize browser compatibility
@@ -40,4 +37,4 @@ $(document).ready ->
     # @TODO: Add ScrollReveal https://github.com/jlmakes/scrollreveal
 
     # Initialize the about topic writer.
-    new Aboutwriter()
+    # new Aboutwriter()

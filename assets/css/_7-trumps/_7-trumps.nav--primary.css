@@ -133,7 +133,7 @@
         }
 
         /* the hamburger */
-        &:after,
+        &::after,
         strong:before,
         strong:after {
             position: absolute;
@@ -146,7 +146,7 @@
             background: #fff;
             border-radius: 2px;
         }
-        &:after {
+        &::after {
             transition-duration: $transition-duration;
         }
         strong:before {
@@ -162,7 +162,7 @@
     /* when the navigation is visible */
     .nav--visible {
         .nav-toggler {
-            &:after {
+            &::after {
                 transform: translate3d(0, 10px, 0) rotate(135deg);
             }
             strong:before {
@@ -185,7 +185,7 @@
                     color: #fff;
 
                     /* the hamburger */
-                    &:after,
+                    &::after,
                     strong:before,
                     strong:after {
                         background: #fff;
@@ -193,7 +193,7 @@
                 }
 
                 /* the hamburger */
-                &:after,
+                &::after,
                 strong:before,
                 strong:after {
                     background: $color-font;

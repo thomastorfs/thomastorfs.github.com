@@ -41,7 +41,7 @@
         padding-left: 0.875em;
         overflow: hidden;
 
-        &:before {
+        &::before {
             /* positioning and layout */
             position: absolute;
             top: 50%;

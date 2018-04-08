@@ -12,21 +12,21 @@
  * ---------------------------------------------------------------------------*/
 .hero {
     /* default typography */
-    color: #fff;
+    color: $color-blue-dark;
 
     h1, h2, h3, h4, h5 {
-        color: #fff;
+        color: $color-blue-dark;
     }
 
     h1 {
         font-size: 1.25rem;
     }
 
-    /* black background by default */
-    background-color: #000;
+    /* white background by default */
+    background-color: #fff;
 
     /* remove throbber on heros because it's annoying */
-    &:after {
+    &::after {
         display: none;
     }
 }
@@ -66,6 +66,16 @@
 /* less vertical spacing */
 .hero--bg {
     padding: $sizes-header-height-small 0;
+    
+    /* black background by default */
+    background-color: #000;
+    
+    /* default typography */
+    color: #fff;
+
+    h1, h2, h3, h4, h5 {
+        color: #fff;
+    }
 }
 
 
