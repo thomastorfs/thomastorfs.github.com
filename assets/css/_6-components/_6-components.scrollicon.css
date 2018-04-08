@@ -8,25 +8,30 @@
 
 .scrollicon {
     position: relative;
-
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     margin: 0 auto;
-    transform: rotateZ(-45deg);
-
-    border: solid 2px #fff;
-    border-left: solid 2px $color-blue;
-    border-bottom: solid 2px $color-blue;
-    border-radius: 4px;
     
-    -webkit-animation: scrollAnim 3s infinite ease-out;
+    &::before {
+        @mixin webfont-icon;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        content: $icon-arrow-down-notext;
+        color: $color-blue;
+        font-size: 16px;
+    }
+    
+    -webkit-animation: scrollAnim 1.5s infinite ease-out;
     animation: scrollAnim 1.5s infinite ease-out;
 }
 
 @keyframes scrollAnim {
     0% {
         opacity: 0;
-        top: -20px
+        top: -20px;
     }
     25% {
         opacity: 1;
@@ -38,6 +43,6 @@
     }
     100% {
         opacity: 0;
-        top: 15px
+        top: 15px;
     }
 }

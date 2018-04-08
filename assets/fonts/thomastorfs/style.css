@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'thomastorfs';
-  src:  url('fonts/thomastorfs.eot?b9hgi8');
-  src:  url('fonts/thomastorfs.eot?b9hgi8#iefix') format('embedded-opentype'),
-    url('fonts/thomastorfs.ttf?b9hgi8') format('truetype'),
-    url('fonts/thomastorfs.woff?b9hgi8') format('woff'),
-    url('fonts/thomastorfs.svg?b9hgi8#thomastorfs') format('svg');
+  src:  url('fonts/thomastorfs.eot?9kao8x');
+  src:  url('fonts/thomastorfs.eot?9kao8x#iefix') format('embedded-opentype'),
+    url('fonts/thomastorfs.ttf?9kao8x') format('truetype'),
+    url('fonts/thomastorfs.woff?9kao8x') format('woff'),
+    url('fonts/thomastorfs.svg?9kao8x#thomastorfs') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,11 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-logo-torfs-consulting:before {
-  content: "\e906";
-}
 .icon-logo:before {
   content: "\e900";
+}
+.icon-logo-torfs-consulting:before {
+  content: "\e906";
 }
 .icon-arrow-down:before {
   content: "\e901";
@@ -44,4 +44,7 @@
 }
 .icon-arrow-right:before {
   content: "\e905";
+}
+.icon-arrow-down-noborder:before {
+  content: "\e907";
 }
