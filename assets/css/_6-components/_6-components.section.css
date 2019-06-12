@@ -7,7 +7,7 @@
  */
 
 section {
-    padding: 64px 0;
+    padding: 100px 0;
 }
 
 /* header */
@@ -20,6 +20,11 @@ section {
         letter-spacing: 0.175rem;
         text-align: center;
     }
+}
+
+/* intro */
+.section__intro {
+    position: relative;
 }
 
 /* content */
@@ -61,7 +66,7 @@ section {
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     section {
-        padding: 110px 0;
+        padding: 130px 0;
     }
 
     /* header */
@@ -77,7 +82,7 @@ section {
 /* desktop */
 @media (min-width: $bp-desktop-min) {
     section {
-        padding: 155px 0;
+        padding: 180px 0;
     }
 
     /* header */
