@@ -13,6 +13,12 @@
     text-align: left;
 }
 
+/* success messages */
+.message.success {
+    background: $color-green-lighter;
+    color: $color-green;
+}
+
 /* error messages */
 .message.error {
     background: $color-red-lighter;

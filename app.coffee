@@ -16,8 +16,7 @@ module.exports =
     clean_urls: true
   locals:
     resize: new ImageResizer
-    blogposts: dataModel.getBlogPosts(),
-    projects: dataModel.getProjects()
+    blogposts: dataModel.getBlogPosts()
   jade:
     pretty: true
   extensions: [

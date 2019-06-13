@@ -25,13 +25,23 @@ $color-grey-darker: #1e1e1e;
 $color-grey-darkest: #0e0e0e;
 
 /* reds */
+$color-red: #ff0808;
 $color-red-lighter: #ffc0c0;
 $color-red-light: #ff2828;
 $color-red-dark: #db1818;
 
-/* colors */
-$color-red: #ff0808;
+/* blues */
 $color-blue: #0eb3ed;
+$color-green-lighter: #ffc0c0;
+$color-green-light: #ff2828;
+$color-green-dark: #db1818;
+
+/* greens */
+$color-green: #87c33b;
+$color-green-lighter: #cae9a4;
+$color-green-light: #a4d568;
+$color-green-dark: #517820;
+
 
 /**
  * assignments

@@ -10,7 +10,6 @@ Stickheader     = require './lib/header/Stickyheader'
 Navtoggler      = require './lib/header/Navtoggler'
 Contactform     = require './lib/forms/Contactform'
 Sectionnext     = require './lib/section/Sectionnext'
-Aboutwriter     = require './lib/content/Aboutwriter'
 
 # Remove the Router for now
 # Router    = require './lib/Router'
@@ -38,6 +37,3 @@ $(document).ready ->
     new FitVids('body')
 
     # @TODO: Add ScrollReveal https://github.com/jlmakes/scrollreveal
-
-    # Initialize the about topic writer.
-    new Aboutwriter()

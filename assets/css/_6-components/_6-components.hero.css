@@ -118,6 +118,7 @@
     .wrapper__inner {
         position: relative;
         max-width: 85%;
+        margin: 0 auto;
         text-align: center;
         z-index: 3;
     }

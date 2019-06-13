@@ -11,12 +11,6 @@ class DataModel
         # Sort by descending date
         posts = _.sortBy(posts, 'date').reverse()
 
-    getProjects: ->
-        # Get the projects
-        projects = @getDirectoryEntries 'views/work'
-        # Sort by ascending index
-        projects = _.sortBy(projects, 'index')
-
     getDirectoryEntries: (directory, files = []) =>
         # Read all files
         entries = fs.readdirSync directory

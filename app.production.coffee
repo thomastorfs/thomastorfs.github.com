@@ -18,8 +18,7 @@ module.exports =
   open_browser: false
   locals:
     resize: new ImageResizer
-    blogposts: dataModel.getBlogPosts(),
-    projects: dataModel.getProjects()
+    blogposts: dataModel.getBlogPosts()
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',

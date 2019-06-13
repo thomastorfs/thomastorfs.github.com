@@ -24,13 +24,13 @@ class Contactform
                         for error in response.errors
                             @addMessage '[name="' + error.param + '"]', 'error', error.msg
                     else if response.success
-                        @addMessage '.actions', 'error', 'Your message has been succesfully sent.'
+                        @addMessage '.actions', 'success', 'Your message has been succesfully sent.'
                     else
-                        @addMessage '.actions', 'error', 'An error occurred while sending your message.'
+                        @addMessage '.actions', 'success', 'An error occurred while sending your message.'
 
                     @enableSend()
                 .fail (response) =>
-                    @addMessage '.actions', 'error', 'An error occurred while sending your message.'
+                    @addMessage '.actions', 'success', 'An error occurred while sending your message.'
                     @enableSend()
 
     addMessage: (id, type, body) =>
