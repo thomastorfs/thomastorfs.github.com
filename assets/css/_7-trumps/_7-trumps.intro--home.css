@@ -1,0 +1,100 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Hero on the homepage
+ *
+ * #############################################################################
+ */
+
+.intro--home {
+    /* general layout*/
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    /* make sure the alignment is only horizontal */
+    .wrapper__inner {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+    }
+
+    header {
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .logo {
+        display: block;
+        width: 182px;
+        margin: 0 auto;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            /* make it white */
+            fill: $color-font;
+            transition: fill $transition-duration ease 0s;
+        }
+    }
+
+    /* set the margins between the elements */
+    header {
+        margin: 0 auto 4em auto;
+    }
+    .section__content {
+        margin: 0 auto 3em auto;
+    }
+    header,
+    .section__content {
+        /* add link styling */
+        a {
+            color: $color-blue;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-blue-light;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-tablet-narrow-min) {
+    .intro--home {
+        header,
+        .section__content {
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width: $bp-tablet-wide-min) {
+    .intro--home {
+        /* show the next button below the text */
+        .section__next {
+            display: inline-block;
+            position: static;
+            margin-top: 2.5rem;
+            margin-left: 0;
+
+            /* icon */
+            &:before {
+                color: $color-font;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-desktop-min) {
+    .intro--home {
+        header,
+        .section__content {
+            width: 50%;
+        }
+    }
+}

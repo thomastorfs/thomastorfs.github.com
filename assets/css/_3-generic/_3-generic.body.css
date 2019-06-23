@@ -13,23 +13,9 @@ body {
 
 body {
     background: $color-bg-main;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-family: $font-serif;
     font-weight: 400;
     line-height: 2.25em;
     color: $color-font;
-}
-
-/* tablet narrow */
-@media (min-width: $bp-tablet-narrow-min) {
-    body {
-        font-size: 0.875rem;
-    }
-}
-
-/* desktop */
-@media (min-width: $bp-desktop-min) {
-    body {
-        font-size: 1rem;
-    }
 }

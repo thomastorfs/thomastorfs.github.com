@@ -1,0 +1,13 @@
+mixin wrapper(tag, extra_classes)
+
+    - var default_classes = 'wrapper'
+
+    if extra_classes
+        - var classes = default_classes  + ' ' + extra_classes
+    else
+        - var classes = default_classes
+
+    #{tag}(class='#{classes}')
+        .wrapper__inner
+            .wrapper__content
+                block
