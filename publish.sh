@@ -6,6 +6,7 @@
 
 # replace with your compile command
 #roots clean
+rm -rf public
 roots compile --env="production"
 
 # Remove the DS_Store files
