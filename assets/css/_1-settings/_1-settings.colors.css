@@ -12,7 +12,7 @@
 /* light greys */
 $color-grey-light: #c6c6c6;
 $color-grey-lighter: #e3e3e3;
-$color-grey-lightest: #f1f1f1;
+$color-grey-lightest: #f5f5f5;
 
 /* greys */
 $color-grey: #999999;
@@ -48,7 +48,7 @@ $color-bg-blue-trans: rgba(10, 19, 73, 0.9);
 $color-bg-white-trans-light: rgba(255, 255, 255, 0.1);
 
 /* typography */
-$color-font: #000;
+$color-font: $color-blue;
 $color-font-header: $color-blue;
 
 /* backgrounds */

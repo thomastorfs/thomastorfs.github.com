@@ -25,7 +25,7 @@
     /* dark input fields */
     input[type=text],
     textarea {
-        background: $color-blue-dark;
+        background: #fff;
         color: #fff;
     }
     input::placeholder,

@@ -81,9 +81,9 @@
  * blue button
  * ---------------------------------------------------------------------------*/
 .button_blue {
-    /* red gradient background */
+    /* blue gradient background */
     strong {
-        background-image: linear-gradient(180deg, #23338f, #00106c);
+        background-image: linear-gradient(180deg, #182468, $color-blue-dark);
     }
 
     /* hover background */
@@ -178,6 +178,12 @@
         strong {
             background-image: linear-gradient(0deg, #fff, #ccc);
         }
+    }
+
+    /* icon */
+    &::before {
+        color: $color-blue !important;
+        text-shadow: 1px 1px 0 #fff;
     }
 }
 
