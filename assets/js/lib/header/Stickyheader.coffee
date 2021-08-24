@@ -35,12 +35,12 @@ class Stickyheader
                 @header.removeClass @topClass
 
             # add or remove the hide class
-            if @lastScrollPosition > (@hideScrollPosition + @minHideScroll) && !@header.hasClass @hideClass
-                @header.addClass @hideClass
-
-            else if scrollPosition < @lastScrollPosition
-                @header.removeClass @hideClass
-                @hideScrollPosition = scrollPosition
+            # if @lastScrollPosition > (@hideScrollPosition + @minHideScroll) && !@header.hasClass @hideClass
+            #     @header.addClass @hideClass
+            #
+            # else if scrollPosition < @lastScrollPosition
+            #     @header.removeClass @hideClass
+            #     @hideScrollPosition = scrollPosition
 
         # returned to top
         else

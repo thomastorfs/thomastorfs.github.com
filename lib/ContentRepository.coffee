@@ -3,18 +3,18 @@ fm          = require 'front-matter'
 _           = require 'underscore'
 path        = require 'path'
 
-# Create our Data Model class
-class DataModel
+# Create our Content Repository class
+class ContentRepository
     getBlogPosts: ->
-        # Get the blogposts
         posts = @getDirectoryEntries 'views/blog'
-        # Sort by descending date
-        posts = _.sortBy(posts, 'date').reverse()
+        posts = _.groupBy(posts, '_parsedYear')
+        years = _.sortBy(Object.keys(posts), (key) => key).reverse()
+        groupedPosts = []
+        _.each(years, (year) => groupedPosts.push(_.sortBy(posts[year], '_parsedDate').reverse()))
+        groupedPosts
 
     getProjects: ->
-        # Get the projects
         projects = @getDirectoryEntries 'views/work'
-        # Sort by ascending index
         projects = _.sortBy(projects, 'index')
 
     getDirectoryEntries: (directory, files = []) =>
@@ -42,6 +42,10 @@ class DataModel
                     # Create the URL and add it to the file data
                     p = path.relative('views', path.join(filePath.substr(0, filePath.lastIndexOf('.'))))
                     fileData.attributes._url = "/#{p.replace(path.sep, '/')}"
+                    fileData.attributes._parsedDate = new Date(fileData.attributes.date)
+                    fileData.attributes._parsedYear = fileData.attributes._parsedDate.getFullYear()
+                    fileData.attributes._parsedMonth = fileData.attributes._parsedDate.toLocaleString('default', {month: 'short'})
+                    fileData.attributes._parsedDay = fileData.attributes._parsedDate.getDay()
 
                     # Add the file data to the files array
                     files.push fileData.attributes
@@ -53,4 +57,4 @@ class DataModel
 
         return files
 
-module.exports = DataModel
+module.exports = ContentRepository

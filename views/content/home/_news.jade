@@ -1,0 +1,24 @@
+section.wrapper.news-overview
+    .wrapper__inner
+        .wrapper__content
+            header.section__header
+                h1 News
+
+            .section__content
+
+                if locals.blogposts
+
+                    each blogyear, i in locals.blogposts
+
+                        h2 #{blogyear[0]._parsedYear}
+
+                        each post, j in blogyear
+
+                            ul.list--news
+                                li
+                                    a.news-item(href='#{post._url}', title='Read ' + post.title)
+                                        span.date #{post._parsedDay} #{post._parsedMonth} 
+                                        span.title #{post.title}
+
+                else
+                    p.center There is currently no news available

@@ -13,7 +13,7 @@ body {
 
 body {
     background: $color-bg-main;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-family: $font-serif;
     font-weight: 400;
     line-height: 2.25em;
@@ -23,7 +23,7 @@ body {
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     body {
-        font-size: 0.875rem;
+        font-size: 0.938rem;
     }
 }
 

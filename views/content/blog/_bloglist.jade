@@ -13,16 +13,15 @@ section.wrapper.section--text.section--hero
             .section__content
                 if locals.blogposts
                     ul.list--blog
-                        - var showCount = 5
 
-                        - each post, i in locals.blogposts
-                            - if (i > showCount) break
+                        - each blogyear, i in locals.blogposts
+                            - each post in blogyear
 
-                            li
-                                +bglink-full(post._url, 'Read ' + post.title, post.image, post.imageDest)
-                                    h2 #{post.title}
-                                    p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
-                                    .button.button_white
-                                        strong Read more
+                                li
+                                    +bglink-full(post._url, 'Read ' + post.title, post.image, post.imageDest)
+                                        h2 #{post.title}
+                                        p.meta #{post.dateFull} <span class="separator">|</span> #{post.timetoread}
+                                        .button.button_white
+                                            strong Read more
                 else
                     p.center There are currently no blog posts

@@ -10,7 +10,7 @@
     /* general layout*/
     display: table;
     width: 100%;
-    height: 100%;
+    height: 90%;
 
     /* position my head */
     background-position: 60% 50%;
@@ -21,6 +21,7 @@
         vertical-align: middle;
         width: 100%;
         height: 100%;
+        text-align: center;
     }
 
     header {
@@ -32,15 +33,25 @@
         }
     }
 
-    .section__content {
-        /* hide the content */
-        display: none;
+    a {
+        &:hover {
+            color: #a7e45c;
+        }
     }
 
     /* set the margins between the elements */
     header,
     .section__content {
         margin-bottom: 3em;
+    }
+
+    /* show the next button below the text */
+    .section__next {
+        display: block;
+        position: relative;
+        top: 0;
+        width: 40px;
+        height: 40;
     }
 }
 
@@ -56,7 +67,7 @@
         /* show the content */
         .section__content {
             display: block;
-    
+
             /* add some shadow */
             text-shadow: 0 0 10px #000;
         }

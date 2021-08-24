@@ -1,12 +1,12 @@
-postcss         = require 'postcss'
-css_pipeline    = require 'css-pipeline'
-browserify      = require 'roots-browserify'
-dynamic         = require 'dynamic-content'
-DataModel       = require './lib/DataModel'
-ImageResizer    = require './lib/ImageResizer'
+postcss           = require 'postcss'
+css_pipeline      = require 'css-pipeline'
+browserify        = require 'roots-browserify'
+dynamic           = require 'dynamic-content'
+ContentRepository = require './lib/ContentRepository'
+ImageResizer      = require './lib/ImageResizer'
 
 # Instantiate the model
-dataModel = new DataModel
+contentRepository = new ContentRepository
 
 # Configure Roots
 module.exports =
@@ -16,8 +16,8 @@ module.exports =
     clean_urls: true
   locals:
     resize: new ImageResizer
-    blogposts: dataModel.getBlogPosts(),
-    projects: dataModel.getProjects()
+    blogposts: contentRepository.getBlogPosts(),
+    projects: contentRepository.getProjects()
   jade:
     pretty: true
   extensions: [

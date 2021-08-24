@@ -79,6 +79,37 @@
 
 
 /**
+ * green button
+ * ---------------------------------------------------------------------------*/
+.button_green {
+    /* specific border style */
+    border-top-color: #c3ed8f;
+    border-right-color: #7cb537;
+    border-bottom-color: #23380a;
+    border-left-color: #7fb73a;
+
+    /* red gradient background */
+    strong {
+        background-image: linear-gradient(180deg, #a7e45c, #67a41c);
+    }
+
+    /* hover background */
+    &:hover {
+        strong {
+            background-image: linear-gradient(180deg, #b4f663, #77bc23);
+        }
+    }
+
+    /* clicked background */
+    &:active {
+        strong {
+            background-image: linear-gradient(0deg, #a7e45c, #67a41c);
+        }
+    }
+}
+
+
+/**
  * red button
  * ---------------------------------------------------------------------------*/
 .button_red {

@@ -1,14 +1,14 @@
-fs              = require 'fs'
-postcss         = require 'postcss'
-uglifyjs        = require 'uglify-js'
-browserify      = require 'roots-browserify'
-css_pipeline    = require 'css-pipeline'
-dynamic         = require 'dynamic-content'
-DataModel       = require './lib/DataModel'
-ImageResizer    = require './lib/ImageResizer'
+fs                = require 'fs'
+postcss           = require 'postcss'
+uglifyjs          = require 'uglify-js'
+browserify        = require 'roots-browserify'
+css_pipeline      = require 'css-pipeline'
+dynamic           = require 'dynamic-content'
+ContentRepository = require './lib/ContentRepository'
+ImageResizer      = require './lib/ImageResizer'
 
 # Instantiate the model
-dataModel = new DataModel
+contentRepository = new ContentRepository
 
 # Configure Roots
 module.exports =
@@ -18,8 +18,8 @@ module.exports =
   open_browser: false
   locals:
     resize: new ImageResizer
-    blogposts: dataModel.getBlogPosts(),
-    projects: dataModel.getProjects()
+    blogposts: contentRepository.getBlogPosts(),
+    projects: contentRepository.getProjects()
   extensions: [
     browserify(
       files: 'assets/js/main.coffee',

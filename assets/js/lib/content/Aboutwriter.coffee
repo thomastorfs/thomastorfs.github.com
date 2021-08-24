@@ -14,6 +14,9 @@ class Aboutwriter
                         'technology',
                         'design',
                         'photography',
+                        'books',
+                        'nature',
+                        'meditation',
                         'many things'
                     ],
                     startDelay: 2000,
