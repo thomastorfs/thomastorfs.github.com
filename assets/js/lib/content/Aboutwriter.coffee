@@ -11,10 +11,10 @@ class Aboutwriter
                 {
                     strings: [
                         'music',
-                        'technology',
                         'design',
                         'photography',
                         'books',
+                        'ecology',
                         'nature',
                         'meditation',
                         'many things'
