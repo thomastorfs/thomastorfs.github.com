@@ -17,27 +17,20 @@ Aboutwriter     = require './lib/content/Aboutwriter'
 
 # Whenever the DOM is ready
 $(document).ready ->
-    # Initialize browser compatibility
     new Compatibility()
 
     # Router.start()
 
-    # Initialize the sticky header.
     new Stickheader('.header')
 
-    # Intialize the toggling on the navigation.
     new Navtoggler('.nav-toggler')
 
-    # Initialize the contact form.
     new Contactform('.form--contact')
 
-    # Initialize the section-next buttons.
     new Sectionnext('.section__next')
 
-    # Initialize the automatic fitting of videos
     new FitVids('body')
 
     # @TODO: Add ScrollReveal https://github.com/jlmakes/scrollreveal
 
-    # Initialize the about topic writer.
     new Aboutwriter()

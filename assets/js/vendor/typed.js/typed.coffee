@@ -273,12 +273,12 @@ class Typedjs
                     @el.val(nextString)
                 else if (@contentType == 'html')
                     @el.html(nextString)
-                else 
+                else
                     @el.text(nextString)
 
             # if the number (id of character in current string) is
             # less than the stop number, keep going
-            if (curStrPos > @stopNum) 
+            if (curStrPos > @stopNum)
                 # subtract characters one by one
                 curStrPos--
                 # loop the function

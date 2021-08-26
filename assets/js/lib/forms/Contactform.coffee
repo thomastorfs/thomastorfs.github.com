@@ -2,22 +2,17 @@ $ = require 'jquery'
 
 class Contactform
     constructor: (selector) ->
-        # elements
         @form = $ selector
         @sendBtns = @form.find '[type=submit]'
 
-        # Submit the form
         @form.submit (e) =>
             e.preventDefault()
 
-            # Get the form values
             formValues = @form.serializeArray()
 
-            # Disable the submit button and remove any messages
             @disableSend()
             @removeMessages()
 
-            # Send the email
             $.post 'http://api.torfsconsulting.com/api/contact-form', $.param(formValues)
                 .done (response) =>
                     if response.errors? && !response.errors.code

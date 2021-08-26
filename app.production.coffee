@@ -7,10 +7,8 @@ dynamic           = require 'dynamic-content'
 ContentRepository = require './lib/ContentRepository'
 ImageResizer      = require './lib/ImageResizer'
 
-# Instantiate the model
 contentRepository = new ContentRepository
 
-# Configure Roots
 module.exports =
   ignores: ['.idea/**', 'readme.md', 'README', '*.lock', '*.iml', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**']
   server:

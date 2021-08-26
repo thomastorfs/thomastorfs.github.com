@@ -3,7 +3,6 @@ Typedjs = require '../../vendor/typed.js/typed'
 
 class Aboutwriter
     constructor: () ->
-        # elements
         $topic = $ '.topic'
 
         if $topic.length

@@ -11,18 +11,14 @@ $ = require 'jquery'
 
 class FitVids
     constructor: (wrapper, options) ->
-        # Internal counter for unique video names.
         @count = 0
 
-        # Get the wrapper
         $wrapper = $(wrapper)
 
-        # Initialize the settings
         settings =
             customSelector: null
             ignore: null
 
-        # Make sure the style is added
         if !document.getElementById('fit-vids-style')
             # appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
             head = document.head || document.getElementsByTagName('head')[0]
@@ -31,11 +27,9 @@ class FitVids
             div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>'
             head.appendChild(div.childNodes[1])
 
-        # Set the options
         if options
             $.extend( settings, options )
 
-        # Process each wrapper element
         $wrapper.each (i, el) =>
             selectors = [
                 'iframe[src*="player.vimeo.com"]',
