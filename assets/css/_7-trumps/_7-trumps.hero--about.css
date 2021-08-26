@@ -48,13 +48,13 @@
             left: 0;
             display: block;
             width: 100% !important;
-            margin-top: -0.4em;
+            margin-top: -0.9rem;
 
             /* icon */
             @mixin webfont-icon;
             content: $icon-heart;
             color: $color-red;
-            font-size: 0.70em;
+            font-size: 1.9rem;
             text-align: center;
         }
     }
