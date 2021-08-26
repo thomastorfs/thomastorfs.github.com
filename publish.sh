@@ -17,7 +17,7 @@ for f in `ls public/*.html public/**/*.html`; do mv $f "${f%%.*}"; done
 
 # requires s3cmd >= v1.5.0-beta1 for
 # https://github.com/s3tools/s3cmd/issues/243
-s3cmd sync --default-mime-type="text/html; charset=utf-8" --guess-mime-type --delete-removed public/ s3://torfsconsulting.com/
+s3cmd sync --default-mime-type="text/html; charset=utf-8" --guess-mime-type --delete-removed public/ s3://thomastorfs.com/
 
 # Set cache control to one hour
-s3cmd --recursive modify --add-header='Cache-Control:max-age=3600, public' s3://torfsconsulting.com
+s3cmd --recursive modify --add-header='Cache-Control:max-age=3600, public' s3://thomastorfs.com

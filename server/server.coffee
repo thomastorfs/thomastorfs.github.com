@@ -8,7 +8,7 @@ bodyParser          = require 'body-parser'
 app = express()
 
 allowCrossDomain = (req, res, next) ->
-    res.header('Access-Control-Allow-Origin', 'http://torfsconsulting.com');
+    res.header('Access-Control-Allow-Origin', 'http://thomastorfs.com');
     res.header('Access-Control-Allow-Methods', 'GET, POST');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next()
@@ -67,7 +67,7 @@ router.route '/contact-form'
         mailOptions =
             from: req.body.name + ' <' + req.body.email + '>'
             to: 'thomas.torfs@gmail.com'
-            subject: 'torfsconsulting.com: ' + req.body.name + ' sends you a message'
+            subject: 'thomastorfs.com: ' + req.body.name + ' sends you a message'
             text: req.body.message
 
         smtpTransport.sendMail mailOptions, (error, info) ->

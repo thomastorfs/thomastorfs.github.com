@@ -2,7 +2,7 @@
 app = express()
 
 allowCrossDomain = (req, res, next) ->
-    res.setHeader 'Access-Control-Allow-Origin', 'http://torfsmedia.com'
+    res.setHeader 'Access-Control-Allow-Origin', 'http://thomastorfs.com'
 res.setHeader 'Access-Control-Allow-Methods', 'GET, POST'
 res.setHeader 'Access-Control-Allow-Headers', 'Content-Type'
 next()
@@ -57,12 +57,12 @@ req.body.email = req.sanitize req.body.email
 req.body.message = req.sanitize req.body.message
 
         # Send the email
-smtpTransport = nodeMailer.createTransport 'smtps://noreply%40torfsmedia.com:22c8c55838247b1ce0d4ecc5d6c134f9@smtp.mailgun.org'
+smtpTransport = nodeMailer.createTransport 'smtps://noreply%40thomastorfs.com:22c8c55838247b1ce0d4ecc5d6c134f9@smtp.mailgun.org'
 
 mailOptions =
     from: req.body.name + ' <' + req.body.email + '>'
-to: 'info@torfsmedia.com'
-subject: 'torfsmedia.com: ' + req.body.name + ' sends you a message'
+to: 'info@thomastorfs.com'
+subject: 'thomastorfs.com: ' + req.body.name + ' sends you a message'
 text: req.body.message
 
 smtpTransport.sendMail mailOptions, (error, info) ->
