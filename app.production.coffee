@@ -10,7 +10,7 @@ ImageResizer      = require './lib/ImageResizer'
 contentRepository = new ContentRepository
 
 module.exports =
-  ignores: ['.idea/**', 'readme.md', 'README', '*.lock', '*.iml', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**']
+  ignores: ['.idea/**', 'readme.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**', 'package-lock.json', '**.lock', '**.log']
   server:
     clean_urls: true
   open_browser: false
@@ -41,6 +41,6 @@ module.exports =
       require('cssnano')
     ]
   after:
-    ->
+    () =>
       result = uglifyjs.minify('public/js/app.js')
-      fs.writeFile('public/js/app.js', result.code)
+      fs.writeFile('public/js/app.min.js', result.code, (err) -> if err then console.error(err))
