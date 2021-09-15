@@ -8,7 +8,7 @@ ImageResizer      = require './lib/ImageResizer'
 contentRepository = new ContentRepository
 
 module.exports =
-  ignores: ['.idea/**', 'readme.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**', 'package-lock.json', '**.lock', '**.log']
+  ignores: ['.idea/**', 'README.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**', 'package-lock.json', '**.lock', '**.log']
   debug: true
   server:
     clean_urls: true
