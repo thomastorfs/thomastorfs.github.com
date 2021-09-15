@@ -19,6 +19,9 @@
 nbproject
 Thumbs.db
 
+# Output folder
+public/
+
 # NPM packages folder.
 node_modules/
 
