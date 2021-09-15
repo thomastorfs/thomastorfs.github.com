@@ -5,13 +5,18 @@ path        = require 'path'
 
 # Create our Content Repository class
 class ContentRepository
-    getBlogPosts: ->
+    getGroupedBlogPosts: ->
         posts = @getDirectoryEntries 'views/blog'
         posts = _.groupBy(posts, '_parsedYear')
         years = _.sortBy(Object.keys(posts), (key) => key).reverse()
         groupedPosts = []
         _.each(years, (year) => groupedPosts.push(_.sortBy(posts[year], '_parsedDate').reverse()))
         groupedPosts
+
+    getBlogPosts: ->
+        posts = @getDirectoryEntries 'views/blog'
+        posts = _.sortBy(posts, '_parsedDate').reverse()
+        posts
 
     getProjects: ->
         projects = @getDirectoryEntries 'views/work'
@@ -45,7 +50,7 @@ class ContentRepository
                     fileData.attributes._parsedDate = new Date(fileData.attributes.date)
                     fileData.attributes._parsedYear = fileData.attributes._parsedDate.getFullYear()
                     fileData.attributes._parsedMonth = fileData.attributes._parsedDate.toLocaleString('default', {month: 'short'})
-                    fileData.attributes._parsedDay = fileData.attributes._parsedDate.getDay()
+                    fileData.attributes._parsedDay = fileData.attributes._parsedDate.getDate()
 
                     # Add the file data to the files array
                     files.push fileData.attributes

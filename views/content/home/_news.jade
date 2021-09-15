@@ -6,9 +6,9 @@ section.wrapper.news-overview
 
             .section__content
 
-                if locals.blogposts
+                if locals.blogposts_grouped
 
-                    each blogyear, i in locals.blogposts
+                    each blogyear, i in locals.blogposts_grouped
 
                         h2 #{blogyear[0]._parsedYear}
 

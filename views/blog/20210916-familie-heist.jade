@@ -1,0 +1,35 @@
+---
+title: 'New side project: Familie Heist'
+description: 'New side project: Familie Heist'
+author: 'Thomas'
+date: '2021-09-16'
+dateFull: '16 September 2021'
+timetoread: '1 minute read'
+image: 'views/blog/assets/20210916-familie-heist/hero.jpg'
+imageDest: 'blog/20210916-familie-heist'
+_content: false
+---
+
+extends ../_includes/layout-blogpost
+
+block header-vars
+    - var title = 'New side project: Familie Heist'
+    - var description = 'New side project: Familie Heist'
+
+block vars
+    - var imgDir = 'views/blog/assets/20210916-familie-heist/'
+    - var imgDest = 'blog/20210916-familie-heist'
+    - var imgHeader = imgDir + 'hero.jpg'
+
+block header
+    h1 New side project: Familie Heist
+    p.meta 16 September 2021 <span class="separator">|</span> 1 minute read
+
+block content
+    h2 Something for everyone
+
+    p Just like a wiki, but more user friendly. The idea is to build something in order to remember our family in a more visually entertaining and informative way. 
+    
+    p I wanted to put as little effort in it as possible since we're short on time. So far we've tried both <a href="https://www.mediawiki.org/wiki/MediaWiki" target="_blank" title="Go to MediaWiki">MediaWiki</a> and <a href="https://www.drupal.org" target="_blank" title="Go to the website from Drupal">Drupal</a>. The user experience from WikiMedia was uninviting for several people from our family. And Drupal offered an unstable development experience, being largely database driven.
+    
+    p So, back to square one. Let's build it from scratch. This time using <a href="https://spring.io" target="_blank" title="Go to the Spring website">Spring</a> and <a href="https://angular.io" target="_blank" title="Go to the Angular website">Angular</a>. If you're interested, the <a href="https://github.com/thomastorfs/familieheist" target="_blank" title="Go to the source code from Familie Heist">source code can be found at Github</a>.

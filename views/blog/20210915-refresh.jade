@@ -1,0 +1,33 @@
+---
+title: 'Refresh'
+description: 'Refresh'
+author: 'Thomas'
+date: '2021-09-15'
+dateFull: '15 September 2021'
+timetoread: '1 minute read'
+image: 'views/blog/assets/20210915-refresh/hero.jpg'
+imageDest: 'blog/20210915-refresh'
+_content: false
+---
+
+extends ../_includes/layout-blogpost
+
+block header-vars
+    - var title = 'Refresh'
+    - var description = 'Refresh'
+
+block vars
+    - var imgDir = 'views/blog/assets/20210915-refresh/'
+    - var imgDest = 'blog/20210915-refresh'
+    - var imgHeader = imgDir + 'hero.jpg'
+
+block header
+    h1 Refresh
+    p.meta 15 September 2021 <span class="separator">|</span> 1 minute read
+
+block content
+    h2 Time is ticking
+
+    p Just like for most people, time is a scarce resource. I'm trying to get this website back up and running. Rather changing everything at once, the idea now is to rebuild it slowly, one small step at a time. Instead of hosting it on Amazon, I decided to go with <a href="https://pages.github.com" target="_blank" title="Go to Github Pages">Github Pages</a>. One Git commit should be enough to publish new changes.
+    
+    p More soon...

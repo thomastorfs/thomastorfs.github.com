@@ -17,6 +17,7 @@ module.exports =
   locals:
     resize: new ImageResizer
     blogposts: contentRepository.getBlogPosts(),
+    blogposts_grouped: contentRepository.getGroupedBlogPosts(),
     projects: contentRepository.getProjects()
   extensions: [
     browserify(

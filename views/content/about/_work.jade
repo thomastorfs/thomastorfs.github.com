@@ -8,7 +8,6 @@ section.wrapper.home--work
                     ul.cols
                         //- Copy the projects array so we can add an extra link towars the contact page
                         - var projects = JSON.parse(JSON.stringify(locals.projects))
-                        - projects.push({title: 'Your project?', _url: '/contact', linkText: 'Interested? You can always contact me here.', image: 'views/content/home/images/portfolio-more.jpg', imageDest: 'home', type: 'moreLink', extraClass: 'more' })
 
                         //- Get the amount of projects
                         - projectCount = projects.length

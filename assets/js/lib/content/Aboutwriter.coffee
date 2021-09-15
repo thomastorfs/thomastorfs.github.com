@@ -16,7 +16,8 @@ class Aboutwriter
                         'ecology',
                         'nature',
                         'meditation',
-                        'many things'
+                        'spirituality',
+                        'doing the right thing'
                     ],
                     startDelay: 2000,
                     typeSpeed: 70,

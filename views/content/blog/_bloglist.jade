@@ -14,7 +14,7 @@ section.wrapper.section--text.section--hero
                 if locals.blogposts
                     ul.list--blog
 
-                        - each blogyear, i in locals.blogposts
+                        - each blogyear, i in locals.blogposts_grouped
                             - each post in blogyear
 
                                 li
