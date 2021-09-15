@@ -1,16 +1,13 @@
 #!/bin/sh
 
-roots clean
-roots compile --env="production"
+# roots clean
+# roots compile --env="production"
 
-sed -i "" '/gh-pages/d' ./.gitignore
+sed -i "" '/public\//d' ./.gitignore
 git add .
 git commit -m "Edit .gitignore to publish"
 
-git add .
-git commit -m "publish new version to github pages"
-git push
-git subtree push --prefix public origin gh-pages
+git push origin `git subtree split --prefix public`:gh-pages --force
 
 git reset HEAD~
 git checkout .gitignore
