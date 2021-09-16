@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# roots clean
-# roots compile --env="production"
+roots clean
+roots compile --env="production"
 
 sed -i "" '/public\//d' ./.gitignore
 git add .
