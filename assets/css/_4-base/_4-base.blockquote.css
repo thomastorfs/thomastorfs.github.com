@@ -1,0 +1,29 @@
+/**
+ * #############################################################################
+ *
+ * Base: Blockquote
+ *
+ * #############################################################################
+ */
+
+
+blockquote {
+
+    position: relative;
+    padding: 0 0 0 2rem;
+    margin-bottom: 2em;
+
+    font-style: italic;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 3px;
+        background: $color-grey;
+        content: " ";
+    }
+
+}

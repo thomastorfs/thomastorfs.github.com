@@ -1,0 +1,143 @@
+---
+title: '3 Alarming facts for this century'
+description: '3 Alarming facts for this century'
+author: 'Thomas'
+date: '2020-07-07'
+dateFull: '7 July 2020'
+timetoread: '3 minute read'
+image: 'views/blog/assets/20200707-3-alarming-facts-for-this-century/hero.jpg'
+imageDest: 'blog/20200707-3-alarming-facts-for-this-century'
+_content: false
+---
+
+extends ../_includes/layout-blogpost
+
+block header-vars
+    - var title = '3 Alarming facts for this century'
+    - var description = '3 Alarming facts for this century'
+
+block vars
+    - var imgDir = 'views/blog/assets/20200707-3-alarming-facts-for-this-century/'
+    - var imgDest = 'blog/20200707-3-alarming-facts-for-this-century'
+    - var imgHeader = imgDir + 'hero.jpg'
+
+block header
+    h1 3 Alarming facts for this century
+    p.meta 7 July 2020 <span class="separator">|</span> 3 minute read
+
+block content
+    p Here’s a blunt statement, “I don’t think humanity is going to make it this century”. Really? Yes, really. Let me show you 3 reasons why I believe this is the case:
+    
+    h2 1. CO² remains into the atmosphere for more than 100 years
+    
+    p “Even if we shut down every fossil-fueled power plant today, existing CO2 will continue to warm the planet.” A very interesting article with references to scientific research and papers from Google, Intergovernmental Panel on Climate Change (IPCC), Earth System Research Laboratory (ESRL) and United States Environmental Protection Agency (EPA) can be found at <a href="http://spectrum.ieee.org/energy/renewables/what-it-would-really-take-to-reverse-climate-change" target="_blank" title="Go to the article">http://spectrum.ieee.org/energy/renewables/what-it-would-really-take-to-reverse-climate-change</a>.
+
+    +content-image(imgDir + 'google-graph.jpg', imgDest, 'Data Sources: “The Impact of Clean Energy Innovation,” Google-McKinsey, 2011; “Target Atmospheric CO 2: Where Should Humanity Aim?,” James Hansen et al., 2008')
+    
+    figcaption Data Sources: “The Impact of Clean Energy Innovation,” Google-McKinsey, 2011; “Target Atmospheric CO 2: Where Should Humanity Aim?,” James Hansen et al., 2008
+    
+    +content-image(imgDir + 'emissions.jpg', imgDest, 'Total CO2 emissions by country (source: nature.com)')
+    
+    figcaption Total CO2 emissions by country (source: <a href="https://www.nature.com/immersive/d41586-019-02711-4/index.html" target="_blank" title="Go to the article on nature.com">nature.com</a>)
+    
+    p Another great article that visualises greenhouse-gas emissions can be found here: <a href="https://www.nature.com/immersive/d41586-019-02711-4/index.html" target="_blank" title="Go to the article: The hard truths of climate change — by the numbers">The hard truths of climate change — by the numbers</a>.
+
+    p Professor Ed Hawking created a fantastic visualization of the worldwide evolution of temperature across most countries, called Warming Stripes. A composition of these Warming Stripes was published at <a href="https://www.bbc.com/news/science-environment-48678196" target="_blank" title="Go to the article at BBC: The chart that defines our warming world">BBC</a>.
+    
+    +content-image(imgDir + 'bbc-temperature-changes.png', imgDest, 'Temperature changes around the world (1901-2018)')
+    
+    h2 2. Five percent of forest loss in just 22 years
+    
+    p This is something which is often minimised, from which mainly intensification of farmland as the root cause. If you look at the statistics from The World Bank regarding deforestation and biodiversity you can see that global forest cover has diminished from 41 608 000 km² in 1990 to 39 430 000 km² in 2012 (see <a href="http://wdi.worldbank.org/table/3.4" target="_blank" title="Go to the World Bank: World Development Indicators: Deforestation and biodiversity">http://wdi.worldbank.org/table/3.4</a> at the bottom). If you extrapolate this trend and project it into the future, taking the increasing world population into account, you will soon notice that this will have catastrophic consequences.
+    
+    +content-image(imgDir + 'eca-biodiversity-farming.jpg', imgDest, 'Changes of biodiversity on farmland due to intensification of farmland use (Source: European Court Of Auditors)')
+    
+    figcaption Changes of biodiversity on farmland due to intensification of farmland use (Source: <a href="https://www.eca.europa.eu/en/Pages/DocItem.aspx?did=50151" target="_blank" title="Go to the Audit preview: Biodiversity in farming from European Court Of Auditors">European Court Of Auditors</a>)
+    
+    ol
+        li <em>Regarding ecology in general</em><br />Earth is a closed ecosystem which we are part of. Humanity cannot survive without this ecosystem. Ecological damage that does not happen within our neighborhood still has an effect on us in the long term, whether economical, political or social.
+        
+        li <em>Deforestation exacerbates climate change</em><br />Through photosynthesis, forests remove CO² from the air and produce oxygen. They also store carbon as wood. One ton of carbon in wood or biomass represents 3.67 tons of recycled atmospheric CO².
+        
+        li <em>Impact on ecosystems</em><br />Forests preserve water, soil quality, plants and biodiversity. Deforestation worsens periods of drought, soil erosion, pollution of the natural circulation of water, flooding and increase of destructive insects due to ecological imbalance.
+        
+        li <em>Loss of animal species</em><br />Tropical rainforests contain at least half of the animal species on Earth. The loss of these rainforests is causing a dramatic decline in biodiversity and is the leading cause of animal species extinction worldwide.
+        
+        li <em>Harm to water</em><br />Forests form natural dams that absorb rainwater. They retain and purify rainwater. The disappearance of forests destroys the soil’s ability to absorb water.
+        
+    +content-image(imgDir + 'the-world-counts-forests.png', imgDest, 'We’re losing Earth’s original wild forests (source: The World Counts)')
+    
+    figcaption We’re losing Earth’s original wild forests (source: <a href="https://www.theworldcounts.com/challenges/planet-earth/forests-and-deserts/why-is-deforestation-a-problem/story" target="_blank" title="Go to the forest counter at The World Counts">The World Counts</a>)
+    
+    p Even more important than the global forest cover is the percentage of wild forests that remain. These are the true sources of biodiversity on land. Currently only 35% of wild forests are left, compared to 50% just 5 years ago (2015). “If the trend is not stopped, we will only have 10 percent of the world’s original forests left by 2030.”
+
+    p source: <a href="https://www.theworldcounts.com/challenges/planet-earth/forests-and-deserts/why-is-deforestation-a-problem" target="_blank" title="Go to the forest counter at The World Counts">https://www.theworldcounts.com/challenges/planet-earth/forests-and-deserts/why-is-deforestation-a-problem</a>
+    
+    h2 3. Increasing world population and consumption
+    
+    p Population growth causes an increase in production and consumption, especially considering the raising standard of living globally. Both have an impact on the environment and emissions (CO², methane, ozone, …) which results in an increase of water shortages, soil exhaustion, loss of forests (see point 3 further down), more pollution, climate change, and so on…
+    
+    blockquote If Earth’s history is squeezed into one year, modern human has existed for 37 minutes and used up a third of Earth’s natural resources in the last 0.2 seconds. (source: https://www.theworldcounts.com)
+    
+    p The average projection of the world population according to the UN shows that it will continue to rise after 2100. We will reach 8 billion people in 3 to 4 years, 9 billion in 15 years, 10 billion in 30 years, and so on.
+    
+    +content-image(imgDir + 'united-nations-world-total-population.png', imgDest, 'United Nations: World: Total Population')
+    
+    figcaption (source: <a href="https://population.un.org/wpp/Graphs/Probabilistic/POP/TOT/900" target="_blank" title="Go to United Nations: World: Total Population">United Nations</a>)
+    
+    p See <a href="https://population.un.org/wpp/Graphs/Probabilistic/POP/TOT/900" target="_blank" title="Go to United Nations: World: Total Population">https://population.un.org/wpp/Graphs/Probabilistic/POP/TOT/900</a> for more information.
+    
+    h2 Economic consequences
+    
+    p The arguments above are just a few of many more which will have destructive economic effects. Dr. Nate Hagens has an excellent presentation in which he concludes that we will enter a new and more bio-physically interwoven economic era in the near future (see <a href="https://www.youtube.com/watch?v=n4x_CUumdKs" target="_blank" title="Go to the talk from Nate Hagens on Youtube">https://www.youtube.com/watch?v=n4x_CUumdKs</a>).
+    
+    p Here’s a short summary from this presentation:
+    
+    ol
+        li We use future energy in the form of credit.
+        li Money cannot create energy, but money allows us to consume energy faster.
+        li Infinite growth does not exist in our environment.
+        li The economy is part of our environment.
+        li Energy is almost fully responsible for all economic growth.
+        li 1 barrel of oil, calculated in kilojoules, corresponds to approximately 11 years of human labor.
+        li Technology makes it possible to consume energy faster.
+        li Energy and raw materials are our real capital.
+        li Money has no real value.
+        li Raw materials are becoming increasingly scarce and their extraction is becoming increasingly more expensive.
+        li Money has a strong correlation with status and power.
+        li It’s not about money, it’s about the game, the eternal hunger for more.
+        li Debts are a temporary allocation of raw materials.
+        li All major countries have declining debt-based productivity.
+        li What you want is not what you need. Our biology determines what we need, our culture determines how and how much we get. Relative income is what is important to people, not absolute income. e.g. Our body only needs 3000 calories per day. An average American consumes 230,000 calories per day.
+        li The invisible hand disappears in a crisis.
+        li There is a disconnect between industry and the financial world.
+
+    h2 Conclusion
+    
+    p In short, as a result, I believe that it is of crucial importance that we become aware of ourselves, that we become aware of the repercussions of our Western habits on our environment and society. If we strive to map the current and future pain points as much as possible, we can make adjustments where possible and prepare for the inevitable.
+    
+    p I hope that we can think ahead and act as preventively as possible in order to guarantee a better future for the majority of the people, if not everyone.
+    
+    p Of course, the question remains, how?
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        

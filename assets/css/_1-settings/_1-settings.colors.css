@@ -45,6 +45,8 @@ $color-bg-white-trans-light: rgba(255, 255, 255, 0.1);
 /* typography */
 $color-font: #000;
 $color-font-header: #000;
+$color-font-caption: $color-grey;
+$color-font-link: $color-blue;
 
 /* backgrounds */
 $color-footer: $color-grey-dark;

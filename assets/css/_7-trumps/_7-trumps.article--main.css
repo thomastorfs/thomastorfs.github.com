@@ -23,7 +23,7 @@
         margin: 0;
         padding: 2.5em 0;
         letter-spacing: 0.175em;
-        text-align: center;
+        text-align: left;
 
         /* don't add a top margin on the first one */
         &:first-child {
@@ -50,8 +50,12 @@
         padding-bottom: 2em;
     }
 
+    blockquote {
+        margin-bottom: 2em !important;
+    }
+
     /* set the maximum width for paragraphs and headings */
-    p, h2, h3, h4, blockquote {
+    p, h2, h3, h4, blockquote, ul, ol, figcaption {
         max-width: $bp-tablet-narrow-min;
         margin: 0 auto;
     }
@@ -85,6 +89,15 @@
         /* do the same for the throbber */
         &:after {
             border-left-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    /* lists */
+    ol {
+        li {
+            margin: 0 0 0 1.75rem;
+            padding: 0 0 1em 0.5em;
+            list-style: decimal !important;
         }
     }
 }

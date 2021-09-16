@@ -1,0 +1,31 @@
+/**
+ * #############################################################################
+ *
+ * Base: Captions
+ *
+ * #############################################################################
+ */
+
+
+figcaption {
+    position: relative;
+    top: -3rem;
+    margin: 0 auto;
+    max-width: 728px;
+
+    font-size: 1rem;
+    color: $color-font-caption;
+    line-height: 1.25rem;
+    font-weight: normal;
+    text-align: center;
+
+    a {
+        color: $color-font-caption !important;
+        text-decoration: underline !important;
+
+        &:hover {
+            color: $color-font-link !important;
+            text-decoration: none !important;
+        }
+    }
+ }
