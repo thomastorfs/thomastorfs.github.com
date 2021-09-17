@@ -98,7 +98,7 @@
 
         li {
             position: relative;
-            padding: 0 0 1em 1.75em;
+            padding: 0 0 1em 2em;
             counter-increment: custom-counter;
 
             &:before {
