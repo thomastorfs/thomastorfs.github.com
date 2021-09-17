@@ -60,6 +60,11 @@
             height: 0.825em;
         }
     }
+
+    /* add a background overlay */
+    &.lazyloaded:before {
+        opacity: 0.4;
+    }
 }
 
 /* mobile narrow */
