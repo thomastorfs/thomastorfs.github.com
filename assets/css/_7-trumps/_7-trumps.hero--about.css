@@ -38,24 +38,26 @@
         position: relative;
         display: inline-block;
         width: 0;
-        padding-left: 0.875em;
+        padding-left: 1em;
         overflow: hidden;
 
         &:before {
             /* positioning and layout */
             position: absolute;
             top: 50%;
+            transform: translateY(-50%);
             left: 0;
             display: block;
             width: 100% !important;
-            margin-top: -0.9rem;
+
 
             /* icon */
             @mixin webfont-icon;
             content: $icon-heart;
             color: $color-red;
-            font-size: 1.9rem;
+            font-size: 1em;
             text-align: center;
+            height: 0.825em;
         }
     }
 }

@@ -17,7 +17,10 @@
 
     /* spacing below a single client */
     .client {
-        margin-bottom: 15px;
+        margin-bottom: 2em;
+    }
+    .client.current {
+        padding-bottom: 0.5em;
     }
 
     /* client logo */
@@ -82,12 +85,31 @@
     }
 }
 
+@media (min-width: $bp-tablet-narrow-min) {
+    .client.current {
+        max-width: $bp-tablet-narrow-min;
+        margin: 0 auto 4em auto;
+        font-size: 1rem;
+        line-height: 2em;
+
+        h1 {
+            margin-bottom: 0.75em;
+        }
+        .subtitle {
+            margin-bottom: 2em;
+        }
+    }
+}
+
 /* tablet wide */
 @media (min-width: $bp-tablet-wide-min) {
     .list--clients {
         /* spacing below a single client */
         .client {
             margin-bottom: 30px;
+        }
+        .client.current {
+            margin-bottom: 4em;
         }
     }
 }
