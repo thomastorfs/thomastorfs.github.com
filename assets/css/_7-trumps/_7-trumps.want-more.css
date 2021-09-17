@@ -17,20 +17,8 @@
     .text {
         height: 160px;
         padding: 1em 60% 0 22px;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.2);
         text-align: left;
-    }
-
-    /* the last one has a red background */
-    .cols__row-last {
-        .text {
-            background: rgba(255, 5, 5, 0.7);
-        }
-        a:hover {
-            .text {
-                background: rgba(255, 5, 5, 0.85);
-            }
-        }
     }
 }
 
