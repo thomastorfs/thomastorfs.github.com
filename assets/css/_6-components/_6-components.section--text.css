@@ -20,6 +20,15 @@
         font-size: 0.875rem;
         line-height: 1.875em;
         text-align: left;
+
+        a {
+            color: $color-blue;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
     /* more padding if it's the first section on the page */
