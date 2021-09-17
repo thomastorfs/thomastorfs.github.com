@@ -43,4 +43,4 @@ module.exports =
   after:
     () =>
       result = uglifyjs.minify('public/js/app.js')
-      fs.writeFile('public/js/app.min.js', result.code, (err) -> if err then console.error(err))
+      fs.writeFile('public/js/app.js', result.code, (err) -> if err then console.error(err))
