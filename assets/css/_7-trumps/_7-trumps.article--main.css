@@ -94,10 +94,19 @@
 
     /* lists */
     ol {
+        counter-reset: custom-counter;
+
         li {
-            margin: 0 0 0 1.75rem;
-            padding: 0 0 1em 0.5em;
-            list-style: decimal !important;
+            position: relative;
+            padding: 0 0 1em 1.75em;
+            counter-increment: custom-counter;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: counter(custom-counter) ".";
+            }
         }
     }
 }
