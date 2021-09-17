@@ -1,7 +1,7 @@
 mixin wrapper-with-bg(tag, source, dest, extra_classes)
-    - var large = resize.createImage({source: source, suffix: 'large', dest: dest, w: 1920, h: 1200, crop: true})
-    - var medium = resize.createImage({source: source, suffix: 'medium', dest: dest, w: 1280, h: 800, crop: true})
-    - var small = resize.createImage({source: source, suffix: 'small', dest: dest, w: 960, h: 600, crop: true})
+    - var large = resize.createImage({source: source, suffix: 'large', dest: dest, w: 1920, h: 1200, quality: 50, crop: true})
+    - var medium = resize.createImage({source: source, suffix: 'medium', dest: dest, w: 1280, h: 800, quality: 50, crop: true})
+    - var small = resize.createImage({source: source, suffix: 'small', dest: dest, w: 960, h: 600, quality: 50, crop: true})
 
     - var default_classes = 'wrapper lazyload wrapper--bg'
 
