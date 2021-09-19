@@ -1,7 +1,7 @@
 # Vendor libs
 $               = require 'jquery'
-lazysizes       = require 'lazysizes'
 lsBgset         = require 'lazysizes/plugins/bgset/ls.bgset'
+lazysizes       = require 'lazysizes'
 FitVids         = require './vendor/fitvids/FitVids'
 
 # Custom libs
