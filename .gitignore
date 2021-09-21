@@ -10,6 +10,9 @@
 *~
 *.sass-cache
 
+# Default output folder
+public
+
 # OS or Editor folders
 .DS_Store
 .cache
