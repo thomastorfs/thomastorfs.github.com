@@ -39,13 +39,13 @@
     a {
         display: block;
         padding: 2em 0;
-        background: $color-red;
+        background: $color-blue;
         color: #fff;
         text-decoration: none;
 
         /* hover state */
         &:hover {
-            background: $color-red-light;
+            background: $color-blue-light;
         }
     }
 }

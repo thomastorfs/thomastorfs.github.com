@@ -36,6 +36,7 @@
     a {
         &:hover {
             color: #a7e45c;
+            text-decoration: none;
         }
     }
 

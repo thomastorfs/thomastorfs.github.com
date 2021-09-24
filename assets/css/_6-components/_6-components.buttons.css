@@ -79,6 +79,37 @@
 
 
 /**
+ * blue button
+ * ---------------------------------------------------------------------------*/
+.button_blue {
+    /* specific border style */
+    border-top-color: #95f0fe;
+    border-right-color: #0aa2d8;
+    border-bottom-color: #006e9f;
+    border-left-color: #0ca4d9;
+
+    /* blue gradient background */
+    strong {
+        background-image: linear-gradient(180deg, #3fe4ff, #0082bc);
+    }
+
+    /* hover background */
+    &:hover {
+        strong {
+            background-image: linear-gradient(180deg, #7eedff, #119edd);
+        }
+    }
+
+    /* clicked background */
+    &:active {
+        strong {
+            background-image: linear-gradient(0deg, #3fe4ff, #0082bc);
+        }
+    }
+}
+
+
+/**
  * green button
  * ---------------------------------------------------------------------------*/
 .button_green {
@@ -88,7 +119,7 @@
     border-bottom-color: #23380a;
     border-left-color: #7fb73a;
 
-    /* red gradient background */
+    /* green gradient background */
     strong {
         background-image: linear-gradient(180deg, #a7e45c, #67a41c);
     }

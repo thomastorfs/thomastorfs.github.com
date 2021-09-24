@@ -17,6 +17,13 @@
         }
     }
 
+    a {
+        &:hover {
+            color: $color-blue-light;
+            text-decoration: none;
+        }
+    }
+
     /* make sure the content does not stick against the wall */
     .section__content {
         text-align: justify;
