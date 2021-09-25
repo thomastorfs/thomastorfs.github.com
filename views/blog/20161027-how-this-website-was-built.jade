@@ -28,9 +28,9 @@ block header
 block content
     h2 Static FTW!
 
-    p Not so long ago I stumbled upon this beautifully designed and amazingly fast website from <a href="http://mojotech.com/" target="_blank" title="View the MojoTech website">MojoTech</a>. A quick look at their source code showed that they used a pretty nifty approach for speeding everything up. First and foremost it was a static website, or at least statically served I thought (proxy?). And second of all, nearly all the needed HTML was served as well using JSON.
+    p Not so long ago, I stumbled upon this beautifully designed and amazingly fast website from <a href="http://mojotech.com/" target="_blank" title="View the MojoTech website">MojoTech</a>. A quick look at their source code showed that they used a pretty nifty approach for speeding everything up. First and foremost it was a static website, or at least statically served I thought (proxy?). And second of all, nearly all the needed HTML was served as well using JSON.
 
-    p So I started looking for sources how the HTML was rendered, and I found a great video from <a href="https://github.com/samccone" target="_blank" title="Visit Sam Saccone's Github profile">Sam Saccone</a> explaining the technology behind it all. Curiously enough he showed a rather straightforward framework called <a href="http://roots.cx/" target="_blank" title="Go to the Roots website">Roots</a>, made by <a href="http://carrot.is/" target="_blank" title="View the Carrot Creative website">Carrot Creative</a>. Here it is:
+    p So I started looking for sources how the HTML was rendered, and I found a great video from <a href="https://github.com/samccone" target="_blank" title="Visit Sam Saccone's Github profile">Sam Saccone</a> explaining the technology behind it all. Curiously enough, he showed a rather straightforward framework called <a href="http://roots.cx/" target="_blank" title="Go to the Roots website">Roots</a>, made by <a href="http://carrot.is/" target="_blank" title="View the Carrot Creative website">Carrot Creative</a>. Here it is:
 
     iframe(src="https://www.youtube.com/embed/rOIJ27MFlsY", frameborder="0", allowfullscreen)
 
@@ -38,7 +38,7 @@ block content
 
     h2 Wait! Not so fast!
 
-    p <a href="https://github.com/carrot/roots-dynamic-content" target="_blank" title="Go to the Github repository of Dynamic Content">Dynamic Content</a> compiles static templates and serves the rest of the website with local variables which in turn you can use to dynamically render your website. Sweet! However, whenever you would like to use these variables within the dynamic templates themselves, the remaining templates aren't yet compiled. The result is that the local variables lack data upon compilation.
+    p <a href="https://github.com/carrot/roots-dynamic-content" target="_blank" title="Go to the Github repository of Dynamic Content">Dynamic Content</a> compiles static templates and serves the rest of the website with local variables, which in turn you can use to dynamically render your website. Sweet! However, whenever you would like to use these variables within the dynamic templates themselves, the remaining templates aren't yet compiled. The result is that the local variables lack data upon compilation.
 
     p The solution to this problem is rather simple. The dynamic templates use Front Matter in order to deliver data to Roots. I wrote a small CoffeeScript class that recursively extracts and returns this data in JSON format. Roots can be configured as such that local variables are inserted before compiling. Here's the result:
 
@@ -250,9 +250,9 @@ block content
 
     h2 The styling
 
-    p Ahh, the styling... theming has become increasingly more complex, especially considering the increasingly more dynamic and modular approach to building websites. Luckily a few very well thought out techniques have been published over the past few years. The ones I use on this website are <a href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/" target="_blank" title="Read ITCSS: Scalable and maintainable CSS architecture">ITCSS</a> and <a href="https://en.bem.info/" target="_blank" title="Go to the official BEM website">BEM</a>. Despite having more files and longer syntax the actual theming is now much more versatile and maintainable. The compilation of the styling is done using the almighty tool <a href="http://postcss.org/" target="_blank" title="Go to the PostCSS website">PostCSS</a>.
+    p Ahh, the styling... theming has become increasingly more complex, especially considering the increasingly more dynamic and modular approach to building websites. Luckily, a few very well-thought-out techniques have been published over the past few years. The ones I use on this website are <a href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/" target="_blank" title="Read ITCSS: Scalable and maintainable CSS architecture">ITCSS</a> and <a href="https://en.bem.info/" target="_blank" title="Go to the official BEM website">BEM</a>. Despite having more files and longer syntax, the actual theming is now much more versatile and maintainable. The compilation of the styling is done using the almighty tool <a href="http://postcss.org/" target="_blank" title="Go to the PostCSS website">PostCSS</a>.
 
-    p Next to the CSS I also use <a href="http://browserify.org/" target="_blank" title="Go to the main Browserify website">Browserify</a> for writing modular JavaScript. It's incredibly handy for compiling your code together with required CommonJS modules into a final codebase, ready to be used by your browser. I combined it with the power of CoffeeScript as demonstrated in the video above. Many thanks to Sam Saccone for the idea.
+    p Next to the CSS I also use <a href="http://browserify.org/" target="_blank" title="Go to the main Browserify website">Browserify</a> for writing modular JavaScript. It's incredibly handy for compiling your code together with required CommonJS modules into a final codebase, ready to be used by your browser. I combined it with the power of CoffeeScript, as demonstrated in the video above. Many thanks to Sam Saccone for the idea.
 
     h2 Final thoughts
 
