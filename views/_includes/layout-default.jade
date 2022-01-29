@@ -1,8 +1,8 @@
 block header-vars
 doctype html
-html
+html(lang='en')
     head
-        title #{title} | Thomas Torfs
+        title #{title} | Software Engineer | Thomas Torfs
         meta(name='description', content='#{description}')
 
         meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
@@ -10,8 +10,10 @@ html
         meta(name='MobileOptimized', content='width')
         meta(name='HandheldFriendly', content='true')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        meta(http-equiv='cleartype', content='on')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(http-equiv="X-Frame-Options" content='DENY')
+        
+        meta(property='og:title' content='#{title} | Software Engineer | Thomas Torfs')
+        meta(property='og:type' content='page')
 
         link(rel='alternate', type='application/rss+xml', title='RSS', href='http://www.thomastorfs.com/feed/rss')
 
@@ -25,8 +27,8 @@ html
         link(rel='apple-touch-icon', href='/images/apple-touch-icon-120x120.png', sizes='120x120')
         link(rel='apple-touch-icon', href='/images/apple-touch-icon-152x152.png', sizes='152x152')
 
-        link(href='https://fonts.googleapis.com/css?family=Libre+Baskerville:700,400', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans:800', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Libre+Baskerville:700,400', rel='stylesheet', type='text/css', media='print', onload="this.media='all'")
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:800', rel='stylesheet', type='text/css', media='print', onload="this.media='all'")
         link(rel='stylesheet', href='/css/app.css')
 
         script

@@ -1,13 +1,13 @@
 form(name="contact-form", method="post").form--contact
     .form-text
-        label Your name
-        input(type="text", name="name", placeholder="What is your name?")
+        label(for='your-name') Your name
+        input(id='your-name', type="text", name="name", placeholder="What is your name?", title='What is your name?')
     .form-text
-        label Your e-mail address
-        input(type="text", name="email", placeholder="What is your email address?")
+        label(for='your-email') Your e-mail address
+        input(id='your-email', type="text", name="email", placeholder="What is your email address?", title="What is your email address?")
     .form-text
-        label Your message
-        textarea(name="message", cols="40", rows="5", placeholder="What's on your mind?")
+        label(for='your-message') Your message
+        textarea(id='your-message', name="message", cols="40", rows="5", placeholder="What's on your mind?", title="What's on your mind?")
     .actions
         button.button.button_blue(type="submit")
             strong Send message

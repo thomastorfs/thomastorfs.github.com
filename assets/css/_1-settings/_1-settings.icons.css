@@ -13,8 +13,8 @@
     font-family: 'thomastorfs';
     src:  url('/fonts/thomastorfs/thomastorfs.eot?17hoak');
     src:  url('/fonts/thomastorfs/thomastorfs.eot?17hoak#iefix') format('embedded-opentype'),
-      url('/fonts/thomastorfs/thomastorfs.ttf?17hoak') format('truetype'),
       url('/fonts/thomastorfs/thomastorfs.woff?17hoak') format('woff'),
+      url('/fonts/thomastorfs/thomastorfs.ttf?17hoak') format('truetype'),
       url('/fonts/thomastorfs/thomastorfs.svg?17hoak#thomastorfs') format('svg');
     font-weight: normal;
     font-style: normal;
