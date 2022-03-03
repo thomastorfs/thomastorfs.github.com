@@ -18,6 +18,10 @@ class ContentRepository
         posts = _.sortBy(posts, '_parsedDate').reverse()
         posts
 
+    getReading: ->
+        reading = @getDirectoryEntries 'views/reading'
+        reading = _.sortBy(reading, 'index')
+
     getProjects: ->
         projects = @getDirectoryEntries 'views/work'
         projects = _.sortBy(projects, 'index')

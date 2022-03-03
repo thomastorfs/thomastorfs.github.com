@@ -1,0 +1,18 @@
+include mixin-wrapper-with-bg
+include mixin-content-image
+
+block vars
+
+article.article--main.reading
+    +wrapper-with-bg('header', imgHeader, imgDest, 'hero hero--bg hero--dualheight hero--title hero--reading')
+        block header
+
+        .section__next
+
+    .article--main__text.wrapper
+        .wrapper__inner
+            .wrapper__content
+                block content
+
+include partial-prevnext-reading
+include partial-want-more

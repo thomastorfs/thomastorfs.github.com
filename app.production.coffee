@@ -10,7 +10,7 @@ ImageResizer      = require './lib/ImageResizer'
 contentRepository = new ContentRepository
 
 module.exports =
-  ignores: ['**/.DS_Store', 'docs/**', '.idea/**', 'README.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**', 'package-lock.json', '**.lock', '**.log', 'docs']
+  ignores: ['**/.DS_Store', 'docs/**', '.idea/**', 'README.md', '*.sh', '**/layout.*', '**/_*', '.gitignore', 'assets/js/lib/**', 'assets/js/vendor/**', 'views/_includes/**', 'views/content/**', 'assets/css/vendor/*', 'lib/**', 'server/**', 'views/blog/assets/**', 'views/reading/assets/**', 'package-lock.json', '**.lock', '**.log', 'docs']
   server:
     clean_urls: true
   open_browser: false
@@ -18,6 +18,7 @@ module.exports =
     resize: new ImageResizer
     blogposts: contentRepository.getBlogPosts(),
     blogposts_grouped: contentRepository.getGroupedBlogPosts(),
+    reading: contentRepository.getReading(),
     projects: contentRepository.getProjects()
   extensions: [
     browserify(

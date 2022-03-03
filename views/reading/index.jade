@@ -1,0 +1,11 @@
+block vars
+    - header_classes = 'header--dark'
+
+extends ../_includes/layout-default
+
+block header-vars
+    - var title = 'Reading'
+    - var description = 'A selection of books that may be worthwhile'
+
+block content
+    include ../content/reading/index

@@ -1,0 +1,24 @@
+/**
+ * #############################################################################
+ *
+ * Components: Book link
+ *
+ * #############################################################################
+ */
+
+.book--link {
+    display: inline-block;
+
+    color: $color-font;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        color: $color-font-link;
+
+        h2, p {
+            color: $color-font-link;
+            transition: color $transition-duration $transition-type, background $transition-duration $transition-type;
+        }
+    }
+}

@@ -2,7 +2,7 @@ block header-vars
 doctype html
 html(lang='en')
     head
-        title #{title} | Blog | Software Engineer | Thomas Torfs
+        title #{title} | Reading | Software Engineer | Thomas Torfs
         meta(name='description', content='#{description}')
 
         meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
@@ -12,8 +12,8 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         meta(http-equiv="X-Frame-Options" content='DENY')
         
-        meta(property='og:title' content='#{title} | Blog | Software Engineer | Thomas Torfs')
-        meta(property='og:type' content='blogpost')
+        meta(property='og:title' content='#{title} | Reading | Software Engineer | Thomas Torfs')
+        meta(property='og:type' content='book')
 
         link(rel='alternate', type='application/rss+xml', title='RSS', href='http://www.thomastorfs.com/feed/rss')
 
@@ -43,7 +43,7 @@ html(lang='en')
 body.nav--hidden
     include partial-header
 
-    include layout-content-blogpost
+    include layout-content-reading
 
     include partial-footer
 

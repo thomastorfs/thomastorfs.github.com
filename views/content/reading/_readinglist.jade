@@ -1,0 +1,16 @@
+section.wrapper.section--text.section--hero
+    .wrapper__inner
+        .wrapper__content
+            header.section__header
+                h1 Reading
+
+            .section__content
+                if locals.reading
+                    ul.list--books
+                        - each book in locals.reading
+                            li
+                                +book-link(book._url, 'Read ' + book.title, book.image, book.imageDest, book.title)
+                                    p.meta #{book.title}<br />#{book.description}
+                                    p(class='star-rating star-rating-#{book.score}') <span>#{book.score} Stars</span>
+                else
+                    p.center There are currently no books

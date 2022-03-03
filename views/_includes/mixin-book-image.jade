@@ -1,0 +1,11 @@
+mixin book-image(source, dest, alt)
+    - var large_1x = resize.createImage({source: source, suffix: 'large-1x', dest: dest, w: 550, crop: false})
+    - var large_2x = resize.createImage({source: source, suffix: 'large-2x', dest: dest, w: 1100, quality: 30, crop: false})
+    - var small_1x = resize.createImage({source: source, suffix: 'small-1x', dest: dest, w: 275, crop: false})
+    - var small_2x = resize.createImage({source: source, suffix: 'small-2x', dest: dest, w: 550, quality: 30, crop: false})
+
+    picture.lazyload
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        source(media='(min-width: 550px)', srcset='#{large_1x} 1x, #{large_2x} 2x')
+        <!--[if IE 9]></video><![endif]-->
+        img(srcset='#{small_1x} 1x, #{small_2x} 2x' alt='#{alt}')

@@ -15,7 +15,7 @@
     margin: 0 auto;
 
     /* increase the default text size */
-    font-size: 1.2em;
+    font-size: 1.125em;
     line-height: 2em;
 
     /* headings */
@@ -126,7 +126,7 @@
         padding: 120px 0;
 
         /* increase the text size */
-        font-size: 1.375em;
+        font-size: 1.25em;
     }
 }
 
