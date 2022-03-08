@@ -5,7 +5,8 @@ author: 'Hermes Trismegistus | Tim Freke'
 publishingDate: '100 CE to 300 CE | 2018'
 pages: 131
 score: 5
-image: 'views/reading/assets/the-hermetica/cover-the-hermetica.jpg'
+image: 'views/reading/assets/the-hermetica/hero.jpg'
+imageBook: 'views/reading/assets/the-hermetica/cover-the-hermetica.jpg'
 imageDest: 'reading/the-hermetica'
 _content: false
 ---
@@ -15,64 +16,114 @@ extends ../_includes/layout-reading
 block header-vars
     - var title = 'The Hermetica'
     - var description = 'The Lost Wisdom of the Pharaohs'
+    - var score = 5
 
 block vars
     - var imgDir = 'views/reading/assets/the-hermetica/'
+    - var imgBook = 'views/reading/assets/the-hermetica/cover-the-hermetica.jpg'
     - var imgDest = 'reading/the-hermetica'
     - var imgHeader = imgDir + 'hero.jpg'
 
 block header
-    h1 The Hermetica
-    h2 The Lost Wisdom of the Pharaohs
+    h1 #{title}
+    h2 #{description}
     p 100 CE to 300 CE Hermes Trismegistus | 2018 Tim Freke
+    +star-rating(score)
 
 block content
     h2 Number 1
 
-    p Without a doubt this is my absolute favourite book. I recommend it to everyone. It's an introduction to an experiential journey which can hardly be put into words. Similar to the Dhammapada and the Upanishads, the advice is to go and look for yourself. Go into deep meditation and find out what it's all about.
+    p Without a doubt this is my absolute favourite book. I recommend it to everyone. It's an introduction to an experiential journey which can hardly be put into words. Similar to the Dhammapada and the Upanishads, the advice is to go and look for yourself. Go into <a href='https://en.wikipedia.org/wiki/Vipassanā' target='_blank' title='Visit the Wikipedia page about Vipassana meditation'>deep meditation</a> and find out what it's all about.
     
     p This is it folks. Go read it, then follow your heart.
+
+    h2 Details
+    
+    ul
+        li Paperback:‎ 192 pages
+        li ISBN-10:‎ 158542692X
+        li ISBN-13:‎ 978-1585426928
+        li
+            a(href='https://openlibrary.org/works/OL14871571W/The_hermetica', title='View more information about #{title}', target='_blank') View #{title} on Open Library
     
     h2 19 significant notes
     
     ul.notes
-        li <strong class="progress">5%</strong> The list of people who have acknowledged a debt to the Hermetica reads like a 'Who's Who' of the greatest philosophers, scientists and artists that the West has produced — Leonardo da Vinci, Durer, Botticelli, Roger Bacon, Paracelsus, Thomas More, William Blake, Kepler, Copernicus, Isaac Newton, Sir Walter Raleigh, Milton, Ben Johnson, Daniel Defoe, Shelley and his wife Mary, Victor Hugo and Carl Jung. It heavily influenced Shakespeare, John Donne, John Dee and all the poet-philosophers who surrounded the court of Queen Elizabeth I, as well as the founding scientists of the Royal Society in London, and even the leaders who inspired the Protestant Reformation in Europe. The list is endless, with the Hermetica's influence reaching well beyond the frontiers of Europe.
+        li 
+            strong.progress 5%
+            | The list of people who have acknowledged a debt to the Hermetica reads like a 'Who's Who' of the greatest philosophers, scientists and artists that the West has produced — Leonardo da Vinci, Durer, Botticelli, Roger Bacon, Paracelsus, Thomas More, William Blake, Kepler, Copernicus, Isaac Newton, Sir Walter Raleigh, Milton, Ben Johnson, Daniel Defoe, Shelley and his wife Mary, Victor Hugo and Carl Jung. It heavily influenced Shakespeare, John Donne, John Dee and all the poet-philosophers who surrounded the court of Queen Elizabeth I, as well as the founding scientists of the Royal Society in London, and even the leaders who inspired the Protestant Reformation in Europe. The list is endless, with the Hermetica's influence reaching well beyond the frontiers of Europe.
         
-        li <strong class="progress">5%</strong> In substance and importance it is equal to well-known Eastern scriptures like the Upanishads, the Dhammapada and the Tao Te Ching.
+        li 
+            strong.progress 5%
+            | In substance and importance it is equal to well-known Eastern scriptures like the Upanishads, the Dhammapada and the Tao Te Ching.
         
-        li <strong class="progress">8%</strong> wherever the works of Hermes have been studied and venerated, civilisation has flourished. Pagan scholars and sages fled to the newly emerging Arab culture,
+        li 
+            strong.progress 8%
+            | wherever the works of Hermes have been studied and venerated, civilisation has flourished. Pagan scholars and sages fled to the newly emerging Arab culture,
         
-        li <strong class="progress">9%</strong> sages of the ancient world had preached a single doctrine.
+        li 
+            strong.progress 9%
+            | sages of the ancient world had preached a single doctrine.
         
-        li <strong class="progress">12%</strong> circle of courtiers surrounding Elizabeth I. Sir Philip Sydney, Sir Walter Raleigh, John Donne, Christopher Marlowe, William Shakespeare, George Chapman, and Francis Bacon were all acquainted with the works of the Egyptian sage.
+        li 
+            strong.progress 12%
+            | circle of courtiers surrounding Elizabeth I. Sir Philip Sydney, Sir Walter Raleigh, John Donne, Christopher Marlowe, William Shakespeare, George Chapman, and Francis Bacon were all acquainted with the works of the Egyptian sage.
         
-        li <strong class="progress">20%</strong> The main surviving philosophical Hermetic texts are the eighteen books known as the Corpus Hermeticum (seventeen survive, Book XV is missing), the Asclepius, the Stobaeus and various fragments.
+        li 
+            strong.progress 20%
+            | The main surviving philosophical Hermetic texts are the eighteen books known as the Corpus Hermeticum (seventeen survive, Book XV is missing), the Asclepius, the Stobaeus and various fragments.
         
-        li <strong class="progress">21%</strong> 'Atum' — one of the ancient Egyptian names for the Supreme One-God.
+        li 
+            strong.progress 21%
+            | 'Atum' — one of the ancient Egyptian names for the Supreme One-God.
         
-        li <strong class="progress">22%</strong> Translation inevitably means that we have lost this original power and clarity. Hermes teaches, however, that through the power of the mind all things are possible.
+        li 
+            strong.progress 22%
+            | Translation inevitably means that we have lost this original power and clarity. Hermes teaches, however, that through the power of the mind all things are possible.
         
-        li <strong class="progress">23%</strong> The philosophy that Hermes teaches is not just a clever intellectual exercise. It is about focussing the mind in deep meditation on Atum (an ancient Egyptian name for God).
+        li 
+            strong.progress 23%
+            | The philosophy that Hermes teaches is not just a clever intellectual exercise. It is about focussing the mind in deep meditation on Atum (an ancient Egyptian name for God).
         
-        li <strong class="progress">23%</strong> For Hermes, spiritual philosophy is not opposed to science, as it often is for us today.
+        li 
+            strong.progress 23%
+            | For Hermes, spiritual philosophy is not opposed to science, as it often is for us today.
         
-        li <strong class="progress">24%</strong> Pure philosophy is spiritual striving, through constant contemplation, to attain True Knowledge of Atum the One-God.
+        li 
+            strong.progress 24%
+            | Pure philosophy is spiritual striving, through constant contemplation, to attain True Knowledge of Atum the One-God.
         
-        li <strong class="progress">28%</strong> This is a mystical vision of the first act of creation, remarkably similar to the modern scientific theory of the Big Bang. An explosion of light and energy slowly cools to become the black womb of space, into which suns and planets and finally ourselves are born. This birth, like any birth, is accompanied by pain, and Hermes hears an inarticulate cry of suffering from the turbulent depths. The Light then speaks a Word which calms the chaotic waters. This Word is like a blueprint that will organise a structured cosmos out of the chaos.
+        li 
+            strong.progress 28%
+            | This is a mystical vision of the first act of creation, remarkably similar to the modern scientific theory of the Big Bang. An explosion of light and energy slowly cools to become the black womb of space, into which suns and planets and finally ourselves are born. This birth, like any birth, is accompanied by pain, and Hermes hears an inarticulate cry of suffering from the turbulent depths. The Light then speaks a Word which calms the chaotic waters. This Word is like a blueprint that will organise a structured cosmos out of the chaos.
         
-        li <strong class="progress">33%</strong> To conceive of Atum is difficult. To define him is impossible. The imperfect and impermanent cannot easily apprehend the eternally perfected. Atum is whole and constant. In himself he is motionless, yet he is self-moving. He is immaculate, incorruptible and ever-lasting. He is the Supreme Absolute Reality.
+        li 
+            strong.progress 33%
+            | To conceive of Atum is difficult. To define him is impossible. The imperfect and impermanent cannot easily apprehend the eternally perfected. Atum is whole and constant. In himself he is motionless, yet he is self-moving. He is immaculate, incorruptible and ever-lasting. He is the Supreme Absolute Reality.
         
-        li <strong class="progress">50%</strong> Atum creates the Cosmic Mind. The Cosmic Mind creates the Cosmos. The Cosmos creates Time. Time creates Change.
+        li 
+            strong.progress 50%
+            | Atum creates the Cosmic Mind. The Cosmic Mind creates the Cosmos. The Cosmos creates Time. Time creates Change.
         
-        li <strong class="progress">63%</strong> At first, the heavenly gods complained saying: 'You are being rash in creating humanity. They see with inquisitive eyes, and hear what they have no right to hear. They reach out with audacious hands. They will dig up the roots of plants, and investigate the properties of stones. They will dissect the lower animals — and one another also! They will seek to discover how it is that they are alive, and what is hidden within. They will cut down the woods of their native land and sail across the sea to see what lies there. They will dig mines and search the uttermost depths of the Earth. All this might be bearable, but they will do much more. They will press on to explore the world above, seeking by observation to discover the laws that govern the movements of the heavens.' Atum replied: 'I will build the Zodiac — a secret mechanism in the stars, linked to unerring and inevitable fate. The lives of men, from birth to final destruction, shall be controlled by the hidden workings of this mechanism.'
+        li 
+            strong.progress 63%
+            | At first, the heavenly gods complained saying: 'You are being rash in creating humanity. They see with inquisitive eyes, and hear what they have no right to hear. They reach out with audacious hands. They will dig up the roots of plants, and investigate the properties of stones. They will dissect the lower animals — and one another also! They will seek to discover how it is that they are alive, and what is hidden within. They will cut down the woods of their native land and sail across the sea to see what lies there. They will dig mines and search the uttermost depths of the Earth. All this might be bearable, but they will do much more. They will press on to explore the world above, seeking by observation to discover the laws that govern the movements of the heavens.' Atum replied: 'I will build the Zodiac — a secret mechanism in the stars, linked to unerring and inevitable fate. The lives of men, from birth to final destruction, shall be controlled by the hidden workings of this mechanism.'
         
-        li <strong class="progress">69%</strong> All souls share the same essential nature. They are neither male nor female, as such differentiating characteristics exist only in the body. All souls are a part of the one Soul of the Cosmos.
+        li 
+            strong.progress 69%
+            | All souls share the same essential nature. They are neither male nor female, as such differentiating characteristics exist only in the body. All souls are a part of the one Soul of the Cosmos.
         
-        li <strong class="progress">70%</strong> Before it incarnates, the soul is already wrapped in a spiritual body. When this wrapping is thin and clear, the soul is intelligent. However, when this wrapping is dense and opaque, the soul has limited vision and is only aware of its immediate situation. As a soul sinks into incarnation it forgets its own nature and takes on the qualities of the gods who have shut it into a human body. Hermes describes a vision of disembodied souls about to make their journey into a physical form. They are filled with fear and horror at the fate which awaits them. They cannot bear the prospect of such imprisonment.
+        li 
+            strong.progress 70%
+            | Before it incarnates, the soul is already wrapped in a spiritual body. When this wrapping is thin and clear, the soul is intelligent. However, when this wrapping is dense and opaque, the soul has limited vision and is only aware of its immediate situation. As a soul sinks into incarnation it forgets its own nature and takes on the qualities of the gods who have shut it into a human body. Hermes describes a vision of disembodied souls about to make their journey into a physical form. They are filled with fear and horror at the fate which awaits them. They cannot bear the prospect of such imprisonment.
         
-        li <strong class="progress">72%</strong> The purer forces arrive at adolescence and co-operate with the rational part of the soul.
+        li 
+            strong.progress 72%
+            | The purer forces arrive at adolescence and co-operate with the rational part of the soul.
         
-        li <strong class="progress">96%</strong> Language is inadequate. The gods sing a hymn of silence.
+        li 
+            strong.progress 96%
+            | Language is inadequate. The gods sing a hymn of silence.
 
 
         

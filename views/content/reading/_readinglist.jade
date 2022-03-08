@@ -9,8 +9,8 @@ section.wrapper.section--text.section--hero
                     ul.list--books
                         - each book in locals.reading
                             li
-                                +book-link(book._url, 'Read ' + book.title, book.image, book.imageDest, book.title)
+                                +book-link(book._url, 'Read ' + book.title, book.imageBook, book.imageDest, book.title)
                                     div #{book.title}<br />#{book.description}
-                                    #[+star-rating(5)]
+                                    +star-rating(book.score)
                 else
                     p.center There are currently no books

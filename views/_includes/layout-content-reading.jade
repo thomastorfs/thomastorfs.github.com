@@ -1,9 +1,11 @@
 include mixin-wrapper-with-bg
 include mixin-content-image
+include mixin-book-image
+include mixin-star-rating
 
 block vars
 
-article.article--main.reading
+article.article--main.article--reading
     +wrapper-with-bg('header', imgHeader, imgDest, 'hero hero--bg hero--dualheight hero--title hero--reading')
         block header
 

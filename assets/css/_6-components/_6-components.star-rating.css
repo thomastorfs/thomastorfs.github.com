@@ -1,3 +1,10 @@
+/**
+ * #############################################################################
+ *
+ * Components: Star rating
+ *
+ * #############################################################################
+ */
 
 .star-rating {
     display: inline-block;
@@ -25,5 +32,18 @@
 a:hover > .text > .star-rating {
     svg {
         fill: $color-blue;
+    }
+}
+
+.hero {
+    .star-rating,
+    .star-rating__stars {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        svg {
+            fill: #fff;
+        }
     }
 }

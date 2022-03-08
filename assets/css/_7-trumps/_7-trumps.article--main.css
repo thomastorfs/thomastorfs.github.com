@@ -109,6 +109,17 @@
             }
         }
     }
+
+    /* book image */
+    .book--image {
+        width: 50%;
+        margin: 0 auto;
+
+        .text {
+            position: relative;
+            top: -3em;
+        }
+    }
 }
 
 /* narrow tablet */
