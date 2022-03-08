@@ -13,6 +13,7 @@ module.exports =
   server:
     clean_urls: true
   locals:
+    renderdate: Date.now()
     resize: new ImageResizer
     blogposts: contentRepository.getBlogPosts(),
     blogposts_grouped: contentRepository.getGroupedBlogPosts(),
