@@ -11,5 +11,48 @@
 
     li {
         display: inline-block;
+        max-width: $bp-mobile-wide-min;
+        width: 75%;
+        padding: $gutter;
+    }
+
+    /* make images use the full width */
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        margin: 0.75rem 0;
+    }
+}
+
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    .list--books {
+        li {
+            max-width: 100%;
+            width: 50%;
+        }
+    }
+}
+
+/* wide tablet */
+@media (min-width: $bp-tablet-wide-min) {
+    .list--books {
+        li {
+            width: 50%;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .list--books {
+        li {
+            width: 33.33%;
+        }
     }
 }
