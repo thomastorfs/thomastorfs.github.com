@@ -9,5 +9,5 @@ cp -R public docs
 git add .
 git commit -m "Publish new static version"
 
+git push -u gitlab --all
 git push -u origin --all
-git push -u gitlab-public --all
