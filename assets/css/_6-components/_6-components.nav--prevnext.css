@@ -39,6 +39,10 @@
                 /* add the animation */
                 transition: transform $transition-duration $transition-type;
             }
+
+            h2, p {
+                transition: margin $transition-duration $transition-type;
+            }
         }
 
         /* position the icon and animate on hover */
@@ -49,12 +53,20 @@
                         right: 30px;
                         content: $icon-arrow-right;
                     }
+
+                    h2, p {
+                        margin-right: 10px;
+                    }
                 }
 
                 a:hover {
                     .text {
                         &:before {
                             transform: translateX(10px);
+                        }
+
+                        h2, p {
+                            margin-right: 0;
                         }
                     }
                 }
@@ -65,6 +77,10 @@
                         left: 30px;
                         content: $icon-arrow-left;
                     }
+
+                    h2, p {
+                        margin-left: 10px;
+                    }
                 }
 
                 a:hover {
@@ -72,6 +88,10 @@
                         &:before {
                             transform: translateX(-10px);
                         }
+                    }
+
+                    h2, p {
+                        margin-left: 0;
                     }
                 }
             }
@@ -104,6 +124,10 @@
                         right: auto;
                         left: 20px;
                     }
+
+                    h2, p {
+                        margin-right: 20px;
+                    }
                 }
 
                 a:hover {
@@ -121,6 +145,10 @@
                         left: auto;
                         right: 20px;
                     }
+
+                    h2, p {
+                        margin-left: 20px;
+                    }
                 }
 
                 a:hover {
@@ -134,7 +162,7 @@
         /* set the link height */
         .bglink {
             height: 300px;
-        }    
+        }
     }
 }
 
