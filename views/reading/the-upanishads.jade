@@ -1,0 +1,54 @@
+---
+title: 'The Upanishads'
+description: 'Breath of the Eternal'
+author: 'Siddhartha Gautama | Eknath Easwaran and Juan Mascaró'
+publishingDate: '300 BCE'
+score: 5
+image: 'views/reading/assets/the-upanishads/hero.jpg'
+imageBook: 'views/reading/assets/the-upanishads/cover-the-upanishads.jpg'
+imageDest: 'reading/the-upanishads'
+_content: false
+---
+
+extends ../_includes/layout-reading
+
+block header-vars
+    - var title = 'The Upanishads'
+    - var description = 'Breath of the Eternal'
+    - var score = 5
+
+block vars
+    - var imgDir = 'views/reading/assets/the-upanishads/'
+    - var imgBook = 'views/reading/assets/the-upanishads/cover-the-upanishads.jpg'
+    - var imgDest = 'reading/the-upanishads'
+    - var imgHeader = imgDir + 'hero.jpg'
+
+block header
+    h1 #{title}
+    h2 #{description}
+    p 300 BCE 
+    +star-rating(score)
+
+block content
+    h2 TODO
+
+    p TODO
+
+    h2 Details
+
+    ul
+        li Paperback:‎ 238 pages
+        li E-book: xxx pages
+        li ISBN-10:‎ xxx
+        li ISBN-13:‎ xxx
+        li
+            a(href='https://openlibrary.org/works/OL15894214W/The_Upanishads', title='View more information about #{title} on Open Library', target='_blank') View #{title} on Open Library
+        li
+            a(href='https://www.goodreads.com/book/show/12020706-the-upanishads', title='View more information about #{title} on Goodreads', target='_blank') View #{title} on Goodreads
+    
+    h2 149 significant notes
+    
+    ul.notes
+        li
+            strong.progress 1%
+            | TODO
