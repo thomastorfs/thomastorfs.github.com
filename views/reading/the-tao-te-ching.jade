@@ -1,0 +1,54 @@
+---
+title: 'The Tao Te Ching'
+description: 'The book of the way'
+author: 'Lao Tzu | Sam Torode and Dwight Goddard'
+publishingDate: '400 BCE | 2016'
+score: 5
+image: 'views/reading/assets/the-tao-te-ching/hero.jpg'
+imageBook: 'views/reading/assets/the-tao-te-ching/cover-the-tao-te-ching.jpg'
+imageDest: 'reading/the-tao-te-ching'
+_content: false
+---
+
+extends ../_includes/layout-reading
+
+block header-vars
+    - var title = 'The Tao Te Ching'
+    - var description = 'The book of the way'
+    - var score = 5
+
+block vars
+    - var imgDir = 'views/reading/assets/the-tao-te-ching/'
+    - var imgBook = 'views/reading/assets/the-tao-te-ching/cover-the-tao-te-ching.jpg'
+    - var imgDest = 'reading/the-tao-te-ching'
+    - var imgHeader = imgDir + 'hero.jpg'
+
+block header
+    h1 #{title}
+    h2 #{description}
+    p 400 BCE Lao Tzu | 2016 Sam Torode and Dwight Goddard
+    +star-rating(score)
+
+block content
+    h2 TODO
+
+    p TODO
+
+    h2 Details
+
+    ul
+        li Paperback:‎ 86 pages
+        li E-book: 90 pages
+        li ISBN-10:‎ 1690029994
+        li ISBN-13:‎ 978-1690029991
+        li
+            a(href='https://openlibrary.org/books/OL35676061M/Tao_Te_Ching', target='_blank') View #{title} on Open Library
+        li
+            a(href='https://www.goodreads.com/book/show/53528292-tao-te-ching', title='View more information about #{title} on Goodreads', target='_blank') View #{title} on Goodreads
+    
+    h2 TODO significant notes
+    
+    ul.notes
+        li
+            strong.progress 1%
+            | TODO
