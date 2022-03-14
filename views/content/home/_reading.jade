@@ -1,0 +1,18 @@
+section.wrapper.reading-overview
+    .wrapper__inner
+        .wrapper__content
+            header.section__header
+                h1 Last read books
+                
+            .section__content
+                if locals.reading
+                    ul.list--books.list--books-small
+                        - var i = 0
+                        - each book in locals.reading_sorted
+                            if i++ < 3
+                                li
+                                    +book-link(book._url, 'Read ' + book.title, book.imageBook, book.imageDest, book.title)
+                                        +star-rating(book.score)
+                                        div Finished on #{book.dateFull}
+                else
+                    p.center There are currently no books

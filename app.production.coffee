@@ -20,6 +20,7 @@ module.exports =
     blogposts: contentRepository.getBlogPosts(),
     blogposts_grouped: contentRepository.getGroupedBlogPosts(),
     reading: contentRepository.getReading(),
+    reading_sorted: contentRepository.getReadingSorted(),
     projects: contentRepository.getProjects()
   extensions: [
     browserify(

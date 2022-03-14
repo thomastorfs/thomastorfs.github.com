@@ -6,6 +6,10 @@
  * #############################################################################
  */
 
+
+ /**
+  * default books list
+  * ---------------------------------------------------------------------------*/
 .list--books {
     text-align: center;
 
@@ -15,6 +19,12 @@
         max-width: $bp-mobile-wide-min;
         width: 75%;
         padding: $gutter;
+    }
+    li:first-child {
+        padding-top: 0;
+    }
+    li:last-child {
+        padding-bottom: 0;
     }
 
     /* make images use the full width */
@@ -46,6 +56,10 @@
         li {
             width: 50%;
         }
+        li:first-child,
+        li:last-child {
+            padding: $gutter;
+        }
     }
 }
 
@@ -54,6 +68,47 @@
     .list--books {
         li {
             width: 33.33%;
+        }
+    }
+}
+
+
+/**
+ * small books list
+ * ---------------------------------------------------------------------------*/
+.list--books-small {
+    text-align: center;
+
+    li {
+        max-width: $bp-mobile-wide-min;
+        width: 75%;
+    }
+}
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    .list--books-small {
+        li {
+            max-width: 50%;
+            width: 50%;
+        }
+    }
+}
+
+/* wide tablet */
+@media (min-width: $bp-tablet-wide-min) {
+    .list--books-small {
+        li {
+            width: 50%;
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .list--books-small {
+        li {
+            width: 30%;
         }
     }
 }

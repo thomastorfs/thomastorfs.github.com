@@ -1,0 +1,49 @@
+/**
+ * #############################################################################
+ *
+ * Components: Reading overview
+ *
+ * #############################################################################
+ */
+
+.reading-overview {
+    background: $color-grey-dark;
+
+    .section__header {
+        margin-bottom: 0
+    }
+
+    h1,
+    a,
+    .section__content {
+        color: #fff;
+    }
+    .star-rating {
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-wide-min) {
+    .reading-overview {
+        .section__header {
+            h1 {
+                margin-bottom: 70px;
+            }
+        }
+    }
+}
+
+/* desktop */
+@media (min-width: $bp-desktop-min) {
+    .reading-overview {
+        .section__header {
+            h1 {
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
