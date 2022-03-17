@@ -1,0 +1,67 @@
+---
+title: '3D Printing Replacement parts'
+description: '3D Printing Replacement parts'
+author: 'Thomas'
+date: '2022-03-17'
+dateFull: '17 March 2022'
+timetoread: '1 minute read'
+image: 'views/blog/assets/20220317-3d-printing-replacement-parts/hero.png'
+imageDest: 'blog/20220317-3d-printing-replacement-parts'
+_content: false
+---
+
+extends ../_includes/layout-blogpost
+
+block header-vars
+    - var title = '3D Printing Replacement parts'
+    - var description = '3D Printing Replacement parts'
+
+block vars
+    - var imgDir = 'views/blog/assets/20220317-3d-printing-replacement-parts/'
+    - var imgDest = 'blog/20220317-3d-printing-replacement-parts'
+    - var imgHeader = imgDir + 'hero.png'
+
+block header
+    h1 3D Printing Replacement parts
+    p.meta 17 March 2022 <span class="separator">|</span> 1 minute read
+
+block content
+    h2 Fixing an old dishwasher with modern technology
+
+    p Not so long ago our dishwasher started showing its age. The parts for mounting the wheels started breaking off. Instead of replacing the entire dishwasher, or searching for original parts for weeks in a row, I decided to 3D print these parts instead. It has been almost 10 years since I did any 3D modeling, and this seemed like the ideal project for picking up a lost hobby, perfect for 3D printing some parts that will be used on a daily basis.
+    
+    +content-image(imgDir + 'broken-parts.jpg', imgDest, 'Broken wheel supports')
+    
+    figcaption Broken wheel supports
+    
+    h2 3D Modeling
+    
+    p In order to start modeling I used the nowadays <a href='https://www.blender.org' target='_blank' title='Visit the homepage of Blender'>pretty popular 3D software Blender</a>. Back in the days it wasn't as well known as it is in 2022. I personally used it for the first time in 2001, more than 20 years ago. Compared to 2001 the software and the community <a href='https://www.blender.org/about/history/' target='_blank' title='Read the history of Blender'>certainly has improved leaps and bounds</a>.
+    
+    +content-image(imgDir + 'blender-modeling-replacement-parts.png', imgDest, '3D Modeling the wheel supports')
+    
+    figcaption 3D Modeling the wheel supports
+    
+    p Printing the final result was possible by using <a href='https://www.hubs.com' target='_blank' title='Visit the homepage of Hubs'>a service called Hubs</a>. It supports <a href='https://www.hubs.com/3d-printing/plastic/nylon/hp-pa-12/' target='_blank' title='View more information about PA-12'>printing PA-12</a> which is ideal for this use case. The definition on the Hubs website is as follows:
+    
+    blockquote HP PA (polyamide) 12 is strong thermoplastic for functional prototyping and final parts. It produces high-density parts with excellent chemical resistance to oils, freases, aliphatic hydrocarbons an alkalies. This material achieves watertight properties without any additional post-processing.
+    
+    h2 3D Printing
+    
+    p The end result is fantastic. It's solid and printed with the finest detail. Hubs delivered it just 2 weeks after placing the order. 
+    
+    +content-image(imgDir + 'printed-parts.jpg', imgDest, '3D Printed replacement parts')
+    
+    figcaption 3D Printed replacement parts
+    
+    p In case you're wondering. This is how it's mounted on the lower dishwasher rack, ready to be used again for at least a couple years.
+    
+    +content-image(imgDir + 'mounted-parts.jpg', imgDest, 'Mounted replacement parts')
+    
+    figcaption End result, mounted on the lower dishwasher rack
+    
+    p In case you'd like to have a look, you can download the final 3D file below. Note that you will need to have <a href='https://www.blender.org' target='_blank' title='Visit the homepage of Blender'>Blender</a> installed as well in order to open it.
+    
+    p.center
+        a.button.button_black(href='/files/blog/20220317-3d-printing-replacement-parts/dishwasher-wheel-support-replacement.blend', data-href='/about', title='Download the 3D model.', target='_blank')
+            strong Download the 3D model
