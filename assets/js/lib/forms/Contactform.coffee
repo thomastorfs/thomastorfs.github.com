@@ -13,16 +13,16 @@ class Contactform
             @disableSend()
             @removeMessages()
 
-            $.post 'http://api.thomastorfs.com/api/contact-form', $.param(formValues)
+            $.post 'https://formspree.io/f/xoqrnnzq', formValues
                 .done (response) =>
-                    if response.errors? && !response.errors.code
-                        for error in response.errors
-                            @addMessage '[name="' + error.param + '"]', 'error', error.msg
-                    else if response.success
+                    if response.ok
                         @addMessage '.actions', 'error', 'Your message has been succesfully sent.'
                     else
-                        @addMessage '.actions', 'error', 'An error occurred while sending your message.'
-
+                        response.json().then(data) =>
+                            if Object.hasOwn(data, 'errors')
+                                @addMessage '.actions', 'error', 'error', data["errors"].map(error => error["message"]).join(", ")
+                            else
+                                @addMessage '.actions', 'error', 'An error occurred while sending your message.'
                     @enableSend()
                 .fail (response) =>
                     @addMessage '.actions', 'error', 'An error occurred while sending your message.'
