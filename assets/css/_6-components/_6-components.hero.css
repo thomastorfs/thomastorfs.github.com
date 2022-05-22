@@ -71,6 +71,21 @@
     }
 }
 
+.wrapper__caption {
+    position: absolute;
+    bottom: $gutter;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    font-size: 1rem;
+    color: $color-font-caption-light;
+    line-height: 1.25rem;
+    font-weight: normal;
+    text-align: center;
+    opacity: 0.6;
+}
+
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
     .hero {
