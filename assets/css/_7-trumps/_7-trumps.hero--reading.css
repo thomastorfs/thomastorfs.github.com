@@ -1,0 +1,42 @@
+/**
+ * #############################################################################
+ *
+ * Trumps: Hero on the reading detail page
+ *
+ * #############################################################################
+ */
+
+.hero--reading {
+    h1 {
+        margin-bottom: 0 !important;
+    }
+    h2 {
+        margin-bottom: 2rem !important;
+    }
+    p {
+        line-height: 1.375em;
+        margin-bottom: 2rem;
+    }
+    .star-rating {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+/* tablet narrow */
+@media (min-width: $bp-tablet-narrow-min) {
+    .hero--reading {
+        h1 {
+            margin-bottom: 0.625rem !important;
+        }
+        h2 {
+            margin-bottom: 3rem !important;
+        }
+        p {
+            margin-bottom: 0.625rem;
+        }
+        .star-rating {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

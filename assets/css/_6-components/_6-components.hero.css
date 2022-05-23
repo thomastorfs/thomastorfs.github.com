@@ -78,7 +78,7 @@
     right: 0;
     overflow: hidden;
 
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: $color-font-caption-light;
     line-height: 1.25rem;
     font-weight: normal;
@@ -95,6 +95,10 @@
         h1 {
             font-size: 2rem;
         }
+    }
+
+    .wrapper__caption {
+        font-size: 1rem;
     }
 }
 
