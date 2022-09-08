@@ -20,6 +20,8 @@ module.exports =
     blogposts: contentRepository.getBlogPosts(),
     blogposts_grouped: contentRepository.getGroupedBlogPosts(),
     reading: contentRepository.getReading(),
+    reading_best: contentRepository.getReadingBest(),
+    reading_other: contentRepository.getReadingOther(),
     reading_sorted: contentRepository.getReadingSorted(),
     projects: contentRepository.getProjects()
   extensions: [

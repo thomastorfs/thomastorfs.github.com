@@ -1,0 +1,21 @@
+section.wrapper.section--text.reading-overview
+    .wrapper__inner
+        .wrapper__content
+            header.section__header
+                h1 Other books
+                
+                .section__intro
+                    p
+                        | The following are also worth mentioning
+
+            .section__content
+                if locals.reading_other
+
+                    ul.list--books.list--books-small
+                        - each book in locals.reading_other
+                            li
+                                +book-link(book._url, 'Read ' + book.title, book.imageBook, book.imageDest, book.title)
+                                    div #{book.title}
+                                    +star-rating(book.score)
+                else
+                    p.center There are currently no books

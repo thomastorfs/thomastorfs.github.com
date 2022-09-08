@@ -22,6 +22,16 @@ class ContentRepository
         reading = @getDirectoryEntries 'views/reading'
         reading = _.sortBy(reading, 'index')
 
+    getReadingBest: ->
+        reading = @getDirectoryEntries 'views/reading'
+        reading = _.filter(reading, (entry) => entry.score == 5)
+        reading = _.sortBy(reading, 'index')
+
+    getReadingOther: ->
+        reading = @getDirectoryEntries 'views/reading'
+        reading = _.filter(reading, (entry) => entry.score < 5)
+        reading = _.sortBy(reading, 'index')
+
     getReadingSorted: ->
         reading = @getDirectoryEntries 'views/reading'
         reading = _.sortBy(reading, '_parsedDate').reverse()

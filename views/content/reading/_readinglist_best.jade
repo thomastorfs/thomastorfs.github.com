@@ -9,9 +9,9 @@ section.wrapper.section--text.section--hero
                         | This page contains a list of books that are truly worth it. New books are added on a regular basis. For a more comprehensive list, please visit <a href="https://www.goodreads.com/thomastorfs" title="Go to my profile on Goodreads" target="_blank">Goodreads</a>.
 
             .section__content
-                if locals.reading
+                if locals.reading_best
                     ul.list--books
-                        - each book in locals.reading
+                        - each book in locals.reading_best
                             li
                                 +book-link(book._url, 'Read ' + book.title, book.imageBook, book.imageDest, book.title)
                                     div #{book.title}<br />#{book.description}

@@ -112,3 +112,51 @@
         }
     }
 }
+
+
+
+/**
+ * other books list
+ * ---------------------------------------------------------------------------*/
+/* .list--books_other {
+    text-align: left;
+    margin: 0 auto;
+
+    a {
+        display: flex;
+        align-items: baseline;
+        padding: 0.75rem 0;
+        text-decoration: none;
+        line-height: 1.25rem;
+        color: $color-font;
+
+        &:hover {
+            text-decoration: underline;
+            color: $color-blue;
+        }
+    }
+
+    .info {
+        float: left;
+    }
+
+    .description {
+        font-size: 0.875rem;
+    }
+
+    .star-rating {
+        float: right;
+    }
+} */
+
+/* narrow tablet */
+@media (min-width: $bp-tablet-narrow-min) {
+    /* .list--books_other {
+        max-width: 450px;
+        font-size: 1.125rem;
+
+        a {
+            padding: 0.875rem 0;
+        }
+    } */
+}
