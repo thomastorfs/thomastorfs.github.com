@@ -11,7 +11,7 @@
     padding: 70px 0;
 
     /* set the maximum width */
-    max-width: calc($bp-desktop-min / 1.2);
+    max-width: 1200px;
     margin: 0 auto;
 
     /* increase the default text size */
@@ -56,7 +56,7 @@
 
     /* set the maximum width for paragraphs and headings */
     p, h2, h3, h4, blockquote, ul, ol, figcaption {
-        max-width: $bp-tablet-narrow-min;
+        max-width: 800px;
         margin: 0 auto;
     }
 

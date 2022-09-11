@@ -1,0 +1,21 @@
+/**
+ * #############################################################################
+ *
+ * Base: Pre blocks
+ *
+ * #############################################################################
+ */
+
+pre {
+    position: relative;
+    padding: 20px 30px;
+
+    background: $color-bg-pre;
+    border-radius: 5px;
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $color-font-pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

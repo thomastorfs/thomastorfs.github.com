@@ -1,0 +1,237 @@
+---
+title: 'SSL certificates for Java'
+description: 'SSL certificates for Java'
+author: 'Thomas'
+date: '2022-09-11'
+dateFull: '11 September 2022'
+timetoread: '3 minute read'
+image: 'views/blog/assets/20220911-ssl-certificates-for-java/hero.jpg'
+imageDest: 'blog/20220911-ssl-certificates-for-java'
+_content: false
+---
+
+extends ../_includes/layout-blogpost
+
+block header-vars
+    - var title = 'SSL certificates for Java'
+    - var description = 'SSL certificates for Java'
+
+block vars
+    - var imgDir = 'views/blog/assets/20220911-ssl-certificates-for-java/'
+    - var imgDest = 'blog/20220911-ssl-certificates-for-java'
+    - var imgHeader = imgDir + 'hero.jpg'
+    - var imgCaption = 'Photo by Thomas Jensen'
+
+block header
+    h1 SSL certificates for Java
+    p.meta 11 September 2022 <span class="separator">|</span> 3 minute read
+
+block content
+
+    h2 Introduction
+    
+    p Imagine writing a Java program and having to communicate with an API over HTTPS. Would it work right away? Why not? That's what we're going to find out.
+    
+    p Just in case, SSL stands for <a href="https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https" title="Go to What is SSL, TLS and HTTPS?" target="_blank">Secure Sockets Layer</a>. It's what HTTPS uses to make the connection secure. Communication between a server and client is only possible if the SSL-certificate is accepted on the client side. However, sometimes it's not just the SSL certificate that brings trouble for establishing connections. Sometimes the problem starts with the network traffic itself.
+    
+    p We're going to troubleshoot this situation in 4 steps. Step 1 and 2 are there to see whether we can actually reach the server. Step 3 will allow us to retrieve the required certificates, and step 4 guides us through the installation process of these certificates for our Java program.
+
+    h2 1. Does the IP resolve correctly?
+
+    p Check the DNS resolving IP using <code>nslookup</code>, <code>dig</code> and <code>ping</code>. For instance, if you're developing applications that run both on a private network as well as in the cloud, this may be necessary (for example with AWS PrivateLink, Azure Private Link or anything similar). 
+    
+    p It may also be necessary when working on MS Windows and connecting over VPN. Why? Because of Smart Multi-Homed Name Resolution, a new feature in Windows 8 / 10. This feature allows faster DNS resolving by prioritizing network connections according to their speed (ethernet, wifi, vpn, ...). In short, the DNS server from the network you're connecting with over VPN may be interfering with the address resolving from a public DNS server.
+
+    h3 1.1 nslookup
+
+    pre
+        | $ nslookup login.microsoftonline.com
+        | Server:		192.168.0.123
+        | Address:	192.168.0.123#53
+        | 
+        | Non-authoritative answer:
+        | login.microsoftonline.com	canonical name = ak.privatelink.msidentity.com.
+        | ak.privatelink.msidentity.com	canonical name = www.tm.ak.prd.aadg.trafficmanager.net.
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.22
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 40.126.31.64
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.69
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.1
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 40.126.31.68
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.3
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.74
+        | Name:	www.tm.ak.prd.aadg.trafficmanager.net
+        | Address: 20.190.159.70
+
+    h3 1.2 dig
+
+    p dig (Domain Information Groper) is a network administration command-line tool for querying the Domain Name System (DNS). If you don't have <code>dig</code> on your system download BIND9 via <a href="https://www.isc.org/download/" title="Download BIND9 from ISC" target="_blank">https://www.isc.org/download/</a>.
+
+    pre
+        | $ dig login.microsoftonline.com
+        | 
+        | ; <<>> DiG 9.10.6 <<>> login.microsoftonline.com
+        | ;; global options: +cmd
+        | ;; Got answer:
+        | ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57166
+        | ;; flags: qr rd ra; QUERY: 1, ANSWER: 10, AUTHORITY: 0, ADDITIONAL: 1
+        | 
+        | ;; OPT PSEUDOSECTION:
+        | ; EDNS: version: 0, flags:; udp: 4096
+        | ;; QUESTION SECTION:
+        | ;login.microsoftonline.com.	IN	A
+        | 
+        | ;; ANSWER SECTION:
+        | login.microsoftonline.com. 65	IN	CNAME	ak.privatelink.msidentity.com.
+        | ak.privatelink.msidentity.com. 65 IN	CNAME	www.tm.ak.prd.aadg.trafficmanager.net.
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.70
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.22
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	40.126.31.64
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.69
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.1
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	40.126.31.68
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.3
+        | www.tm.ak.prd.aadg.trafficmanager.net. 65 IN A	20.190.159.74
+        | 
+        | ;; Query time: 13 msec
+        | ;; SERVER: 192.168.0.123#53(192.168.0.123)
+        | ;; WHEN: Sun Sep 11 17:56:03 CEST 2022
+        | ;; MSG SIZE  rcvd: 276
+
+    h3 1.3 ping
+
+    p Next to <code>nslookup</code> and <code>dig</code>, there's also <code>ping</code>. Even when the request times out we get to see the resolving IP. So ICMP (Internet Control Message Protocol) may be disabled on the server, resulting in a typical <code>Request timeout for...</code>, we will still be able to see whether the address resolves or not. Again, this may be necessary to clarify local DNS resolving such as when working on Windows 8/10 or higher due to Smart Multi-Homed Name Resolution.
+
+    pre
+        | $ ping login.microsoftonline.com
+        | PING www.tm.ak.prd.aadg.trafficmanager.net (40.126.32.139): 56 data bytes
+        | Request timeout for icmp_seq 0
+        | Request timeout for icmp_seq 1
+        | Request timeout for icmp_seq 2
+        | ^C
+        | --- www.tm.ak.prd.aadg.trafficmanager.net ping statistics ---
+        | 4 packets transmitted, 0 packets received, 100.0% packet loss
+
+    h2 2. Is the HTTPS port accessible?
+
+    p After checking whether the DNS resolving is correct and verifying that the resulting address is reachable, we have to see whether the HTTPS-port is accessible as well. We will do this using <code>nmap</code> and <code>openssl</code>
+
+    h3 2.1 nmap
+
+    p Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. If you don't have <code>nmap</code> on your system, download it via <a href="https://nmap.org/download.html" title="Download nmap on nmap.org" target="_blank">https://nmap.org/download.html</a>
+
+    p We're going to check whether port 443 is accessible on the server side. This is the default HTTPS port.
+
+    pre
+        | $ nmap login.microsoftonline.com
+        | Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-11 18:17 CEST
+        | Nmap scan report for login.microsoftonline.com (40.126.32.139)
+        | Host is up (0.017s latency).
+        | Other addresses for login.microsoftonline.com (not scanned): 20.190.160.23 40.126.32.137 40.126.32.73 40.126.32.132 40.126.32.75 40.126.32.67 20.190.160.15
+        | Not shown: 998 filtered tcp ports (no-response)
+        | PORT    STATE SERVICE
+        | 80/tcp  open  http
+        | 443/tcp open  https
+        | 
+        | Nmap done: 1 IP address (1 host up) scanned in 4.98 seconds
+
+    h3 2.2 openssl
+
+    p OpenSSL is a software library for applications that secure communications over computer networks against eavesdropping or the need to identify the party at the other end. If you don't have OpenSSL on your system download it at <a href="https://slproweb.com/products/Win32OpenSSL.html" title="Download OpenSSL at SLProWeb" target="_blank">https://slproweb.com/products/Win32OpenSSL.html</a> or in case you also need Git, OpenSSL is included with Git Bash at <a href="https://git-scm.com/downloads" title="Download Git Bash" target="_blank">https://git-scm.com/downloads</a>
+
+    p Try to connect. We use <code>openssl</code> because <code>telnet</code> does not support TLS for connecting over HTTPS. (In other words, for unencrypted communication we could also use telnet.)
+
+    pre
+        | $ openssl s_client -connect login.microsoftonline.com:443
+        | CONNECTED(00000006)
+        | depth=2 C = US, O = DigiCert Inc, OU = www.digicert.com, CN = DigiCert Global Root CA
+        | verify return:1
+        | depth=1 C = US, O = DigiCert Inc, CN = DigiCert SHA2 Secure Server CA
+        | verify return:1
+        | depth=0 C = US, ST = Washington, L = Redmond, O = Microsoft Corporation, CN = stamp2.login.microsoftonline.com
+        | verify return:1
+        | ---
+        | Certificate chain
+        |  0 s:C = US, ST = Washington, L = Redmond, O = Microsoft Corporation, CN = stamp2.login.microsoftonline.com
+        |    i:C = US, O = DigiCert Inc, CN = DigiCert SHA2 Secure Server CA
+        |  1 s:C = US, O = DigiCert Inc, CN = DigiCert SHA2 Secure Server CA
+        |    i:C = US, O = DigiCert Inc, OU = www.digicert.com, CN = DigiCert Global Root CA
+        | ---
+        | Server certificate
+        | -----BEGIN CERTIFICATE-----
+        | MIIH0jCCBrqgAwIBAgIQA154tVXTK0FhyimmQ1t8pDANBgkqhkiG9w0BAQsFADBN
+        | ...
+
+    h2 3. Certificates
+
+    h3 3.1 Download
+
+    p If you don't have the necessary certificates yet, you can download them from the server which you are trying to access with the following command:
+
+    pre
+        | $ openssl s_client -connect {url}:{port} &lt;NUL | openssl pkcs12 -export -nokeys -out {certname}-x509.cert.tmp
+
+    h3 3.2 Verify
+
+    p Make sure the certificate is valid by reading and parsing it with OpenSSL:
+
+    pre
+        | $ openssl x509 -in {certname}-x509.cert.tmp -text
+
+    h3 3.3 Corrections
+
+    p To make sure that the file encoding and the line endings are correct, output the parsed version to a new file using OpenSSL:
+
+    pre
+        | $ openssl x509 -in {certname}-x509.cert.tmp -out {certname}-x509.cert
+
+    h2 4. Configure Java
+
+    p If you don't have Java installed on your system, you can download it at https://www.java.com/nl/download/
+
+    h3 4.1 Add certificates to truststore
+
+    pre
+        | "C:\Program Files\java\jdk-13.0.2\bin\keytool.exe" -import -cacerts -alias ms-azure-tls-issuing-ca-01 -file "Microsoft Azure TLS Issuing CA 01.cer"
+        | 
+        | or
+        | 
+        | "C:\Program Files\java\jdk-13.0.2\bin\keytool.exe" -importcert -cacerts -alias ms-azure-tls-issuing-ca-01 -file "Microsoft Azure TLS Issuing CA 01.cer"
+
+    h3 4.2 Test connection
+
+    p Use SSLPoke (https://github.com/MichalHecko/SSLPoke)
+
+    pre
+        | "C:\Program Files\java\jdk-13.0.2\bin\java.exe" SSLPoke login.microsoftonline.com 443
+
+    h3 4.3 Add certificate to Microsoft Management Console
+
+    p In case you're running MS Windows, you may also want to add these certificates to the Windows version for centralized certificate management. This can be done using Microsoft Management Console.
+
+    ol
+        li Open the Run-dialog by pressing: <code>Windows-key + R</code>
+        li Then enter: <code>certlm.msc</code>
+        li Navigate to <code>Certificates - Local Computer</code>
+        li Open the <code>context menu</code> by right clicking on the folder. Click on <code>all tasks</code> then <code>import</code>.
+        li A wizard popup will show up which will allow you to add the certificate step by step.
+
+    h2 5. Conclusion
+
+    p This is it. You should now be able to connect your Java program with the required server over HTTPS.
+    
+    h2 Links
+
+    ol
+        li <a href="https://www.isc.org/download/" title="" target="_blank">https://www.isc.org/download/</a>
+        li <a href="https://nmap.org/download.html" title="" target="_blank">https://nmap.org/download.html</a>
+        li <a href="https://slproweb.com/products/Win32OpenSSL.html" title="" target="_blank">https://slproweb.com/products/Win32OpenSSL.html</a>
+        li <a href="https://git-scm.com/downloads" title="" target="_blank">https://git-scm.com/downloads</a>
+        li <a href="https://www.java.com/nl/download/" title="" target="_blank">https://www.java.com/nl/download/</a>
+        li <a href="https://github.com/MichalHecko/SSLPoke" title="" target="_blank">https://github.com/MichalHecko/SSLPoke</a>

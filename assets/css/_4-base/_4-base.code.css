@@ -1,0 +1,18 @@
+/**
+ * #############################################################################
+ *
+ * Base: Code blocks
+ *
+ * #############################################################################
+ */
+
+code {
+    position: relative;
+    padding: 3px 7px;
+
+    border: solid 1px $color-border-code;
+    background: $color-bg-code;
+    border-radius: 5px;
+
+    font-size: 1rem;
+}
