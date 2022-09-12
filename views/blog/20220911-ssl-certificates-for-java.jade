@@ -34,15 +34,24 @@ block content
     
     p Just in case, SSL stands for <a href="https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https" title="Go to What is SSL, TLS and HTTPS?" target="_blank">Secure Sockets Layer</a>. It's what HTTPS uses to make the connection secure. Communication between a server and client is only possible if the SSL-certificate is accepted on the client side. However, sometimes it's not just the SSL certificate that brings trouble for establishing connections. Sometimes the problem starts with the network traffic itself.
     
-    p We're going to troubleshoot this situation in 4 steps. Step 1 and 2 are there to see whether we can actually reach the server. Step 3 will allow us to retrieve the required certificates, and step 4 guides us through the installation process of these certificates for our Java program.
+    p We're going to troubleshoot this situation in 4 steps:
+    
+    ul
+        li <a href="#step1">Step 1</a> <a href="#step2">and 2</a> are there to see whether we can actually reach the server. 
+        li <a href="#step3">Step 3</a> will allow us to retrieve the required certificates
+        li Finally, <a href="#step4">step 4</a> guides us through the installation process of these certificates for our Java program.
 
-    h2 1. Does the IP resolve correctly?
+    h2#step1 1. Does the IP resolve correctly?
 
     p Check the DNS resolving IP using <code>nslookup</code>, <code>dig</code> and <code>ping</code>. For instance, if you're developing applications that run both on a private network as well as in the cloud, this may be necessary (for example with AWS PrivateLink, Azure Private Link or anything similar). 
     
-    p It may also be necessary when working on MS Windows and connecting over VPN. Why? Because of Smart Multi-Homed Name Resolution, a new feature in Windows 8 / 10. This feature allows faster DNS resolving by prioritizing network connections according to their speed (ethernet, wifi, vpn, ...). In short, the DNS server from the network you're connecting with over VPN may be interfering with the address resolving from a public DNS server.
+    p It may also be necessary when working on MS Windows and connecting over VPN. Why? Because of <a href="https://medium.com/edtech-trends/how-your-os-is-working-against-your-vpn-971cdd7c2dc4" title="Read about Smart Multi-Homed Name Resolution">Smart Multi-Homed Name Resolution</a>, a new feature in Windows 8/10. This feature allows faster DNS resolving by prioritizing network connections according to their speed (ethernet, wifi, vpn, ...).
+    
+    p In short, the DNS server from the network you're connecting with over VPN may be interfering with the address resolving from a public DNS server. The result is that the resolving IP could be different from the one needed in order for the SSL certificate to work.
 
     h3 1.1 nslookup
+    
+    p Nslookup (from name server lookup) is a network administration command-line tool for querying the Domain Name System (DNS) to obtain the mapping between domain name and IP address, or other DNS records.
 
     pre
         | $ nslookup login.microsoftonline.com
@@ -106,7 +115,7 @@ block content
 
     h3 1.3 ping
 
-    p Next to <code>nslookup</code> and <code>dig</code>, there's also <code>ping</code>. Even when the request times out we get to see the resolving IP. So ICMP (Internet Control Message Protocol) may be disabled on the server, resulting in a typical <code>Request timeout for...</code>, we will still be able to see whether the address resolves or not. Again, this may be necessary to clarify local DNS resolving such as when working on Windows 8/10 or higher due to Smart Multi-Homed Name Resolution.
+    p Next to <code>nslookup</code> and <code>dig</code>, there's also <code>ping</code>. Ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. It's useful in this scenario because, even when the request times out we get to see the resolving IP. So even while ICMP (Internet Control Message Protocol) may be disabled on the server, resulting in a typical <code>Request timeout for...</code>, we will still be able to see whether the address resolves or not. Again, this may be necessary to clarify local DNS resolving such as when working on Windows 8/10 or higher due to Smart Multi-Homed Name Resolution.
 
     pre
         | $ ping login.microsoftonline.com
@@ -118,15 +127,13 @@ block content
         | --- www.tm.ak.prd.aadg.trafficmanager.net ping statistics ---
         | 4 packets transmitted, 0 packets received, 100.0% packet loss
 
-    h2 2. Is the HTTPS port accessible?
+    h2#step2 2. Is the HTTPS port accessible?
 
     p After checking whether the DNS resolving is correct and verifying that the resulting address is reachable, we have to see whether the HTTPS-port is accessible as well. We will do this using <code>nmap</code> and <code>openssl</code>
 
     h3 2.1 nmap
 
-    p Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. If you don't have <code>nmap</code> on your system, download it via <a href="https://nmap.org/download.html" title="Download nmap on nmap.org" target="_blank">https://nmap.org/download.html</a>
-
-    p We're going to check whether port 443 is accessible on the server side. This is the default HTTPS port.
+    p Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. If you don't have <code>nmap</code> on your system, download it via <a href="https://nmap.org/download.html" title="Download nmap on nmap.org" target="_blank">https://nmap.org/download.html</a>. We're going to check whether port 443 is accessible on the server side. This is the default HTTPS port.
 
     pre
         | $ nmap login.microsoftonline.com
@@ -145,7 +152,7 @@ block content
 
     p OpenSSL is a software library for applications that secure communications over computer networks against eavesdropping or the need to identify the party at the other end. If you don't have OpenSSL on your system download it at <a href="https://slproweb.com/products/Win32OpenSSL.html" title="Download OpenSSL at SLProWeb" target="_blank">https://slproweb.com/products/Win32OpenSSL.html</a> or in case you also need Git, OpenSSL is included with Git Bash at <a href="https://git-scm.com/downloads" title="Download Git Bash" target="_blank">https://git-scm.com/downloads</a>
 
-    p Try to connect. We use <code>openssl</code> because <code>telnet</code> does not support TLS for connecting over HTTPS. (In other words, for unencrypted communication we could also use telnet.)
+    p Try to connect using <code>openssl</code>. We use <code>openssl</code> because <code>telnet</code> does not support TLS for connecting over HTTPS. (In other words, for unencrypted communication we could use telnet instead.)
 
     pre
         | $ openssl s_client -connect login.microsoftonline.com:443
@@ -168,48 +175,52 @@ block content
         | MIIH0jCCBrqgAwIBAgIQA154tVXTK0FhyimmQ1t8pDANBgkqhkiG9w0BAQsFADBN
         | ...
 
-    h2 3. Certificates
+    h2#step3 3. Certificates
 
-    h3 3.1 Download
+    h3 3.1 Download the certificate
 
     p If you don't have the necessary certificates yet, you can download them from the server which you are trying to access with the following command:
 
     pre
-        | $ openssl s_client -connect {url}:{port} &lt;NUL | openssl pkcs12 -export -nokeys -out {certname}-x509.cert.tmp
+        | $ openssl s_client -showcerts -servername {url} -connect {url}:{port} < /dev/null | openssl x509 -out {insert-certname}-x509.cert.tmp
 
-    h3 3.2 Verify
+    h3 3.2 Verify it
 
     p Make sure the certificate is valid by reading and parsing it with OpenSSL:
 
     pre
-        | $ openssl x509 -in {certname}-x509.cert.tmp -text
+        | $ openssl x509 -in {insert-certname}-x509.cert.tmp -text
 
-    h3 3.3 Corrections
+    h3 3.3 Correct it if necessary
 
     p To make sure that the file encoding and the line endings are correct, output the parsed version to a new file using OpenSSL:
 
     pre
-        | $ openssl x509 -in {certname}-x509.cert.tmp -out {certname}-x509.cert
+        | $ openssl x509 -in {insert-certname}-x509.cert.tmp -out {insert-certname}-x509.cert
 
-    h2 4. Configure Java
+    h2#step4 4. Configure Java
 
-    p If you don't have Java installed on your system, you can download it at https://www.java.com/nl/download/
+    p If you don't have Java installed on your system, you can download it at <a href="https://www.java.com/nl/download/" title="Download Java at the official website" target="_blank">https://www.java.com/nl/download/</a>
 
     h3 4.1 Add certificates to truststore
+    
+    p Run <code>keytool</code> with the <code>-import</code> or <code>-importcert</code> and the <code>-cacerts</code> flag in order to add the certificate to the default Java truststore.
 
     pre
-        | "C:\Program Files\java\jdk-13.0.2\bin\keytool.exe" -import -cacerts -alias ms-azure-tls-issuing-ca-01 -file "Microsoft Azure TLS Issuing CA 01.cer"
+        | $ keytool -import -cacerts -alias {insert-alias} -file {insert-certname}-x509.cert
         | 
         | or
         | 
-        | "C:\Program Files\java\jdk-13.0.2\bin\keytool.exe" -importcert -cacerts -alias ms-azure-tls-issuing-ca-01 -file "Microsoft Azure TLS Issuing CA 01.cer"
+        | $ keytool -importcert -cacerts -alias {insert-alias} -file {insert-certname}-x509.cert
 
     h3 4.2 Test connection
 
-    p Use SSLPoke (https://github.com/MichalHecko/SSLPoke)
+    p Next, we're going to test the connection from Java towards the server by using a simple Java program called SSLPoke. You can download it at (<a href="https://github.com/MichalHecko/SSLPoke" title="Download SSLPoke from Github" target="_blank">https://github.com/MichalHecko/SSLPoke</a>). Test the connection with the following command. If successful, you should get the message <code>Successfully connected</code>.
 
     pre
-        | "C:\Program Files\java\jdk-13.0.2\bin\java.exe" SSLPoke login.microsoftonline.com 443
+        | $ java -jar SSLPoke.jar login.microsoftonline.com 443
+        | Successfully connected
+        
 
     h3 4.3 Add certificate to Microsoft Management Console
 
@@ -225,6 +236,8 @@ block content
     h2 5. Conclusion
 
     p This is it. You should now be able to connect your Java program with the required server over HTTPS.
+    
+    p Note: if you're still not able to connect to the required endpoint, contact your local network administrator for further debugging. It could be a firewall or network traffic routing issue.
     
     h2 Links
 

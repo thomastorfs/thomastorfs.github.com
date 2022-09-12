@@ -110,6 +110,20 @@
         }
     }
 
+    ul {
+        li {
+            position: relative;
+            padding: 0 0 1em 2em;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "●"
+            }
+        }
+    }
+
     /* book image */
     .book--image {
         width: 50%;
