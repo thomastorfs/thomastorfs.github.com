@@ -6,7 +6,20 @@
  * #############################################################################
  */
 
-.home--work {
+.about--older-work {
+    background: $color-grey-dark;
+
+    .section__header {
+        margin-bottom: 0
+    }
+
+    h1,
+    a,
+    .section__intro,
+    .section__content {
+        color: #fff;
+    }
+
     /* less bottom padding */
     padding-bottom: $gutter;
 
@@ -41,7 +54,7 @@
 
 /* tablet narrow */
 @media (min-width: $bp-tablet-narrow-min) {
-    .home--work {
+    .about--older-work {
         /* position the text at the top on the left columns */
         .cols__row-first {
             .text {
@@ -67,7 +80,7 @@
 
 /* desktop */
 @media (min-width: $bp-desktop-min) {
-    .home--work {
+    .about--older-work {
         /* larger bottom padding */
         padding-bottom: calc($gutter * 2);
 
