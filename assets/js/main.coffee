@@ -6,6 +6,7 @@ FitVids         = require './vendor/fitvids/FitVids'
 
 # Custom libs
 Compatibility   = require './lib/Compatibility'
+Stickheader     = require './lib/header/Stickyheader'
 Navtoggler      = require './lib/header/Navtoggler'
 Sectionnext     = require './lib/section/Sectionnext'
 Aboutwriter     = require './lib/content/Aboutwriter'
@@ -16,6 +17,8 @@ Aboutwriter     = require './lib/content/Aboutwriter'
 # Whenever the DOM is ready
 $(document).ready ->
     new Compatibility()
+
+    new Stickheader('.header')
 
     new Navtoggler('.nav-toggler')
 
