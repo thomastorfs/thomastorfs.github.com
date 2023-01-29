@@ -6,9 +6,7 @@ FitVids         = require './vendor/fitvids/FitVids'
 
 # Custom libs
 Compatibility   = require './lib/Compatibility'
-Stickheader     = require './lib/header/Stickyheader'
 Navtoggler      = require './lib/header/Navtoggler'
-Contactform     = require './lib/forms/Contactform'
 Sectionnext     = require './lib/section/Sectionnext'
 Aboutwriter     = require './lib/content/Aboutwriter'
 
@@ -19,13 +17,7 @@ Aboutwriter     = require './lib/content/Aboutwriter'
 $(document).ready ->
     new Compatibility()
 
-    # Router.start()
-
-    new Stickheader('.header')
-
     new Navtoggler('.nav-toggler')
-
-    new Contactform('.form--contact')
 
     new Sectionnext('.section__next')
 
