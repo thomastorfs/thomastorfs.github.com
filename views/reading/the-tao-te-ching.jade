@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Tao Te Ching'
     - var description = 'The book of the way'
     - var score = 5
+    - var dateFull = '14 January 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-tao-te-ching/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 2500 year old wisdom
+    .header
+        h2 2500 year old wisdom
+        p #{dateFull}
 
     p This is ancient philosophy at its best. The Tao Te Ching is not only thought-provoking but also fun to read. Gentle and fascinating words travel by when you slowly visit the passages one by one, each sentence more pleasant than the other. A tip: if you're on a long road trip, listen to this in the background: <a href='https://www.youtube.com/watch?v=73_Voet2fnc' target='_blank' title='Visit Tao Te Ching - Read by Wayne Dyer'>Tao Te Ching - Read by Wayne Dyer</a>.
     
@@ -48,6 +51,10 @@ block content
         li E-book: 90 pages
         li ISBN-10:‎ 1690029994
         li ISBN-13:‎ 978-1690029991
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.thriftbooks.com/w/tao-te-ching/31591749/item/#edition=25193003', title='Buy #{title} at Thriftbooks', target='_blank') Buy #{title} at Thriftbooks
         li

@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Emerald Tablet 101'
     - var description = 'A truly transformational experience'
     - var score = 5
+    - var dateFull = '14 January 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-emerald-tablet-101/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Short and truly remarkable
+    .header
+        h2 Short and truly remarkable
+        p #{dateFull}
 
     p Once in a while you stumble upon short literature that really makes a difference. This book is such an example. It accompanies the writings of the Emerald Tablet without blatantly over-analyzing its substance. It lays a foundation for you and helps you distill its abstract yet deep and meaningful contents.
     
@@ -46,6 +49,10 @@ block content
         li E-book: 77 pages
         li ISBN-10:‎ 1537047612
         li ISBN-13:‎ 978-1537047614
+        
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://bookshop.org/books/the-emerald-tablet-101-a-modern-practical-guide-plain-and-simple/9781537047614', title='Buy #{title} at The Bookshop.org', target='_blank') Buy #{title} at The Bookshop.org
         li

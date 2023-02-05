@@ -134,6 +134,16 @@
             top: -3em;
         }
     }
+
+    .header {
+        h2 {
+            padding: 0;
+        }
+        p {
+            font-size: 0.875em;
+            color: $color-font-caption;
+        }
+    }
 }
 
 /* narrow tablet */

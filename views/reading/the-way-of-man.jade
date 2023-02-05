@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Way Of Man'
     - var description = 'According to the teaching of Hasidism'
     - var score = 5
+    - var dateFull = '27 January 2023'
 
 block vars
     - var imgDir = 'views/reading/assets/the-way-of-man/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 A pocket guide for your spirit
+    .header
+        h2 A pocket guide for your spirit
+        p #{dateFull}
 
     p A tiny little gem, that's what The Way Of Man is. It's a combination of philosophy and spirituality, bringing the very core of what many religions try to convey in pocket format. It's an easy read yet very profound, a quick read yet lengthy in its true comprehension and application. This book could be summarized in 6 steps which are easy to learn and hard to master:
 
@@ -54,6 +57,10 @@ block content
         li E-book: 38 pages
         li ISBN-10:‎ 0415278295
         li ISBN-13:‎ 978-0415278294
+    
+    h2 Where to buy?
+    
+    ul
         li
             a(href='https://www.betterworldbooks.com/product/detail/the-way-of-man-according-to-the-teaching-of-hasidism-9780415278294', title='Buy #{title} at BetterWorldBooks', target='_blank') Buy #{title} at BetterWorldBooks
         li

@@ -18,6 +18,7 @@ block header-vars
     - var title = 'Journey of Souls'
     - var description = 'Case Studies of Life Between Lives'
     - var score = 4
+    - var dateFull = '29 August 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/journey-of-souls/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Entertaining regression therapy
+    .header
+        h2 Entertaining regression therapy
+        p #{dateFull}
 
     p This book is fun to read. It finds a pleasant balance between documenting the results of regression therapy by hypnosis and presenting it entertainingly. And even while this book almost reads like a novel, keep in mind that Michael Newton, Ph.D. held a doctorate in Counseling Psychology, was a certified Master Hypnotherapist, and was a member of the American Counseling Association. 
     
@@ -46,6 +49,10 @@ block content
         li E-book: 292 pages
         li ISBN-10:‎ 1567184855
         li ISBN-13:‎ 978-1567184853
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.betterworldbooks.com/product/detail/Journey-of-Souls---Case-Studies-of-Life-Between-Lives-9781567184853', title='Buy #{title} at BetterWorldBooks', target='_blank') Buy #{title} at BetterWorldBooks
         li

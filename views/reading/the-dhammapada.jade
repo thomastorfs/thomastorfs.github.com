@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Dhammapada'
     - var description = 'The most important Buddhist scriptures'
     - var score = 5
+    - var dateFull = '4 March 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-dhammapada/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 The ultimate guide to self-realization
+    .header
+        h2 The ultimate guide to self-realization
+        p #{dateFull}
 
     p When you start reading The Dhammapada, you are not only introduced to the holy scriptures, but also to the truly impressive life of Siddharta Guatama. The book starts by engulfing you with a mesmerizing storyline, only to continue with fantastic explanations of the scriptures themselves. Each chapter prepares you for the more symbolic texts that follow. It truly helps you to understand the deeper meaning.
 
@@ -46,6 +49,10 @@ block content
         li E-book: 150 pages
         li ISBN-10:‎ 1586380206
         li ISBN-13:‎ 978-1586380205
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://bookshop.org/books/the-dhammapada-9781586380205/9781586380205', title='Buy #{title} at The Bookshop.org', target='_blank') Buy #{title} at The Bookshop.org
         li

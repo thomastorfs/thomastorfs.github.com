@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Upanishads'
     - var description = 'Breath of the Eternal'
     - var score = 5
+    - var dateFull = '3 January 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-upanishads/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Experiences from spiritual masters
+    .header
+        h2 Experiences from spiritual masters
+        p #{dateFull}
 
     p The Upanishads are one of the oldest and most profound spiritual texts one can find. It truly captures the sense, beauty and spirit of both the original texts and the actual spiritual experiences themselves, just as promised on its cover. These are a no-brainer for anyone looking for something to reflect upon when experiencing the depth and meaning that comes with <a href='https://en.wikipedia.org/wiki/Vipassanā' target='_blank' title='Visit the Wikipedia page about Vipassana meditation'>deep meditation</a>.
     
@@ -46,6 +49,10 @@ block content
         li E-book: 238 pages
         li ISBN-10:‎ 087481040X
         li ISBN-13:‎ 978-0874810400
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.thriftbooks.com/w/the-upanishads_anonymous/253039/item/#edition=3602098&idiq=1805182', title='Buy #{title} at Thriftbooks', target='_blank') Buy #{title} at Thriftbooks
         li

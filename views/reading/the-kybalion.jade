@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Emerald Tablet of Hermes & The Kybalion'
     - var description = 'Two Classic Books on Hermetic Philosophy'
     - var score = 5
+    - var dateFull = '8 May 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-kybalion/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Reality beyond materialism
+    .header
+        h2 Reality beyond materialism
+        p #{dateFull}
 
     p This book starts like an excellent story with a strange beginning. It introduces you to 12 different translations of <a href="https://en.wikipedia.org/wiki/Emerald_Tablet" title="Go to The Emerald Tablet on Wikipedia" target="_blank">the Emerald Tablet</a>. The tablet itself contains a cryptic message for which countless translation attempts have been made by even the most prestigious intellects on Earth throughout history (for example Isaac Newton). The second part however contains an interpretation of <a href="https://en.wikipedia.org/wiki/The_Kybalion" title="Go to The Kybalion on Wikipedia" target="_blank">The Kybalion</a>. It's this section that truly draws you in and shows how deep the rabbit hole of reality can go.
 
@@ -50,6 +53,10 @@ block content
         li E-book: 124 pages
         li ISBN-10:‎ 1946774804
         li ISBN-13:‎ 978-1946774804
+        
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://bookshop.org/books/the-emerald-tablet-of-hermes-the-kybalion-two-classic-books-on-hermetic-philosophy/9781946774811', title='Buy #{title} at The Bookshop.org', target='_blank') Buy #{title} at The Bookshop.org
         li

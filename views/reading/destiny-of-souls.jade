@@ -18,6 +18,7 @@ block header-vars
     - var title = 'Destiny of Souls'
     - var description = 'New case Studies of Life Between Lives'
     - var score = 4
+    - var dateFull = '22 November 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/destiny-of-souls/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Another jewel by Dr. Michael Newton
+    .header
+        h2 Another jewel by Dr. Michael Newton
+        p #{dateFull}
 
     p This is the second amazingly well-written book in the series by Dr. Michael Newton, Ph.D. It continues the exploration of Journey of Souls (1994) and further explains its findings. What's so remarkable about this series is that it is based on his life work in which he helped over 7000 clients spanning more than 35 years. These clients did not know each other yet told consistent stories under hypnosis. 
     
@@ -46,6 +49,10 @@ block content
         li E-book: 404 pages
         li ISBN-10:‎ 1567184995
         li ISBN-13:‎ 978-1567184990
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.betterworldbooks.com/product/detail/destiny-of-souls-new-case-studies-of-life-between-lives-9781567184990', title='Buy #{title} at BetterWorldBooks', target='_blank') Buy #{title} at BetterWorldBooks
         li

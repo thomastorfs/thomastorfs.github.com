@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Prophet'
     - var description = 'A masterpiece filled with metaphorical poetry'
     - var score = 5
+    - var dateFull = '22 December 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-prophet/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 True beauty with an even more beautiful ending
+    .header
+        h2 True beauty with an even more beautiful ending
+        p #{dateFull}
 
     p This book is a masterpiece filled with metaphorical poetry. It holds many wonderful insights. I received the Dutch translation as a gift. Funny thing is, the final chapter, written by the translator puts the reader's feet back on the ground. Yes, the book is a masterpiece, but the idea you may have of the spiritual American-Arabic writer may be different from who he was in reality. For example, Gibran lived in Boston since he was 12 and eventually left the world as an alcoholic. 
     
@@ -46,6 +49,10 @@ block content
         li E-book: 89 pages
         li ISBN-10:‎ 1441338365
         li ISBN-13:‎ 978-1441338365
+        
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.amazon.com/Prophet-Kahlil-Gibran/dp/1441338365', title='Buy #{title} at Amazon', target='_blank') Buy #{title} at Amazon
         li

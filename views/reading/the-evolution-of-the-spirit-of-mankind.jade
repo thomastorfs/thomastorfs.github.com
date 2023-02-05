@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Evolution Of The Spirit Of Mankind'
     - var description = 'The 82nd Regime Of Light Workers'
     - var score = 4
+    - var dateFull = '25 January 2023'
 
 block vars
     - var imgDir = 'views/reading/assets/the-evolution-of-the-spirit-of-mankind/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Wisdom from a higher plane of existence
+    .header
+        h2 Wisdom from a higher plane of existence
+        p #{dateFull}
 
     p There's something about the contents of this book that sets it apart, in the most positive sense you can think of. At first sight, I was convinced it was just an easily digestible collection of transcriptions from recorded sessions by the gifted medium Julie Macdonald. However, it will become apparent rather quickly that these transcriptions contain fundamental wisdom, the very wisdom we need to foster in order to grow, not just as a single Soul, but as the combined consciousness of all Souls gathered here on Earth.
 
@@ -46,6 +49,10 @@ block content
         li E-book: 384 pages
         li ISBN-10:‎ 1939054494
         li ISBN-13:‎ 978-1939054494
+        
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.betterworldbooks.com/product/detail/the-evolution-of-the-spirit-of-mankind-the-eighty-second-regime-of-light-workers-9781939054494', title='Buy #{title} at BetterWorldBooks', target='_blank') Buy #{title} at BetterWorldBooks
         li

@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Light-Worker\'s Companion'
     - var description = 'A gateway into higher realms and the dimensions of consciousness'
     - var score = 4
+    - var dateFull = '8 August 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/the-light-workers-companion/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Practical and modern guidance
+    .header
+        h2 Practical and modern guidance
+        p #{dateFull}
 
     p This is a very inspiring read. The more experience you have with meditation, regression, prayer, and other ways to expand your consciousness, the more you will feel a connection with the contents of this book. Also, Amanda (the writer) has added several meditation exercises that help you navigate through the expansive and intriguing world of consciousness and everything that lies beyond everyday comprehension. 
     
@@ -46,6 +49,10 @@ block content
         li E-book: 151 pages
         li ISBN-10:‎ 1921019298
         li ISBN-13:‎ 978-1921019296
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.bookdepository.com/The-Light-Workers-Companion-Amanda-Guggenheimer/9781921019296', title='Buy #{title} at Book Depository', target='_blank') Buy #{title} at Book Depository
         li

@@ -18,6 +18,7 @@ block header-vars
     - var title = 'The Hermetica'
     - var description = 'The Lost Wisdom of the Pharaohs'
     - var score = 5
+    - var dateFull = '14 December 2021'
 
 block vars
     - var imgDir = 'views/reading/assets/the-hermetica/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 Number 1
+    .header
+        h2 Number 1
+        p #{dateFull}
 
     p Without a doubt this is my absolute favorite book. I recommend it to everyone. It's an introduction to an experiential journey which can hardly be put into words. Similar to the Dhammapada and the Upanishads, the advice is to go and look for yourself. Go into <a href='https://en.wikipedia.org/wiki/Vipassanā' target='_blank' title='Visit the Wikipedia page about Vipassana meditation'>deep meditation</a> and find out what it's all about.
     
@@ -46,6 +49,10 @@ block content
         li E-book: 131 pages
         li ISBN-10:‎ 158542692X
         li ISBN-13:‎ 978-1585426928
+        
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://bookshop.org/books/the-hermetica-the-lost-wisdom-of-the-pharaohs/9781585426928', title='Buy #{title} at The Bookshop.org', target='_blank') Buy #{title} at The Bookshop.org
         li

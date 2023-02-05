@@ -18,6 +18,7 @@ block header-vars
     - var title = 'Sola Mysterium'
     - var description = 'Celebrating the Beautiful Uncertainty of Everything'
     - var score = 5
+    - var dateFull = '22 September 2022'
 
 block vars
     - var imgDir = 'views/reading/assets/sola-mysterium/'
@@ -33,7 +34,9 @@ block header
     +star-rating(score)
 
 block content
-    h2 The real truth
+    .header
+        h2 The real truth
+        p #{dateFull}
 
     p This book hits the nail on the head! It may be exactly what you're looking for. Instead of filling our minds with even more clueless knowledge about the unknown, and keeping us hungry for more, it presents us with the real truth about spirituality.
     
@@ -52,6 +55,10 @@ block content
         li E-book: 178 pages
         li ISBN-10:‎ 1957007184
         li ISBN-13:‎ 978-1957007182
+
+    h2 Where to buy?
+
+    ul
         li
             a(href='https://www.amazon.com/Sola-Mysterium-Celebrating-Uncertainty-Everything/dp/1957007184/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=', title='Buy #{title} at Amazon', target='_blank') Buy #{title} at Amazon
         li
