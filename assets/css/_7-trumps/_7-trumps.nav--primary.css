@@ -122,7 +122,6 @@
         padding: 2px 60px 0 20px;
         padding-right: 55px;
         font-family: $font-heading;
-        text-transform: uppercase;
         text-decoration: none;
         line-height: $sizes-header-height-small;
         color: #fff;
@@ -134,14 +133,14 @@
 
         /* the hamburger */
         &:after,
-        strong:before,
-        strong:after {
+        span:before,
+        span:after {
             position: absolute;
             right: 15px;
-            top: 19px;
+            top: 21px;
             display: block;
             width: 30px;
-            height: 4px;
+            height: 2px;
             content: " ";
             background: #fff;
             border-radius: 2px;
@@ -149,12 +148,12 @@
         &:after {
             transition-duration: $transition-duration;
         }
-        strong:before {
-            top: 29px;
+        span:before {
+            top: 31px;
             transition: opacity $transition-duration $transition-type, background $transition-duration $transition-type;
         }
-        strong:after {
-            top: 39px;
+        span:after {
+            top: 41px;
             transition-duration: $transition-duration;
         }
     }
@@ -165,10 +164,10 @@
             &:after {
                 transform: translate3d(0, 10px, 0) rotate(135deg);
             }
-            strong:before {
+            span:before {
                 opacity: 0;
             }
-            strong:after {
+            span:after {
                 transform: translate3d(0, -10px, 0) rotate(-135deg);
             }
         }
@@ -186,16 +185,16 @@
 
                     /* the hamburger */
                     &:after,
-                    strong:before,
-                    strong:after {
+                    span:before,
+                    span:after {
                         background: #fff;
                     }
                 }
 
                 /* the hamburger */
                 &:after,
-                strong:before,
-                strong:after {
+                span:before,
+                span:after {
                     background: $color-font;
                 }
             }
