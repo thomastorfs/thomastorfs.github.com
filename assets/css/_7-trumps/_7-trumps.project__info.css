@@ -32,7 +32,7 @@
 /* title */
 .project__info__title {
     /* grey sans-serif text */
-    font-family: $font-sans-serif;
+    font-family: $font-heading;
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1.375em;

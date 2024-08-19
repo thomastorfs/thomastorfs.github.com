@@ -14,21 +14,26 @@
     }
 
     h2 {
-        font-size: 1.375rem;
+        font-size: 1.75rem;
+        margin-bottom: 1.125rem;
     }
 
     ul {
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
         max-width: 400px;
         margin: 0 auto;
         font-size: 1rem;
         text-align: left;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 
     a {
         display: flex;
         align-items: baseline;
-        padding: 0.75rem 0;
+        padding: 0.625rem 0;
         text-decoration: none;
         color: $color-font;
 
@@ -52,16 +57,17 @@
 @media (min-width: $bp-tablet-narrow-min) {
     .news-overview {
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.875rem;
+            margin-bottom: 1.25rem;
         }
 
         ul {
             max-width: 450px;
-            font-size: 1.125rem;
+            font-size: 1.063rem;
         }
 
         a {
-            padding: 0.875rem 0;
+            padding: 0.75rem 0;
         }
     }
 }
@@ -70,16 +76,17 @@
 @media (min-width: $bp-desktop-min) {
     .news-overview {
         h2 {
-            font-size: 1.75rem;
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
         }
 
         ul {
             max-width: 500px;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
         }
 
         a {
-            padding: 1rem 0;
+            padding: 0.875rem 0;
         }
     }
 }

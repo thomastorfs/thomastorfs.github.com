@@ -8,9 +8,8 @@
 
 nav {
     a {
-        font-family: $font-sans-serif;
+        font-family: $font-heading;
         text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 600;
     }
 }

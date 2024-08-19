@@ -15,14 +15,13 @@
     margin: 0 auto;
 
     /* increase the default text size */
-    font-size: 1.125em;
+    font-size: 1em;
     line-height: 2em;
 
     /* headings */
     h2, h3, h4 {
         margin: 0;
         padding: 2.5em 0;
-        letter-spacing: 0.175em;
         text-align: left;
 
         /* don't add a top margin on the first one */
@@ -36,13 +35,13 @@
         }
     }
     h2 {
-        font-size: 1em;
+        font-size: 1.75em;
     }
     h3 {
-        font-size: 0.875em;
+        font-size: 1.50em;
     }
     h4 {
-        font-size: 0.75em;
+        font-size: 1em;
     }
 
     /* add padding to the paragraphs, more reliable than margins */
@@ -161,7 +160,7 @@
         padding: 120px 0;
 
         /* increase the text size */
-        font-size: 1.25em;
+        font-size: 1.125em;
     }
 }
 

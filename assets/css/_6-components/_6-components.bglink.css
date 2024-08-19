@@ -33,7 +33,7 @@
     h2 {
         margin: 0 0 0.25em 0;
         color: #fff;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
 
     /* set margin and line-height for paragraphs */
@@ -62,7 +62,7 @@
     .bglink {
         /* medium title size */
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.375rem;
         }
     }
 }
@@ -72,7 +72,7 @@
     .bglink {
         /* large title size */
         h2 {
-            font-size: 2.125rem;
+            font-size: 1.75rem;
         }
     }
 }

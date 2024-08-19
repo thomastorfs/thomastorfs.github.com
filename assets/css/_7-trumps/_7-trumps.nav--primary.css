@@ -121,7 +121,7 @@
         height: $sizes-header-height-small;
         padding: 2px 60px 0 20px;
         padding-right: 55px;
-        font-family: $font-sans-serif;
+        font-family: $font-heading;
         text-transform: uppercase;
         text-decoration: none;
         line-height: $sizes-header-height-small;

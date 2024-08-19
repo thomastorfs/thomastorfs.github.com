@@ -12,9 +12,9 @@ section.wrapper.news-overview
 
                         h2 #{blogyear[0]._parsedYear}
 
-                        each post, j in blogyear
+                        ul.list--news
 
-                            ul.list--news
+                            each post, j in blogyear
                                 li
                                     a.news-item(href='#{post._url}', title='Read ' + post.title)
                                         span.date #{post._parsedDay} #{post._parsedMonth} 

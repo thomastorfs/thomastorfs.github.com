@@ -20,7 +20,7 @@
 
 .skillset {
     /* default typography */
-    font-family: $font-sans-serif;
+    font-family: $font-heading;
     font-size: 0.75rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -51,7 +51,7 @@
         padding-left: 90%;
     }
     .perc-bar--75 {
-        padding-left: 75%;   
+        padding-left: 75%;
     }
     .perc-bar--60 {
         padding-left: 60%;

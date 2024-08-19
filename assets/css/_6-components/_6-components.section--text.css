@@ -17,7 +17,8 @@
     /* intro text */
     .section__intro {
         margin-bottom: 32px;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+        font-weight: 200;
         line-height: 1.875em;
         text-align: left;
 
@@ -50,7 +51,7 @@
         /* intro text */
         .section__intro {
             margin-bottom: 55px;
-            font-size: 1.125rem;
+            font-size: 1rem;
             text-align: center;
         }
 
@@ -75,7 +76,7 @@
         .section__intro {
             padding: 0 calc($gutter * 2.5);
             margin-bottom: 78px;
-            font-size: 1.375rem;
+            font-size: 1.125rem;
         }
 
         /* more padding if it's the first section on the page */

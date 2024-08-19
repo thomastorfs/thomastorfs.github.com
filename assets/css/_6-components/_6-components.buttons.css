@@ -32,10 +32,9 @@
         padding: 12px;
 
         /* font styling with inset */
-        font-family: $font-sans-serif;
+        font-family: $font-heading;
         font-size: 0.875rem;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-weight: 600;
         color: #fff !important; /* make sure the text remains white in a text area */
         text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
     }
