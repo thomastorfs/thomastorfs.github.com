@@ -19,7 +19,7 @@
     }
 
     h1 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     a {
@@ -93,7 +93,7 @@
 
         /* adjust the title size */
         h1 {
-            font-size: 2.75rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -107,7 +107,7 @@
     .hero {
         /* adjust the title size */
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
         }
     }
 }
@@ -170,7 +170,7 @@
 .hero--title {
     .wrapper__inner {
         position: relative;
-        max-width: 85%;
+        max-width: 90%;
         margin: 0 auto;
         text-align: center;
         z-index: 3;
@@ -179,7 +179,7 @@
     /* title */
     h1 {
         margin: 0;
-        font-size: 2.25em;
+        font-size: 2em;
     }
     h2 {
         font-size: 1.125rem !important;
@@ -211,7 +211,7 @@
     .hero--title {
         /* title */
         h1 {
-            font-size: 2.75em;
+            font-size: 2.5em;
         }
         h2 {
             font-size: 1.375rem !important;
@@ -224,7 +224,7 @@
     .hero--title {
         /* title */
         h1 {
-            font-size: 3.5em;
+            font-size: 3.25em;
         }
         h2 {
             font-size: 1.625rem !important;
@@ -238,7 +238,7 @@
         /* title */
         h1 {
             margin-bottom: 3rem;
-            font-size: 4.5em !important;
+            font-size: 4em !important;
         }
         h2 {
             font-size: 2rem !important;

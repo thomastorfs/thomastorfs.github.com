@@ -12,6 +12,7 @@
 .nav--primary {
     li {
         text-align: center;
+        font-size: 1.125em;
     }
 
     a {
@@ -122,6 +123,7 @@
         padding: 2px 60px 0 20px;
         padding-right: 55px;
         font-family: $font-heading;
+        font-size: 1.125em;
         text-decoration: none;
         line-height: calc($sizes-header-height-small - 5px);
         color: #fff;
