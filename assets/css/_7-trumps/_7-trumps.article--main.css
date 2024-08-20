@@ -8,7 +8,7 @@
 
 .article--main__text {
     /* add padding */
-    padding: 70px 0;
+    padding: 50px 0;
 
     /* set the maximum width */
     max-width: 1200px;
@@ -21,7 +21,7 @@
     /* headings */
     h2, h3, h4 {
         margin: 0;
-        padding: 2.5em 0;
+        padding: 1.5em 0;
         text-align: left;
 
         /* don't add a top margin on the first one */
@@ -149,7 +149,7 @@
 @media (min-width: $bp-tablet-narrow-min) {
     .article--main__text {
         /* increase the padding */
-        padding: 90px 0;
+        padding: 70px 0;
     }
 }
 
@@ -157,7 +157,7 @@
 @media (min-width: $bp-tablet-wide-min) {
     .article--main__text {
         /* increase the padding */
-        padding: 120px 0;
+        padding: 100px 0;
 
         /* increase the text size */
         font-size: 1.125em;
@@ -168,6 +168,6 @@
 @media (min-width: $bp-desktop-min) {
     .article--main__text {
         /* increase the padding */
-        padding: 150px 0;
+        padding: 130px 0;
     }
 }

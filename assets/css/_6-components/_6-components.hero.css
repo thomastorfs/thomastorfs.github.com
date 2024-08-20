@@ -19,7 +19,7 @@
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2.25rem;
     }
 
     a {
@@ -93,7 +93,7 @@
 
         /* adjust the title size */
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
         }
     }
 
@@ -107,7 +107,7 @@
     .hero {
         /* adjust the title size */
         h1 {
-            font-size: 3.25rem;
+            font-size: 3.5rem;
         }
     }
 }
@@ -182,7 +182,7 @@
         font-size: 2.25em;
     }
     h2 {
-        font-size: 1.375rem !important;
+        font-size: 1.125rem !important;
     }
 
     /* meta information */
@@ -211,10 +211,10 @@
     .hero--title {
         /* title */
         h1 {
-            font-size: 3em;
+            font-size: 2.75em;
         }
         h2 {
-            font-size: 1.625rem !important;
+            font-size: 1.375rem !important;
         }
     }
 }
@@ -224,10 +224,10 @@
     .hero--title {
         /* title */
         h1 {
-            font-size: 3.625em;
+            font-size: 3.5em;
         }
         h2 {
-            font-size: 1.75rem !important;
+            font-size: 1.625rem !important;
         }
     }
 }
